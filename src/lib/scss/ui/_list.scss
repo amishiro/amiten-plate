@@ -1,0 +1,26 @@
+/*
+リストまで
+
+```html
+<ul class="list__ul">
+<li>dummy</li>
+<li>dummy</li>
+<li>dummy</li>
+</ul>
+```html
+*/
+
+.list__ul {
+  $this: &;
+  margin-bottom: 0;
+  & > li {
+    color: #000;
+  }
+  &__ul {
+    @extend #{$this};
+    & > li {
+      margin-left: $bm-inner;
+      list-style: disc;
+    }
+  }
+}

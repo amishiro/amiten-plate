@@ -1,0 +1,10 @@
+/*
+画像に対する動作を指定します。
+*/
+
+// レスポンシブWEBデザイン（リキッド）に対応します。
+img.img-responsive {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}

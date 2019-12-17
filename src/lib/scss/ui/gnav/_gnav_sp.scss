@@ -1,0 +1,70 @@
+.gnav{
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  z-index: 1;
+  padding-top: $header-height + 4px;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translateX(100vw);
+  width: 80vw;
+  min-height: 100%;
+  transition: all .5s;
+  background-color: #fff;
+  body.preload &{
+    transition-property: none;
+  }
+  &.js-active{
+    transition: all .5s;
+    transform: translateX(20vw);
+  }
+  &__bg{
+    display: block;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: -100;
+  }
+  &__item{
+    background-color: #fff;
+    border-bottom: 1px solid $color-light;
+  }
+  &__link{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding: 0 $bm*2;
+    text-decoration: none;
+    line-height: 1.2;
+    font-weight: bold;
+    &.contact{
+      color:#fff;
+      @include bg-anime;
+    }
+  }
+}
+
+.gnav-deep{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__link{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 $bm 0 $bm*4;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+}

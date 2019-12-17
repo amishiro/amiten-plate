@@ -1,0 +1,60 @@
+{
+  "name": "amiTemplate-Simple",
+  "description": "for all",
+  "bugs": {
+    "email": "amishiro@amiten.co.jp"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "masato amishiro",
+    "email": "amishiro@amiten.co.jp"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "private": true,
+  "scripts": {
+    "gulp": "gulp",
+    "dev": "gulp",
+    "dist": "gulp dist",
+    "deploy": "gulp deploy",
+    "lint": "eslint --ext .js --ignore-path .gitignore --ignore-pattern src/assets/**/*.js ."
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.8.2",
+    "del": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "ftp-deploy": "^2.3.6",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.0",
+    "open": "^7.0.0",
+    "smooth-scroll": "^16.1.0",
+    "webpack": "^4.41.3",
+    "webpack-stream": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

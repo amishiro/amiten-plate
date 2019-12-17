@@ -1,0 +1,131 @@
+/*
+---
+name: l-culumn
+category:
+- common/layout/l-column
+tag:
+- layout
+compile: false
+---
+
+一定の間隔をあけた、カラムレイアウトを実現します
+
+---
+
+### 2カラム
+```html
+<div class="u-column">
+<div class="u-column__wrapper">
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">one</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">two</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">three<br>dummy<br>dummy<br>dummy<br>dummy<br>dummy<br>dummy</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">four</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">five</div>
+</div>
+</div>
+</div>
+```
+
+### 3カラム
+```html
+<div class="u-column_3">
+<div class="u-column__wrapper">
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">one</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">two</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">three<br>dummy<br>dummy<br>dummy<br>dummy<br>dummy<br>dummy</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">four</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">five</div>
+</div>
+</div>
+</div>
+```
+
+### 4カラム
+```html
+<div class="u-column_4">
+<div class="u-column__wrapper">
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">one</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">two</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">three<br>dummy<br>dummy<br>dummy<br>dummy<br>dummy<br>dummy</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">four</div>
+</div>
+<div class="u-column__item">
+<div class="u-column__inner" style="background:#eee;">five</div>
+</div>
+</div>
+</div>
+```
+*/
+
+.u-column {
+  $this: '.u-column';
+  &_3 {
+    #{$this}__item {
+      @include screen($width-s + 1, $width-m) {
+        flex: (100%/2);
+        max-width: (100%/2);
+      }
+      @include min-screen($width-m + 1) {
+        flex: (100%/3);
+        max-width: (100%/3);
+      }
+    }
+  }
+  &_4 {
+    #{$this}__item {
+      @include screen($width-s + 1, $width-m) {
+        flex: (100%/3);
+        max-width: (100%/3);
+      }
+      @include min-screen($width-m + 1px) {
+        flex: (100%/4);
+        max-width: (100%/4);
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$bm;
+    margin-left: -$bm;
+  }
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: $bm;
+    @include max-screen($width-s) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  &__inner {
+    width: 100%;
+  }
+}

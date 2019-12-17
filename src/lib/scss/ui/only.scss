@@ -1,0 +1,35 @@
+.mobile {
+  @include tablet() {
+    display: none;
+  }
+}
+
+.tablet {
+  @include mobile {
+    display: none;
+  }
+}
+
+.tablet-only {
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop {
+  @include desktop() {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include mobile() {
+    display: none;
+  }
+  @include tablet-only() {
+    display: none;
+  }
+}

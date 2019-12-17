@@ -1,0 +1,44 @@
+@mixin gothic {
+  font-family: sans-serif;
+}
+@mixin mincho() {
+  font-family: 'YakuHanMP', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+}
+
+@mixin mobile {
+  @media screen and (max-width: $width-s) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $width-s + 1) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $width-s) and (max-width: $width-m) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $width-l) {
+    @content;
+  }
+}
+
+@mixin wrapper {
+  box-sizing: border-box;
+  max-width: 490px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $bm;
+  @include tablet {
+    max-width: $width-m;
+  }
+  @include desktop {
+    padding: 0 $bm * 2;
+  }
+}

@@ -1,0 +1,153 @@
+html {
+  overflow-x: hidden;
+  background-color: #fff;
+  font-size: 62.5%; //remベースサイズ設定 1.6rem = 16px
+}
+
+body {
+  @include gothic;
+  overflow-x: hidden;
+  color: $color-dark-lighten;
+  font-size: 1.4rem; // 1.4rem = 14px
+  @include tablet {
+    font-size: 1.6rem; // 1.6rem = 16px
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-feature-settings: 'palt';
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  color: $color-brand;
+  -webkit-tap-highlight-color: transparent; //タップ時のハイライト削除
+  font-weight: bold;
+}
+
+::selection {
+  background-color: $color-point-lighten;
+}
+
+small {
+  color: $color-dark-lighten;
+  font-size: 1.1rem;
+  font-feature-settings: 'palt';
+}
+
+blockquote {
+  box-sizing: border-box;
+  position: relative;
+  border-left: 4px solid $color-light-darken;
+  border-radius: 3px;
+  background-color: $color-light;
+  margin: 0;
+  padding: $bm-inner;
+  &::before {
+    position: absolute;
+    top: -12px;
+    left: -14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $color-light-darken;
+    width: 24px;
+    height: 24px;
+    font-size: 1.4rem;
+  }
+  & > p:first-child {
+    margin-top: 0;
+  }
+}
+
+dl,
+ol,
+ul {
+  margin: 0;
+  line-height: 1.8;
+}
+
+dl {
+  box-sizing: border-box;
+  border-left: 4px solid $color-light-darken;
+  padding: $bm 0 $bm $bm-inner;
+  & > dt {
+    font-weight: bold;
+  }
+  & > dd {
+    margin: 0;
+  }
+}
+
+ol,
+ul {
+  padding: .5em 1.5em;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+}
+
+kbd,
+code,
+samp,
+pre {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: $color-light;
+  margin: 0 $bm/2;
+  padding: $bm/4 $bm;
+  font-size: 1.4rem;
+  font-feature-settings: normal;
+  line-height: 1.4;
+}
+code,
+pre {
+  background-color: $color-dark;
+  color: $color-light-darken;
+}
+pre {
+  box-sizing: border-box;
+  display: block;
+  border-left: 4px solid $color-point;
+  margin: 0;
+  padding: $bm-inner;
+}
+
+sup,
+sub {
+  font-size: 45%;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  img {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .25);
+  }
+  figcaption {
+    position: absolute;
+    right: $bm;
+    bottom: $bm;
+    color: $color-light;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}
+
+iframe {
+  border: none;
+}
