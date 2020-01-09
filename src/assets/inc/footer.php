@@ -1,4 +1,4 @@
-</article>
+</div>
 </main>
 
 <footer class="layout__footer">

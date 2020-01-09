@@ -8,8 +8,16 @@ include($inc . "/head.php");
 include($inc . "/header.php");
 ?>
 
-<article class="main">
-  <section>
+<header class="main__header">
+  <?php include($inc . "/main-header.php"); ?>
+</header>
+
+<div class="main__breadcrumb">
+  <?php include($inc . "/main-breadcrumb.php"); ?>
+</div>
+
+<article class="main__conts">
+  <section class="wrapper">
     <h2>u-column</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
     <div class="u-column3">
@@ -48,11 +56,11 @@ include($inc . "/header.php");
       </div>
     </div>
   </section>
-  <section>
+  <section class="wrapper">
     <h2>h2.heading</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
   </section>
-  <section>
+  <section class="wrapper">
     <h2>h2.heading</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
   </section>

@@ -1,8 +1,10 @@
 .main {
-  @include wrapper;
   &__visual {
   }
+  &__header {
+  }
+  &__breadcrumb {
+  }
   &__conts {
-    margin-bottom: $gup-m;
   }
 }

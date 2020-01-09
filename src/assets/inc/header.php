@@ -38,3 +38,4 @@
       </div>
   </header>
   <main class="layout__main">
+    <div class="main">
