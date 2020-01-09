@@ -53,12 +53,49 @@ h3,
 h4,
 h5,
 h6 {
+  margin-bottom: .3em;
+  color: #000;
   font-weight: normal;
   -webkit-font-feature-settings: 'palt';
           font-feature-settings: 'palt';
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1128px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+@media screen and (min-width: 1128px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1128px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
 p {
+  margin-bottom: .8em;
   line-height: 1.8;
 }
 
@@ -185,16 +222,15 @@ sub {
   font-size: 45%;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 figure {
   position: relative;
   display: inline-block;
-  margin: 0;
+  margin-bottom: .8em;
   padding: 0;
-}
-
-figure img {
-  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
-          box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 figure figcaption {
@@ -995,6 +1031,10 @@ img.u-img-max {
   .main-header__wrapper {
     max-width: 1208px;
   }
+}
+
+.main-header h1 {
+  margin-bottom: 0;
 }
 
 .page-top {
