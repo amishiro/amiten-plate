@@ -29,16 +29,16 @@
   }
 }
 
+// wrapperサイズ
 @mixin wrapper {
-  box-sizing: border-box;
-  max-width: 490px;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 $bm;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 $gup-s;
   @include tablet {
-    max-width: $width-m;
+    padding: 0 $gup-l;
   }
   @include desktop {
-    padding: 0 $bm * 2;
+    max-width: $width-l + $gup-l*2;
   }
 }

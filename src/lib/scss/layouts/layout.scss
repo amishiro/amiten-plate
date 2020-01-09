@@ -2,6 +2,10 @@
   &__wrapper {
   }
   &__header {
+    padding-top: $gup-l;
+    @include tablet {
+      padding-top: $gup-xl;
+    }
   }
   &__main {
   }

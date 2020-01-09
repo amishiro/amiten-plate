@@ -1,7 +1,8 @@
 .main {
+  @include wrapper;
   &__visual {
   }
   &__conts {
-    margin-bottom: $bm-inner;
+    margin-bottom: $gup-m;
   }
 }
