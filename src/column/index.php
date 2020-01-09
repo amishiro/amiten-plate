@@ -8,14 +8,46 @@ include($inc . "/head.php");
 include($inc . "/header.php");
 ?>
 
-<style>
-.ex-box {
-  background-color: red;
-  min-height: 40px;
-}
-</style>
-
 <article class="main">
+  <section>
+    <h2>u-column</h2>
+    <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+    <div class="u-column3">
+      <div class="u-column__wrapper">
+        <div class="u-column__item">
+          <div class="u-column__inner">
+            <img src="<?php echo $img;?>/dummy/yamato.png" alt="" class="u-img-max">
+            <h3>h3.heading</h3>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </div>
+        </div>
+        <div class="u-column__item">
+          <div class="u-column__inner">
+            <img src="<?php echo $img;?>/dummy/yamato.png" alt="" class="u-img-max">
+            <h3>h3.heading つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</h3>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          </div>
+        </div>
+        <div class="u-column__item">
+          <div class="u-column__inner">
+            <img src="<?php echo $img;?>/dummy/yamato.png" alt="" class="u-img-max">
+            <h3>h3.heading</h3>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          </div>
+        </div>
+        <div class="u-column__item">
+          <div class="u-column__inner">
+            <img src="<?php echo $img;?>/dummy/yamato.png" alt="" class="u-img-max">
+            <h3>h3.heading</h3>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          </div>
+        </div>
+        <div class="u-column__item">
+          <div class="u-column__inner" style="background:#eee;">innerAera</div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <h2>h2.heading</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
