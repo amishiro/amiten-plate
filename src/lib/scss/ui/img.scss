@@ -8,3 +8,9 @@ img.u-img-max {
   width: 100%;
   height: auto;
 }
+
+img.u-img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

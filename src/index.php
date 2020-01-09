@@ -8,8 +8,11 @@ include($inc . "/head.php");
 include($inc . "/header.php");
 ?>
 
-<article class="main">
-  <section>
+<article class="main__conts">
+  <section class="visual">
+    <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-fit">
+  </section>
+  <section class="wrapper">
     <h2>h2.heading</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
   </section>
