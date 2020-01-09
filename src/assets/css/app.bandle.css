@@ -222,6 +222,85 @@ iframe {
   margin-bottom: 0;
 }
 
+.gnav {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.gnav__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gnav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.gnav__link {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.gnav__link:hover {
+  background-color: #00529b;
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+body.home .gnav__link.home {
+  background-color: #00529b;
+  color: #fff;
+}
+
+body.column .gnav__link.column {
+  background-color: #00529b;
+  color: #fff;
+}
+
+body.contact .gnav__link.contact {
+  background-color: #00529b;
+  color: #fff;
+}
+
+.gnav__link.contact {
+  background-color: #f58400;
+  color: #eee;
+}
+
 /*
 見出し関連のサイズを調整します。
 
@@ -617,9 +696,9 @@ img.img-responsive {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100%;
 }
 
@@ -636,7 +715,6 @@ img.img-responsive {
 }
 
 .header__logo {
-  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,6 +741,10 @@ img.img-responsive {
   height: 100%;
   text-decoration: none;
   font-size: 1.6rem;
+}
+
+.header__gnav {
+  height: 100%;
 }
 
 .layout__header {

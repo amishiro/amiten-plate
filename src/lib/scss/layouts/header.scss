@@ -14,11 +14,10 @@
     @include wrapper;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
   }
   &__logo {
-    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,5 +31,8 @@
       text-decoration: none;
       font-size: 1.6rem;
     }
+  }
+  &__gnav {
+    height: 100%;
   }
 }

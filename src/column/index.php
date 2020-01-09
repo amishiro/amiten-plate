@@ -3,7 +3,7 @@ include("../function.php");
 $meta->pageName = "カラムテスト";
 // $meta->pageDesc = "ページ個別のディスクリプションがあれば記載";
 // $meta->pageImg = "ページ個別のogpImageがあれば記載";
-$bodyClass = new BodyClass('home');
+$bodyClass = new BodyClass('');
 include($inc . "/head.php");
 include($inc . "/header.php");
 ?>
