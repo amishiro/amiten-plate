@@ -46,7 +46,20 @@
       }
     }
   }
-  // &3 {}
+  &3 {
+    #{$this}__item {
+      @include tablet {
+        $flex-w: 50%;
+        flex: 0 0 $flex-w;
+        max-width: $flex-w;
+      }
+      @include desktop {
+        $flex-w: 33.333%;
+        flex: 0 0 $flex-w;
+        max-width: $flex-w;
+      }
+    }
+  }
   &4 {
     #{$this}__item {
       @include tablet {

@@ -42,3 +42,7 @@
     max-width: $width-l + $gup-l*2;
   }
 }
+
+.wrapper {
+  @include wrapper;
+}
