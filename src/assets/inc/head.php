@@ -44,7 +44,8 @@
   <link href="<?php echo $img . "/icons" ?>/favicon-62.png" rel="icon" type="image/png" sizes="62x62">
 
   <!-- cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/fitie@1.0.0/index.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+  <script>objectFitImages();</script>
 
 </head>
 

@@ -1,6 +1,6 @@
 .main-header {
   background-color: $color-light;
-  padding: $gup-l 0;
+  padding: $gap-l 0;
   &__wrapper {
     @include wrapper;
     display: flex;

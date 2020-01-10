@@ -13,14 +13,14 @@
     align-items: center;
     justify-content: center;
     background-color: $color-brand;
-    padding: $gup-m;
+    padding: $gap-m;
     color: $white;
   }
 }
 
 .fnav {
   margin: 0;
-  margin-bottom: $bm;
+  margin-bottom: $gap;
   padding: 0;
   list-style: none;
   @include tablet {
@@ -30,14 +30,14 @@
   &__item {
     @include mobile {
       &:not(:first-child) {
-        margin-top: $bm;
+        margin-top: $gap;
       }
     }
     @include tablet {
       $flex-w: 33.333%;
       flex: 0 0 $flex-w;
       max-width: $flex-w;
-      padding: $bm;
+      padding: $gap;
     }
   }
   &__link {
@@ -55,7 +55,7 @@
     font-feature-settings: 'palt';
     i {
       position: absolute;
-      right: $bm;
+      right: $gap;
     }
     &.home,
     &:hover {

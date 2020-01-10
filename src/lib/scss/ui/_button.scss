@@ -57,16 +57,16 @@ u-btn(botton)
   $class: '.u-btn';
   display: flex;
   justify-content: center;
-  margin-right: -$bm;
-  margin-left: -$bm;
+  margin-right: -$gap;
+  margin-left: -$gap;
   @include max-screen($width-s) {
     flex-wrap: wrap;
     margin-right: 0;
     margin-left: 0;
   }
   & > #{$class}__item {
-    margin-right: $bm;
-    margin-left: $bm;
+    margin-right: $gap;
+    margin-left: $gap;
     @include max-screen($width-s) {
       flex: 0 0 100%;
       max-width: 100%;
@@ -91,8 +91,8 @@ u-btn(botton)
     box-shadow: 1px 1px 2px rgba(0,0,0,.2);
     min-height: 45px;
     width: 100%;
-    margin-bottom: $bm*2;
-    padding: $bm;
+    margin-bottom: $gap*2;
+    padding: $gap;
     text-decoration: none;
     color: $color-brand;
     font-size: 1.6rem;

@@ -7,12 +7,12 @@ form {
     border: 1px solid $color-light;
     border-radius: 3px;
     width: 100%;
-    margin: $gup-l 0;
-    padding: $gup-m;
+    margin: $gap-l 0;
+    padding: $gap-m;
     legend {
       background-color: #fff;
-      margin-left: -$bm;
-      padding: 0 $bm;
+      margin-left: -$gap;
+      padding: 0 $gap;
       font-weight: bold;
       font-feature-settings: 'palt';
     }
@@ -25,7 +25,7 @@ form {
     border-radius: 2px;
     box-shadow: inner 0 0 4px rgba(0, 0, 0, .2);
     min-width: 300px;
-    padding: $bm;
+    padding: $gap;
     font-size: 1.6rem;
     &:focus {
       border: solid 1px $color-point;
@@ -50,7 +50,7 @@ form {
     &[type='checkbox'] {
       display: inline;
       width: auto;
-      margin-right: $bm/2;
+      margin-right: $gap/2;
       padding: 0;
     }
   }
@@ -63,7 +63,7 @@ form {
     background: none transparent;
     min-width: 300px;
     height: 35px;
-    padding: $bm;
+    padding: $gap;
     outline: none;
     vertical-align: middle;
     color: $color-brand;

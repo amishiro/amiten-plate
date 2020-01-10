@@ -34,12 +34,12 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 $gup-s;
+  padding: 0 $gap-s;
   @include tablet {
-    padding: 0 $gup-l;
+    padding: 0 $gap-l;
   }
   @include desktop {
-    max-width: $width-l + $gup-l*2;
+    max-width: $width-l + $gap-l*2;
   }
 }
 

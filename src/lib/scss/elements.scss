@@ -15,9 +15,9 @@ body {
 }
 
 section {
-  margin-bottom: $gup-l; //40px
+  margin-bottom: $gap-l; //40px
   @include tablet {
-    margin-bottom: $gup-xl; // 64px
+    margin-bottom: $gap-xl; // 64px
   }
 }
 
@@ -86,7 +86,7 @@ blockquote {
   border-radius: 3px;
   background-color: $color-light;
   margin: 0;
-  padding: $gup-m;
+  padding: $gap-m;
   &::before {
     position: absolute;
     top: -12px;
@@ -115,7 +115,7 @@ ul {
 dl {
   box-sizing: border-box;
   border-left: 4px solid $color-light-darken;
-  padding: $bm 0 $bm $gup-m;
+  padding: $gap 0 $gap $gap-m;
   & > dt {
     font-weight: bold;
   }
@@ -141,8 +141,8 @@ pre {
   display: inline-block;
   border-radius: 2px;
   background-color: $color-light;
-  margin: 0 $bm/2;
-  padding: $bm/4 $bm;
+  margin: 0 $gap/2;
+  padding: $gap/4 $gap;
   font-size: 1.4rem;
   font-feature-settings: normal;
   line-height: 1.4;
@@ -157,7 +157,7 @@ pre {
   display: block;
   border-left: 4px solid $color-point;
   margin: 0;
-  padding: $gup-m;
+  padding: $gap-m;
 }
 
 sup,
@@ -176,8 +176,8 @@ figure {
   padding: 0;
   figcaption {
     position: absolute;
-    right: $bm;
-    bottom: $bm;
+    right: $gap;
+    bottom: $gap;
     color: $color-light;
     font-weight: bold;
     font-size: 1.1rem;

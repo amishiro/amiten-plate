@@ -35,24 +35,24 @@
 
 .heading,
 .heading-m {
-  margin: $gup-m * 2 0 $gup-m;
+  margin: $gap-m * 2 0 $gap-m;
   text-align: center;
   color: $black;
   font-weight: bold;
   font-size: 2rem;
   font-feature-settings: 'palt';
   @include tablet {
-    margin: $gup-m * 2 0 $gup-m*2;
+    margin: $gap-m * 2 0 $gap-m*2;
     font-size: 3rem;
   }
   & + p {
-    margin-top: -$gup-m;
-    margin-bottom: $gup-m;
+    margin-top: -$gap-m;
+    margin-bottom: $gap-m;
     text-align: center;
     color: $black;
     font-weight: bold;
     @include tablet {
-      margin-top: -$gup-m * 2;
+      margin-top: -$gap-m * 2;
     }
   }
   &:first-child {

@@ -19,7 +19,7 @@
   &__ul {
     @extend #{$this};
     & > li {
-      margin-left: $gup-m;
+      margin-left: $gap-m;
       list-style: disc;
     }
   }

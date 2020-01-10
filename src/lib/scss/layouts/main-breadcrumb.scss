@@ -1,6 +1,6 @@
 .breadcrumb {
   $this: '.pan';
-  padding: $gup-s 0;
+  padding: $gap-s 0;
   &__wrapper {
     @include wrapper;
     display: flex;
@@ -9,7 +9,7 @@
   &__item {
     display: flex;
     align-items: center;
-    margin-right: $bm/2;
+    margin-right: $gap/2;
     i {
       font-size: 1.4rem;
       line-height: 1;
