@@ -37,16 +37,6 @@ body {
   }
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-@media screen and (min-width: 481px) {
-  section {
-    margin-bottom: 64px;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -398,6 +388,16 @@ iframe {
   }
 }
 
+.container {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 481px) {
+  .container {
+    margin-bottom: 64px;
+  }
+}
+
 .gnav {
   width: 100%;
   height: 100%;
@@ -731,13 +731,6 @@ img.u-img-fit {
 .footer {
   position: relative;
   background-color: #fff;
-  padding-bottom: 40px;
-}
-
-@media screen and (min-width: 481px) {
-  .footer {
-    padding-bottom: 60px;
-  }
 }
 
 .footer__nav {

@@ -15,10 +15,6 @@ body {
 }
 
 section {
-  margin-bottom: $gap-l; //40px
-  @include tablet {
-    margin-bottom: $gap-xl; // 64px
-  }
 }
 
 h1,

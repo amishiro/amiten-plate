@@ -1,0 +1,10 @@
+@mixin container-margin-bottom () {
+  margin-bottom: $gap-l; //40px
+  @include tablet {
+    margin-bottom: $gap-xl; // 64px
+  }
+}
+
+.container {
+  @include container-margin-bottom;
+}

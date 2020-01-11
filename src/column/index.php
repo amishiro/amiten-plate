@@ -17,9 +17,10 @@ include($inc . "/header.php");
 </div>
 
 <article class="main__conts">
-  <section class="wrapper">
+  <section class="container wrapper">
     <h2>u-column日本語</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+
     <div class="u-column3">
       <div class="u-column__wrapper">
         <div class="u-column__item">
@@ -64,12 +65,12 @@ include($inc . "/header.php");
       </div>
     </div>
   </section>
-  <section class="wrapper">
+  <section class="container wrapper">
     <h2>h2.heading</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
   </section>
-  <section class="wrapper">
+  <section class="container wrapper">
     <h2>h2.heading</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
   </section>

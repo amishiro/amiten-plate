@@ -1,10 +1,6 @@
 .footer {
   position: relative;
   background-color: #fff;
-  padding-bottom: 40px;
-  @include tablet {
-    padding-bottom: 60px;
-  }
   &__nav {
     @include wrapper;
   }
