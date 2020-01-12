@@ -1,0 +1,13 @@
+.main-header {
+  background-color: $color-light;
+  padding: $gap-l 0;
+  &__wrapper {
+    @include wrapper;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+}

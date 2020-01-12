@@ -64,7 +64,7 @@ compile: false
     th {
       box-sizing: border-box;
       border: 1px solid $color-light-darken;
-      padding: $bm;
+      padding: $gap;
       vertical-align: middle;
       text-align: left;
       line-height: 1.2;
@@ -99,21 +99,21 @@ compile: false
     }
     tr {
       border-top: 1px solid $color-light;
-      margin-bottom: $bm-inner;
+      margin-bottom: $gap-m;
     }
     td {
       display: flex;
       align-items: center;
       border-bottom: 1px solid $color-light;
-      padding: $bm 0;
+      padding: $gap 0;
       &::before {
         $flex-w: 100px;
         flex: 0 0 $flex-w;
         border-radius: 2px;
         background-color: $color-light;
         max-width: $flex-w;
-        margin-right: $bm;
-        padding: $bm;
+        margin-right: $gap;
+        padding: $gap;
         content: attr(data-label);
         font-weight: bold;
         font-size: 1.4rem;
@@ -121,12 +121,12 @@ compile: false
     }
   }
   caption {
-    margin-bottom: $bm;
+    margin-bottom: $gap;
     text-align: left;
     font-weight: bold;
     &::before {
       @include icon-font('\f0ce');
-      margin-right: $bm/2;
+      margin-right: $gap/2;
     }
   }
 }

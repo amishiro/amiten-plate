@@ -1,69 +1,69 @@
-.gnav{
+.gnav {
   box-sizing: border-box;
   position: fixed;
-  left: 0;
+  top: 0;
   right: 0;
-  top:0;
   bottom: 0;
+  left: 0;
   z-index: 1;
-  padding-top: $header-height + 4px;
-  -webkit-overflow-scrolling: touch;
   overflow-y: auto;
+  background-color: #fff;
+  min-height: 100%;
+  width: 80vw;
   margin: 0;
   padding: 0;
+  padding-top: $header-height + 4px;
   list-style: none;
-  transform: translateX(100vw);
-  width: 80vw;
-  min-height: 100%;
   transition: all .5s;
-  background-color: #fff;
-  body.preload &{
+  transform: translateX(100vw);
+  -webkit-overflow-scrolling: touch;
+  body.preload & {
     transition-property: none;
   }
-  &.js-active{
+  &.js-active {
     transition: all .5s;
     transform: translateX(20vw);
   }
-  &__bg{
-    display: block;
+  &__bg {
     position: fixed;
-    top:0;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,.7);
     z-index: -100;
+    display: block;
+    background-color: rgba(0,0,0,.7);
   }
-  &__item{
-    background-color: #fff;
+  &__item {
     border-bottom: 1px solid $color-light;
+    background-color: #fff;
   }
-  &__link{
+  &__link {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     height: 45px;
-    padding: 0 $bm*2;
+    padding: 0 $gap*2;
     text-decoration: none;
-    line-height: 1.2;
     font-weight: bold;
-    &.contact{
-      color:#fff;
+    line-height: 1.2;
+    &.contact {
       @include bg-anime;
+      color: #fff;
     }
   }
 }
 
-.gnav-deep{
-  list-style: none;
-  padding: 0;
+.gnav-deep {
   margin: 0;
-  &__link{
+  padding: 0;
+  list-style: none;
+  &__link {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     height: 40px;
-    padding: 0 $bm 0 $bm*4;
+    padding: 0 $gap 0 $gap*4;
     text-decoration: none;
     line-height: 1.2;
   }

@@ -12,6 +12,7 @@ ini_set('display_errors', 1);
 $incPatch = (dirname(__FILE__));
 
 // links --------------------------------
+$url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $baseUrl;
 $css = $baseUrl . "/assets/css";
 $img = $baseUrl . "/assets/img";
 $inc = $incPatch . "/assets/inc";

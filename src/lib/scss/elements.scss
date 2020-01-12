@@ -14,17 +14,48 @@ body {
   }
 }
 
+section {
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  margin-bottom: .3em;
+  color: $black;
   font-weight: normal;
   font-feature-settings: 'palt';
 }
 
+h1 {
+  font-size: 3rem;
+  @include desktop {
+    font-size: 3.6rem;
+  }
+}
+
+h2 {
+  font-size: 2.6rem;
+  @include desktop {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  @include desktop {
+    font-size: 2.2rem;
+  }
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
 p {
+  margin-bottom: .8em;
   line-height: 1.8;
 }
 
@@ -51,7 +82,7 @@ blockquote {
   border-radius: 3px;
   background-color: $color-light;
   margin: 0;
-  padding: $bm-inner;
+  padding: $gap-m;
   &::before {
     position: absolute;
     top: -12px;
@@ -80,7 +111,7 @@ ul {
 dl {
   box-sizing: border-box;
   border-left: 4px solid $color-light-darken;
-  padding: $bm 0 $bm $bm-inner;
+  padding: $gap 0 $gap $gap-m;
   & > dt {
     font-weight: bold;
   }
@@ -96,7 +127,9 @@ ul {
 
 hr {
   border: 0;
-  height: 2px;
+  background-color: $color-light;
+  height: 1px;
+  margin: $gap-l 0;
 }
 
 kbd,
@@ -106,8 +139,8 @@ pre {
   display: inline-block;
   border-radius: 2px;
   background-color: $color-light;
-  margin: 0 $bm/2;
-  padding: $bm/4 $bm;
+  margin: 0 $gap/2;
+  padding: $gap/4 $gap;
   font-size: 1.4rem;
   font-feature-settings: normal;
   line-height: 1.4;
@@ -122,7 +155,7 @@ pre {
   display: block;
   border-left: 4px solid $color-point;
   margin: 0;
-  padding: $bm-inner;
+  padding: $gap-m;
 }
 
 sup,
@@ -130,18 +163,19 @@ sub {
   font-size: 45%;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 figure {
   position: relative;
   display: inline-block;
-  margin: 0;
+  margin-bottom: .8em;
   padding: 0;
-  img {
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, .25);
-  }
   figcaption {
     position: absolute;
-    right: $bm;
-    bottom: $bm;
+    right: $gap;
+    bottom: $gap;
     color: $color-light;
     font-weight: bold;
     font-size: 1.1rem;

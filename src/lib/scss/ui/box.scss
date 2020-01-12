@@ -15,10 +15,10 @@
   border: 1px solid $color-point-lighten;
   border-radius: 2px;
   background-color: $color-point-lighten;
-  padding: $bm;
+  padding: $gap;
   color: $white;
   @include tablet {
-    padding: $bm-inner;
+    padding: $gap-m;
   }
   > p:last-child {
     margin-bottom: 0;

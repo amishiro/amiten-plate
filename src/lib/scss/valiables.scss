@@ -1,15 +1,18 @@
 //--------------------ベースマージンの設定
 
-$bm: 8px; //ベースマージンサイズ 8pxは扱いやすい
-$bm-inner: $bm * 3; //ブロック内で使うマージン 通常24px
-$bm-outer: $bm * 6; //ブロック間の大きいマージン 通常48px
+$gap: 8px; //ベースマージンサイズ 8pxは扱いやすい
+
+$gap-s: $gap*2; //16px
+$gap-m: $gap*3; //24px
+$gap-l: $gap*5; //40px
+$gap-xl: $gap*8; //64px
 
 //--------------------横幅の設定
 
 $width-xs: 320px; //iphone5
-$width-s: 666px; //LG G3など、5.5incタイプの大型スマートフォン
-$width-m: 1024px; //ipad縦 ipad横
-$width-l: 1280px; //MackBook 12/Pro 13/Surface2/3/Pro/Nexus10
+$width-s: 480px; //スマートフォン
+$width-m: 768px; //ipad縦
+$width-l: 1128px; // 8カラム*120ox+(24pxガップ*7個) = 1,128px
 $width-xl: 1600px;
 
 //--------------------グローバルナビの設定

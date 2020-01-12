@@ -51,7 +51,7 @@ const settings = {
   default: {
     issue: null,
     deployDir: 'dirName', // deploy先のディレクトリを指定
-    deployUrl: 'https://example.com/',　 // deploy先のURLを指定
+    deployUrl: 'https://example.com/', // deploy先のURLを指定
     deployRoot: '/var/www/html/example/', // deploy先のドキュメントルートを指定
     ftpUser: process.env.FTP_USER,
     ftpPassword: process.env.FTP_PASS,
@@ -89,7 +89,7 @@ export const css = () => {
     }))
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer({ grid: true }),
+      autoprefixer({ grid: 'autoplace' }),
     ]))
     .pipe(rename({ suffix: '.bandle' }))
     .pipe(gulp.dest('./src/assets/css'))

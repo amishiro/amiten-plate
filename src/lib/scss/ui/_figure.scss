@@ -27,8 +27,8 @@
   &__cap {
     $cap: &;
     position: absolute;
-    right: $bm;
-    bottom: $bm;
+    right: $gap;
+    bottom: $gap;
     display: inline-block;
     text-shadow: 0 0 3px #000;
     color: $color-light;
@@ -43,7 +43,7 @@
     &_left {
       @extend #{$cap};
       right: auto;
-      left: $bm;
+      left: $gap;
       &_darken {
         @extend #{$cap};
         text-shadow: 0 0 3px #fff;

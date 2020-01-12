@@ -8,8 +8,16 @@ include($inc . "/head.php");
 include($inc . "/header.php");
 ?>
 
-<article class="main">
-  <section>
+<header class="main__header">
+  <?php include($inc . "/main-header.php"); ?>
+</header>
+
+<div class="main__breadcrumb">
+  <?php include($inc . "/main-breadcrumb.php"); ?>
+</div>
+
+<article class="main__conts">
+  <section class="wrapper">
     <h2>音速で探しましたが、お探しのページが見つかりませんでした。</h2>
     <p>
       お客さまがお探しのページが見つかりませんでした。URLが正しく入力されているかどうか、もう一度ご確認ください。

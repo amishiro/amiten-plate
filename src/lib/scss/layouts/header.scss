@@ -1,57 +1,38 @@
 .header {
-  position: relative;
-  box-shadow: 0 2px 4px rgba(0,0,0,.5);
-  height: $bm*6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba(255,255,255,.85);
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+  height: $gap-l;
   @include tablet {
-    height: 64px;
-  }
-  &__line {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    span {
-      display: block;
-      height: 4px;
-      &:nth-child(1) {
-        float: left;
-        background-color: #009a58;
-        width: 25%;
-      }
-      &:nth-child(2) {
-        float: left;
-        background-color: #e8312c;
-        width: 25%;
-      }
-      &:nth-child(3) {
-        float: left;
-        background-color: #02428c;
-        width: 50%;
-      }
-    }
+    height: $gap-xl;
   }
   &__wrapper {
     @include wrapper;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
   }
   &__logo {
-    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    img {
-      position: relative;
-      top: 2px;
-      width: 128px;
-      height: 28px;
-      @include tablet {
-        width: 170px;
-        height: auto;
-      }
+    font-size: 1.6rem;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-decoration: none;
+      font-size: 1.6rem;
     }
+  }
+  &__gnav {
+    height: 100%;
   }
 }

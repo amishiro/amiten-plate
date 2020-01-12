@@ -1,0 +1,47 @@
+.gnav {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &__link {
+    $link: &;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 $gap-s;
+    text-decoration: none;
+    font-size: 1.4rem;
+    &:hover {
+      background-color: $color-brand;
+      color: #fff;
+      transition: all .3s;
+    }
+    @each $class in home, column, contact {
+      &.#{$class} {
+        body.#{$class} & {
+          background-color: $color-brand;
+          color: #fff;
+        }
+      }
+    }//each
+    &.contact {
+      background-color: $color-point;
+      color: $color-light;
+    }
+  }
+}
