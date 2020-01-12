@@ -1,0 +1,19 @@
+.u-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: $gap-s;
+  grid-row-gap: $gap-m;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: $gap-l;
+    grid-row-gap: $gap-l;
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-column-gap: $gap-l;
+    grid-row-gap: $gap-l;
+  }
+}
