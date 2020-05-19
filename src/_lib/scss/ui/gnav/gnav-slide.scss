@@ -1,32 +1,61 @@
 .gnav-slide {
   &__menu {
-    background-color: blue;
+    position: fixed;
+    top: $gap;
+    right: $gap;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid $color-brand;
+    border-radius: 50%;
+    background-color: $color-brand;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: $color-brand;
+    }
+    &__icon {
+      position: relative;
+      top: 0;
+      font-size: 34px;
+      line-height: 1;
+    }
+    &__text {
+      position: relative;
+      top: -7px;
+      font-size: 10px;
+      line-height: 1;
+    }
   }
   &__background {
     position: fixed;
-    z-index: 10;
-    background-color: rgba(0,0,0,.5);
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,.5);
   }
   &__wrapper {
     position: fixed;
-    z-index: 11;
-    background-color: white;
     top: 0;
     left: 0;
+    z-index: 11;
+    overflow: scroll;
+    background-color: white;
     width: 280px;
     height: 100vh;
-    overflow: scroll;
   }
 }
 
 .gnav-slide-bagckground-enter-active,
-.gnav-slide-bagckground-leave-active
-{
-  transition: opacity 0.2s ease;
+.gnav-slide-bagckground-leave-active {
+  transition: opacity .2s ease;
 }
 
 .gnav-slide-bagckground-enter,
@@ -36,13 +65,12 @@
 }
 
 .gnav-slide-wrapper-enter-active,
-.gnav-slide-wrapper-leave-active
-{
-  transition: transform 0.2s ease;
+.gnav-slide-wrapper-leave-active {
+  transition: transform .2s ease;
 }
 
 .gnav-slide-wrapper-enter,
 .gnav-slide-wrapper-leave-to {
-  transform: translateX(-100%);
   transition: all 150ms ease-in 0s;
+  transform: translateX(-100%);
 }

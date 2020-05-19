@@ -683,34 +683,76 @@ iframe {
 }
 
 .gnav-slide__menu {
-  background-color: blue;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #00529b;
+  border-radius: 50%;
+  background-color: #00529b;
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.gnav-slide__menu:hover {
+  background-color: white;
+  color: #00529b;
+}
+
+.gnav-slide__menu__icon {
+  position: relative;
+  top: 0;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.gnav-slide__menu__text {
+  position: relative;
+  top: -7px;
+  font-size: 10px;
+  line-height: 1;
 }
 
 .gnav-slide__background {
   position: fixed;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .gnav-slide__wrapper {
   position: fixed;
-  z-index: 11;
-  background-color: white;
   top: 0;
   left: 0;
+  z-index: 11;
+  overflow: scroll;
+  background-color: white;
   width: 280px;
   height: 100vh;
-  overflow: scroll;
 }
 
 .gnav-slide-bagckground-enter-active,
 .gnav-slide-bagckground-leave-active {
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
 }
 
 .gnav-slide-bagckground-enter,
@@ -722,18 +764,18 @@ iframe {
 
 .gnav-slide-wrapper-enter-active,
 .gnav-slide-wrapper-leave-active {
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
 .gnav-slide-wrapper-enter,
 .gnav-slide-wrapper-leave-to {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
   -webkit-transition: all 150ms ease-in 0s;
   transition: all 150ms ease-in 0s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .gnav {
