@@ -1,5 +1,5 @@
 // node_module
-// none
+import VScrollLock from 'v-scroll-lock'
 
 // original-css
 // none
@@ -7,9 +7,15 @@
 // export
 const menuVue = new Vue({
   el: '#app',
-  mounted () {
-    console.log('vue test')
+  data () {
+    return {
+      isSlideNavOpen: false
+    }
   }
 })
 
-export default menuVue
+const scrollLock = Vue.use(VScrollLock, {
+  reserveScrollBarGap: true,
+})
+
+export default { menuVue, scrollLock }

@@ -19,7 +19,6 @@
 }
 
 html {
-  overflow-x: hidden;
   background-color: #fff;
   font-size: 62.5%;
 }
@@ -683,10 +682,179 @@ iframe {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .gnav-slide {
+    display: none;
+  }
+}
+
+.gnav-slide__menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #00529b;
+  border-radius: 50%;
+  background-color: #00529b;
+  width: 48px;
+  height: 48px;
+  color: white;
+  cursor: pointer;
+}
+
+.gnav-slide__menu:hover {
+  background-color: white;
+  color: #00529b;
+}
+
+.gnav-slide__menu__icon {
+  position: relative;
+  top: 0;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.gnav-slide__menu__text {
+  position: relative;
+  top: -7px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.gnav-slide__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gnav-slide__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  overflow: scroll;
+  background-color: white;
+  width: 280px;
+  height: 100vh;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+}
+
+.gnav-slide__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #c8c8c8;
+  background-color: #eee;
+  height: 48px;
+  margin-top: -1px;
+}
+
+.gnav-slide__item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.gnav-slide__item:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.gnav-slide__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.gnav-slide__link:hover {
+  background-color: #00529b;
+  color: white;
+}
+
+body.home .gnav-slide__link.home {
+  background-color: #00529b;
+  color: #fff;
+}
+
+body.column .gnav-slide__link.column {
+  background-color: #00529b;
+  color: #fff;
+}
+
+body.contact .gnav-slide__link.contact {
+  background-color: #00529b;
+  color: #fff;
+}
+
+.gnav-slide-bagckground-enter-active,
+.gnav-slide-bagckground-leave-active {
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+}
+
+.gnav-slide-bagckground-enter,
+.gnav-slide-bagckground-leave-to {
+  opacity: 0;
+  -webkit-transition: all 150ms ease-in 0s;
+  transition: all 150ms ease-in 0s;
+}
+
+.gnav-slide-wrapper-enter-active,
+.gnav-slide-wrapper-leave-active {
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.gnav-slide-wrapper-enter,
+.gnav-slide-wrapper-leave-to {
+  -webkit-transition: all 150ms ease-in 0s;
+  transition: all 150ms ease-in 0s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
 .gnav {
+  display: none;
   width: 100%;
   height: 100%;
   list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .gnav {
+    display: block;
+  }
 }
 
 .gnav__wrapper {
@@ -1206,7 +1374,7 @@ img.u-img-fit {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -1214,12 +1382,12 @@ img.u-img-fit {
   background: rgba(255, 255, 255, 0.85);
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  height: 40px;
+  height: 64px;
 }
 
 @media screen and (min-width: 481px) {
   .header {
-    height: 64px;
+    position: fixed;
   }
 }
 
@@ -1286,13 +1454,7 @@ img.u-img-fit {
 }
 
 .layout__header {
-  padding-top: 40px;
-}
-
-@media screen and (min-width: 481px) {
-  .layout__header {
-    padding-top: 64px;
-  }
+  padding-top: 64px;
 }
 
 .breadcrumb {

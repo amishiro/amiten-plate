@@ -1,0 +1,36 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.colorDecorators": false,
+  "stylelint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "emmet.triggerExpansionOnTab": true,
+  "textlint.autoFixOnSave": true,
+  "ecsstractor_port.bem_nesting": true,
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "eslint.format.enable": true,
+  "html.format.endWithNewline": true,
+  "sass.format.debug": true,
+  "path-autocomplete.transformations": [],
+  "editor.tabSize": 2,
+  "cSpell.userWords": [
+    "amiten",
+    "autoplace",
+    "buefy",
+    "gitignore",
+    "nuxt",
+    "nuxtjs",
+    "stylelint",
+    "textlint"
+  ],
+  "csscomb.formatOnSave": true,
+  "csscomb.syntaxAssociations": {
+    "postcss": "scss"
+  }
+}

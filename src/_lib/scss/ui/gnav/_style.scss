@@ -1,6 +1,0 @@
-@include min-screen($width-s + 1px) {
-  @import 'gnav.scss';
-}
-@include max-screen($width-s) {
-  @import 'gnav_sp';
-}
