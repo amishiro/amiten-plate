@@ -1,4 +1,4 @@
-<div class="layout__wrapper" id="all">
+<div class="layout__wrapper" id="app">
   <header class="layout__header">
     <div class="header">
       <div class="header__wrapper">

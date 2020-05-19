@@ -1,3 +1,3 @@
-// smooth-scroll
-import smoothScroll from './js/smooth-scroll'
-smoothScroll()
+// import
+import './js/smooth-scroll'
+import './js/global-menu'
