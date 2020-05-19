@@ -34,6 +34,104 @@
             </ul>
           </nav>
 
+          <nav class="gnav-slide__menu" @click="isSlideNavOpen = !isSlideNavOpen">
+            <span>menu</span>
+            {{ isSlideNavOpen }}
+          </nav>
+
+          <transition name="gnav-slide-bagckground">
+            <div class="gnav-slide__background" v-if="isSlideNavOpen" @click="isSlideNavOpen = !isSlideNavOpen"></div>
+          </transition>
+
+          <transition name="gnav-slide-wrapper">
+            <ul class="gnav-slide__wrapper" v-if="isSlideNavOpen" v-scroll-lock="isSlideNavOpen">
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link home" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>/column" class="gnav-slide__link column" itemprop="URL">Column</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+              <li class="gnav-slide__item" itemprop="name">
+                <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
+              </li>
+            </ul>
+          </transition>
+
         </div>
       </div>
   </header>

@@ -97,6 +97,18 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARR
 
 /***/ }),
 
+/***/ "./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction e(e){return function(e){if(Array.isArray(e)){for(var t=0,o=new Array(e.length);t<e.length;t++)o[t]=e[t];return o}}(e)||function(e){if(Symbol.iterator in Object(e)||\"[object Arguments]\"===Object.prototype.toString.call(e))return Array.from(e)}(e)||function(){throw new TypeError(\"Invalid attempt to spread non-iterable instance\")}()}var t=!1;if(\"undefined\"!=typeof window){var o={get passive(){t=!0}};window.addEventListener(\"testPassive\",null,o),window.removeEventListener(\"testPassive\",null,o)}var n,i,r=\"undefined\"!=typeof window&&window.navigator&&window.navigator.platform&&/iP(ad|hone|od)/.test(window.navigator.platform),l=[],d=!1,c=-1,s=function(e){return l.some((function(t){return!(!t.options.allowTouchMove||!t.options.allowTouchMove(e))}))},a=function(e){var t=e||window.event;return!!s(t.target)||(t.touches.length>1||(t.preventDefault&&t.preventDefault(),!1))},u={enableBodyScroll:function(e){if(r){if(!e)return void console.error(\"enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.\");e.ontouchstart=null,e.ontouchmove=null,l=l.filter((function(t){return t.targetElement!==e})),d&&0===l.length&&(document.removeEventListener(\"touchmove\",a,t?{passive:!1}:void 0),d=!1)}else(l=l.filter((function(t){return t.targetElement!==e}))).length||setTimeout((function(){void 0!==i&&(document.body.style.paddingRight=i,i=void 0),void 0!==n&&(document.body.style.overflow=n,n=void 0)}))},disableBodyScroll:function(o,u){if(r){if(!o)return void console.error(\"disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.\");if(o&&!l.some((function(e){return e.targetElement===o}))){var v={targetElement:o,options:u||{}};l=[].concat(e(l),[v]),o.ontouchstart=function(e){1===e.targetTouches.length&&(c=e.targetTouches[0].clientY)},o.ontouchmove=function(e){1===e.targetTouches.length&&function(e,t){var o=e.targetTouches[0].clientY-c;!s(e.target)&&(t&&0===t.scrollTop&&o>0?a(e):function(e){return!!e&&e.scrollHeight-e.scrollTop<=e.clientHeight}(t)&&o<0?a(e):e.stopPropagation())}(e,o)},d||(document.addEventListener(\"touchmove\",a,t?{passive:!1}:void 0),d=!0)}}else{!function(e){setTimeout((function(){if(void 0===i){var t=!!e&&!0===e.reserveScrollBarGap,o=window.innerWidth-document.documentElement.clientWidth;t&&o>0&&(i=document.body.style.paddingRight,document.body.style.paddingRight=\"\".concat(o,\"px\"))}void 0===n&&(n=document.body.style.overflow,document.body.style.overflow=\"hidden\")}))}(u);var f={targetElement:o,options:u||{}};l=[].concat(e(l),[f])}},install:function(e,t){if(t){var o=t.enableBodyScroll,n=t.disableBodyScroll,i=t.bodyScrollOptions;o&&(this.enableBodyScroll=o),n&&(this.disableBodyScroll=n),i&&(this.bodyScrollOptions=i)}e.directive(\"scroll-lock\",{inserted:this.inserted.bind(this),componentUpdated:this.componentUpdated.bind(this),unbind:this.unbind.bind(this)})},inserted:function(e,t){t.value&&this.disableBodyScroll(e,this.bodyScrollOptions)},componentUpdated:function(e,t){t.value?this.disableBodyScroll(e,this.bodyScrollOptions):this.enableBodyScroll(e)},unbind:function(e){this.enableBodyScroll(e)}};\"undefined\"!=typeof window&&window.Vue&&window.Vue.use(u);/* harmony default export */ __webpack_exports__[\"default\"] = (u);\n\n\n//# sourceURL=webpack:///./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js?");
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -128,7 +140,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// node_module\n// none\n// original-css\n// none\n// export\nvar menuVue = new Vue({\n  el: '#app',\n  mounted: function mounted() {\n    console.log('vue test');\n  }\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (menuVue);\n\n//# sourceURL=webpack:///./src/_lib/js/global-menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nvar menuVue = new Vue({\n  el: '#app',\n  data: function data() {\n    return {\n      isSlideNavOpen: false\n    };\n  },\n  mounted: function mounted() {\n    console.log('vue test');\n  }\n});\nvar scrollLock = Vue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menuVue: menuVue,\n  scrollLock: scrollLock\n});\n\n//# sourceURL=webpack:///./src/_lib/js/global-menu.js?");
 
 /***/ }),
 

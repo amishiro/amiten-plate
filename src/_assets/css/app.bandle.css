@@ -19,7 +19,6 @@
 }
 
 html {
-  overflow-x: hidden;
   background-color: #fff;
   font-size: 62.5%;
 }
@@ -681,6 +680,60 @@ iframe {
   .container {
     margin-bottom: 64px;
   }
+}
+
+.gnav-slide__menu {
+  background-color: blue;
+}
+
+.gnav-slide__background {
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.gnav-slide__wrapper {
+  position: fixed;
+  z-index: 11;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.gnav-slide-bagckground-enter-active,
+.gnav-slide-bagckground-leave-active {
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.gnav-slide-bagckground-enter,
+.gnav-slide-bagckground-leave-to {
+  opacity: 0;
+  -webkit-transition: all 150ms ease-in 0s;
+  transition: all 150ms ease-in 0s;
+}
+
+.gnav-slide-wrapper-enter-active,
+.gnav-slide-wrapper-leave-active {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.gnav-slide-wrapper-enter,
+.gnav-slide-wrapper-leave-to {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 150ms ease-in 0s;
+  transition: all 150ms ease-in 0s;
 }
 
 .gnav {
