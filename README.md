@@ -1,11 +1,13 @@
 ### QUICK START
 
 ```
-$ npm i
+npm i
 ```
+
 &
+
 ```
-$ npm run dev
+npm run dev
 ```
 
 ### 動作確認ずみバージョン
@@ -13,27 +15,29 @@ $ npm run dev
 ```
 $ node -v
 ↓
-v12.13.1
+v14.2.0
 ```
+
 ```
 $ npm -v
 ↓
-6.12.1
+6.14.4
 ```
+
 ```
 $ php -v
 ↓
-PHP 7.1.23
+PHP 7.3.11
 ```
 
 ---
 
 ### テストアドレス
 
-https://
+<https://>
 
 id:  / Pass:
 
 ### 本番アドレス
 
-https://
+<https://>
