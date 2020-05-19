@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  globals: { "_": true },
+  globals: { Vue: true },
   extends: [
     'standard'
   ],
@@ -13,6 +13,6 @@ module.exports = {
     // ↓末尾のセミコロンを許容する。
     'comma-dangle': ['error', 'only-multiline'],
     // ↓空白行に対してwarnのみ出るようにする。
-    'no-multiple-empty-lines': ['warn', {max: 1}]
+    'no-multiple-empty-lines': ['warn', { max: 1 }]
   }
 }
