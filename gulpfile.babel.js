@@ -81,7 +81,7 @@ const reload = (done) => {
 
 // scss
 export const css = () => {
-  return gulp.src(['./src/lib/*.scss'])
+  return gulp.src(['./src/_lib/*.scss'])
     .pipe(sassGlob({
       ignorePaths: [
         '**/_*.scss'
@@ -92,17 +92,17 @@ export const css = () => {
       autoprefixer({ grid: 'autoplace' }),
     ]))
     .pipe(rename({ suffix: '.bandle' }))
-    .pipe(gulp.dest('./src/assets/css'))
+    .pipe(gulp.dest('./src/_assets/css'))
 }
 
 // js
 export const js = () => {
-  return gulp.src('./src/lib/app.js')
+  return gulp.src('./src/_lib/app.js')
     .pipe(
       webpackStream({
         mode: 'development',
         entry: {
-          app: './src/lib/app.js'
+          app: './src/_lib/app.js'
         },
         output: {
           filename: '[name].bandle.js'
@@ -120,7 +120,7 @@ export const js = () => {
         },
       }, webpack)
     )
-    .pipe(gulp.dest('./src/assets/js'))
+    .pipe(gulp.dest('./src/_assets/js'))
 }
 
 // watch
@@ -136,7 +136,7 @@ const delFn = () => {
   return del(['./dist/'])
 }
 const distFn = () => {
-  return gulp.src(['./src/**/*', '!./src/lib/**'])
+  return gulp.src(['./src/**/*', '!./src/_lib/**'])
     .pipe(gulp.dest('./dist/'))
 }
 const cleanCssFn = () => {

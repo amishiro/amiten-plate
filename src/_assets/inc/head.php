@@ -29,7 +29,7 @@
 
   <!-- font -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmp.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmp.min.css" crossorigin="anonymous" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 
   <!-- css -->
@@ -42,6 +42,15 @@
   <link href="<?php echo $img . "/icons" ?>/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
   <link href="<?php echo $img . "/icons" ?>/favicon-48.png" rel="icon" type="image/png" sizes="48x48">
   <link href="<?php echo $img . "/icons" ?>/favicon-62.png" rel="icon" type="image/png" sizes="62x62">
+
+<!-- cdn -->
+<?php if ($severName === 'localhost' || $severName === '127.0.0.1') { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+<?php } else { ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<?php }; ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+<script>objectFitImages();</script>
 
 </head>
 
