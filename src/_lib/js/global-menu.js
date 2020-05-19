@@ -11,9 +11,6 @@ const menuVue = new Vue({
     return {
       isSlideNavOpen: false
     }
-  },
-  mounted () {
-    console.log('vue test')
   }
 })
 

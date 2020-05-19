@@ -2,10 +2,7 @@
   &__wrapper {
   }
   &__header {
-    padding-top: $gap-l;
-    @include tablet {
-      padding-top: $gap-xl;
-    }
+    padding-top: $gap-xl;
   }
   &__main {
   }
