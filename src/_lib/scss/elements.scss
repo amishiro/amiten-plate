@@ -21,10 +21,16 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 1em;
   margin-bottom: .3em;
   color: $black;
   font-weight: normal;
   font-feature-settings: 'palt';
+  line-height: 1.4;
+  @include tablet {
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+  }
 }
 
 h1 {
@@ -37,14 +43,14 @@ h1 {
 h2 {
   font-size: 2.6rem;
   @include desktop {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 }
 
 h3 {
   font-size: 2rem;
   @include desktop {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -63,14 +69,25 @@ a {
   font-weight: bold;
 }
 
+b,
+strong {
+  color: $color-dark-darken;
+}
+
 ::selection {
   background-color: $color-point-lighten;
 }
 
 small {
-  color: $color-dark-lighten;
-  font-size: 1.1rem;
-  font-feature-settings: 'palt';
+  @include font-small;
+  position: relative;
+  display: block;
+  margin-bottom: .5em;
+  &:before {
+    position: absolute;
+    left: -1em;
+    content: '※';
+  }
 }
 
 blockquote {
@@ -182,4 +199,8 @@ figure {
 
 iframe {
   border: none;
+}
+
+address {
+  font-style: normal;
 }

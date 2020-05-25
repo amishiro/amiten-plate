@@ -1,0 +1,6 @@
+.u-small {
+  @include font-small;
+  &.is-light {
+    color: white;
+  }
+}

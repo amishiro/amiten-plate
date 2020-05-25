@@ -32,11 +32,13 @@ $color-light-lighten: lighten($color-light, 5%);
 $color-brand: #d28f97;
 $color-brand-darken: darken($color-brand, 15%);
 $color-brand-lighten: lighten($color-brand, 15%);
+$color-brand-lightness: lighten($color-brand, 40%);
 
 //ポイントカラー
-$color-point: #3c5880;
+$color-point: #ffc759;
 $color-point-darken: darken($color-point, 15%);
 $color-point-lighten: lighten($color-point, 15%);
+$color-point-lightness: lighten($color-point, 40%);
 
 //その他
 $color-etc: #3b5998;

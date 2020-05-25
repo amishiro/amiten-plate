@@ -16,7 +16,7 @@ include($inc . "/header.php");
   <?php include($inc . "/main-breadcrumb.php"); ?>
 </div>
 
-<article class="main__conts">
+<article class="main__content">
   <section class="wrapper">
     <h2>音速で探しましたが、お探しのページが見つかりませんでした。</h2>
     <p>

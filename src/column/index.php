@@ -16,8 +16,8 @@ include($inc . "/header.php");
   <?php include($inc . "/main-breadcrumb.php"); ?>
 </div>
 
-<article class="main__conts">
-  <section class="container wrapper">
+<article class="main__content">
+  <section class="main__section">
     <a href="" class="u-button">test</a>
     <hr>
     <div class="u-buttons">
@@ -43,11 +43,10 @@ include($inc . "/header.php");
       <a href="" class="u-button">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</a>
     </div>
   </section>
-  <section class="container wrapper">
+
+  <section class="main__section">
     <h2>u-column日本語</h2>
     <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-
-
     <div class="u-grid">
       <div class="u-grid__item">
         <figure>
@@ -67,7 +66,8 @@ include($inc . "/header.php");
     </div>
 
   </section>
-  <section class="container wrapper">
+
+  <section class="main__section">
 
     <div class="u-column3">
       <div class="u-column__wrapper">
@@ -113,15 +113,7 @@ include($inc . "/header.php");
       </div>
     </div>
   </section>
-  <section class="container wrapper">
-    <h2>h2.heading</h2>
-    <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-    <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-  </section>
-  <section class="container wrapper">
-    <h2>h2.heading</h2>
-    <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-  </section>
+
 </article>
 
 <?php

@@ -1,13 +1,18 @@
 .main-header {
   background-color: $color-light;
-  padding: $gap-l 0;
+  padding: $gap-m 0;
+  @include tablet {
+    height: 130px;
+    padding: 0 0;
+  }
   &__wrapper {
     @include wrapper;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
   }
-  h1 {
-    margin-bottom: 0;
+  &__title {
+    margin: 0;
   }
 }

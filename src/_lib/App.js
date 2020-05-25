@@ -1,3 +1,3 @@
 // import
-import './js/smooth-scroll'
-import './js/global-menu'
+import './js/vue-scrollto.js'
+import './js/global-menu.js'

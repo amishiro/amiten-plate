@@ -11,8 +11,8 @@ compile: false
 テーブル
 
 ```html
-<table class="table">
-  <caption class='u-ttl_m'>テーブルサンプル</caption>
+<table class="u-table has-data-label">
+  <caption>テーブルサンプル</caption>
   <colgroup>
     <col span="1" style="width:30%;">
     <col span="3" style="width:20%;">
@@ -54,40 +54,11 @@ compile: false
 ```
 */
 
-.table {
+.u-table {
   border-collapse: collapse;
   width: 100%;
   font-feature-settings: 'palt';
-  @include min-screen($width-s + 1px) {
-    tr,
-    td,
-    th {
-      box-sizing: border-box;
-      border: 1px solid $color-light-darken;
-      padding: $gap;
-      vertical-align: middle;
-      text-align: left;
-      line-height: 1.2;
-    }
-    thead {
-      tr {
-      }
-    }
-    tfoot {
-      tr {
-      }
-    }
-    tbody {
-      tr {
-        &:nth-child(2n + 1) {
-          background-color: $color-light;
-        }
-      }
-      td {
-      }
-    }
-  }
-  @include max-screen($width-s) {
+  @include mobile {
     thead,
     tfoot {
       display: none;
@@ -101,32 +72,75 @@ compile: false
       border-top: 1px solid $color-light;
       margin-bottom: $gap-m;
     }
+    th {
+      box-sizing: border-box;
+      background-color: $color-light-darken;
+      padding: $gap;
+      color: $color-dark;
+      font-weight: bold;
+      line-height: 1;
+    }
     td {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid $color-light;
-      padding: $gap 0;
-      &::before {
-        $flex-w: 100px;
-        flex: 0 0 $flex-w;
-        border-radius: 2px;
-        background-color: $color-light;
-        max-width: $flex-w;
-        margin-right: $gap;
-        padding: $gap;
-        content: attr(data-label);
-        font-weight: bold;
-        font-size: 1.4rem;
+      border: 1px solid $color-light-darken;
+      margin-top: -1px;
+      padding: $gap;
+    }
+  }
+  @include tablet {
+    tr,
+    td,
+    th {
+      box-sizing: border-box;
+      border: 1px solid $color-light-darken;
+      padding: $gap-m;
+      vertical-align: middle;
+      text-align: left;
+      line-height: 1.4;
+    }
+    thead {
+      tr {
+        background-color: $color-brand;
+        color: white;
+      }
+    }
+    tfoot {
+      tr {
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(2n + 2) {
+          background-color: $color-light;
+        }
+      }
+      th {
+      }
+      td {
       }
     }
   }
+  &.has-data-label {
+    @include mobile {
+      td {
+        display: flex;
+        align-items: flex-start;
+        padding: $gap-m;
+        &::before {
+          $flex-w: 80px;
+          flex: 0 0 $flex-w;
+          max-width: $flex-w;
+          margin-right: $gap-m;
+          content: attr(data-label);
+          font-weight: bold;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
   caption {
     margin-bottom: $gap;
     text-align: left;
     font-weight: bold;
-    &::before {
-      @include icon-font('\f0ce');
-      margin-right: $gap/2;
-    }
   }
 }

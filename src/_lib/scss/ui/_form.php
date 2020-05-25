@@ -1,5 +1,5 @@
 
-<section class="conts__item" id="forms">
+<section class="main__section" id="forms">
   <header><h1>Form elements（フォーム要素）</h1></header>
   <ul>
     <li><a href="#forms__input">Input fields（入力）</a></li>

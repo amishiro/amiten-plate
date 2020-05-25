@@ -36,7 +36,7 @@
       color: #fff;
       transition: all .3s;
     }
-    @each $class in home, column, contact {
+    @each $class in home, column, ui, contact, element {
       &.#{$class} {
         body.#{$class} & {
           background-color: $color-brand;

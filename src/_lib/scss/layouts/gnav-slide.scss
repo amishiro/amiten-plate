@@ -88,7 +88,7 @@
         }
       }
     }
-    @each $class in home, column, {
+    @each $class in home, column, element, ui {
       &.#{$class} {
         body.#{$class} & {
           background-color: $color-brand;
