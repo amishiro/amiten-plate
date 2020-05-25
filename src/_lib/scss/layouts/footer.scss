@@ -2,38 +2,59 @@
   position: relative;
   background-color: #fff;
   &__nav {
-    @include wrapper;
   }
   &__adr {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: $color-brand;
-    padding: $gap-m;
+    padding: $gap-m 0;
     color: $white;
+  }
+  &__copyright {
+    font-style: normal;
+    font-size: 1.2rem;
+    &-mark {
+      position: relative;
+      top: 3px;
+      font-size: 2rem;
+      line-height: 1;
+    }
   }
 }
 
 .fnav {
-  margin: 0;
-  margin-bottom: $gap;
-  padding: 0;
-  list-style: none;
-  @include tablet {
-    display: flex;
-    align-items: center;
+  &__wrapper {
+    @include wrapper;
+    margin-bottom: $gap;
+    list-style: none;
+    @include tablet {
+      margin-bottom: $gap-m;
+    }
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__item {
-    @include mobile {
-      &:not(:first-child) {
-        margin-top: $gap;
+    padding: 0;
+    @include desktop {
+      display: flex;
+      align-items: center;
+      &::after {
+        display: inline-block;
+        background-color: $color-light-darken;
+        width: 1px;
+        height: 20px;
+        margin: 0 $gap;
+        content: ' ';
       }
-    }
-    @include tablet {
-      $flex-w: 33.333%;
-      flex: 0 0 $flex-w;
-      max-width: $flex-w;
-      padding: $gap;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
   &__link {
@@ -42,31 +63,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid $color-brand;
+    border-bottom: 1px solid white;
+    background-color: $color-light;
     height: 40px;
     text-decoration: none;
     color: $color-brand;
-    font-weight: bold;
-    font-size: 1.4rem;
-    font-feature-settings: 'palt';
-    i {
-      position: absolute;
-      right: $gap;
+    font-size: 1.2rem;
+    line-height: 1;
+    @include desktop {
+      background: none;
+      height: auto;
+      padding: $gap;
     }
-    &.home,
     &:hover {
       background-color: $color-brand;
       color: $white;
     }
+    &[target='_blank'] {
+      &:after {
+        @include material-icons;
+        margin-left: $gap/2;
+        content: 'open_in_new';
+        font-size: 1.6rem;
+      }
+    }
+    @each $class in faq, policy {
+      &.#{$class} {
+        body.#{$class} & {
+          background-color: $color-brand;
+          color: $white;
+        }
+      }
+    }//each
   }
-}
-
-.footadr__copyright {
-  font-size: 1.4rem;
-}
-
-.footadr__mark {
-  position: relative;
-  top: 2px;
-  font-size: 1.8rem;
 }
