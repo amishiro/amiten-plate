@@ -9,9 +9,15 @@ const menuVue = new Vue({
   el: '#app',
   data () {
     return {
-      isSlideNavOpen: false
+      isSlideNavOpen: false,
+      isSlideNavActive: false
     }
-  }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.isSlideNavActive = true
+    }, 500)
+  },
 })
 
 const scrollLock = Vue.use(VScrollLock, {

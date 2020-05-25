@@ -49,3 +49,61 @@
 .wrapper {
   @include wrapper;
 }
+
+// material-icons
+@mixin material-icons {
+  display: inline-block;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  font-family: 'Material Icons';
+  font-feature-settings: 'liga'; /* Support for IE. */
+  letter-spacing: normal;
+  line-height: 1;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+// first-child-headding
+@mixin first-child-heading {
+  h2,
+  h3,
+  h4,
+  h5 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// small font
+@mixin font-small {
+  margin-left: 1em;
+  color: $color-dark-lighten;
+  font-size: 1.1rem;
+}
+
+// img
+@mixin img-fit {
+  width: 100%;
+  height: 100%;
+  font-family: 'object-fit: cover;'; // IE11
+  object-fit: cover;
+}
+
+// IE10+（Edgeも全て含む）ハック
+@mixin ie {
+  _:-ms-lang(x),
+  :root & {
+    @content;
+  }
+}

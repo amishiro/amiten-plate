@@ -1,0 +1,170 @@
+.gnav-slide {
+  visibility: hidden;
+  &.is-active {
+    visibility: visible;
+  }
+  &__background {
+    position: fixed;
+    top: $gap-xl;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,.5);
+  }
+  &__wrapper {
+    box-sizing: border-box;
+    position: fixed;
+    top: $gap-xl;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    overflow-y: auto;
+    background-color: $color-brand;
+    width: 280px;
+  }
+  &__inner {
+    width: 100%;
+    margin: 0;
+    padding: $gap;
+    list-style: none;
+  }
+  &__item {
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: $color-light;
+    height: 48px;
+    margin-top: -1px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 $gap;
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: all .3s;
+    &::before {
+      @include material-icons;
+      content: 'arrow_right';
+    }
+    &:hover {
+      background-color: $color-brand;
+      color: white;
+    }
+    &.ig {
+      font-feature-settings: 'palt';
+    }
+    &.acceptance {
+      &::before {
+        margin-right: $gap/2;
+        margin-left: $gap/2;
+        content: 'headset_mic';
+      }
+      body.acceptance &,
+      &:hover {
+        background-color: $color-brand;
+        color: white;
+        &::before {
+          color: white;
+        }
+      }
+    }
+    &.contact {
+      color: $color-point;
+      &::before {
+        margin-right: $gap/2;
+        margin-left: $gap/2;
+        content: 'mail';
+      }
+      body.contact &,
+      &:hover {
+        background-color: $color-point;
+        color: white;
+        &::before {
+          color: white;
+        }
+      }
+    }
+    @each $class in home, column, {
+      &.#{$class} {
+        body.#{$class} & {
+          background-color: $color-brand;
+          color: white;
+          &::before {
+            color: $color-point;
+          }
+        }
+      }
+    }//each
+  }
+}
+
+.gnav-slide-sub {
+  margin: 0;
+  padding: 0 $gap;
+  &__item {
+    height: 24px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: all .3s;
+    &::before {
+      @include material-icons;
+      content: 'arrow_right';
+    }
+    &:hover {
+      color: $color-brand-lighten;
+    }
+    &[target='_blank'] {
+      &::after {
+        @include material-icons;
+        margin-left: $gap/2;
+        content: 'open_in_new';
+        font-size: 1.6rem;
+      }
+    }
+    @each $class in faq, policy {
+      &.#{$class} {
+        body.#{$class} & {
+          color: $color-point;
+          &::before {
+            color: $color-point;
+          }
+        }
+      }
+    }//each
+  }
+}
+
+.gnav-slide-bagckground-enter-active,
+.gnav-slide-bagckground-leave-active {
+  transition: opacity .2s ease;
+}
+
+.gnav-slide-bagckground-enter,
+.gnav-slide-bagckground-leave-to {
+  opacity: 0;
+  transition: all 150ms ease-in 0s;
+}
+
+.gnav-slide-wrapper-enter-active,
+.gnav-slide-wrapper-leave-active {
+  opacity: 1;
+  transition: transform .2s ease;
+}
+
+.gnav-slide-wrapper-enter,
+.gnav-slide-wrapper-leave-to {
+  transition: all 150ms ease-in 0s;
+  transform: translateX(100%);
+}

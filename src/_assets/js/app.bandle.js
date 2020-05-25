@@ -140,7 +140,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nvar menuVue = new Vue({\n  el: '#app',\n  data: function data() {\n    return {\n      isSlideNavOpen: false\n    };\n  }\n});\nvar scrollLock = Vue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menuVue: menuVue,\n  scrollLock: scrollLock\n});\n\n//# sourceURL=webpack:///./src/_lib/js/global-menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nvar menuVue = new Vue({\n  el: '#app',\n  data: function data() {\n    return {\n      isSlideNavOpen: false,\n      isSlideNavActive: false\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    setTimeout(function () {\n      _this.isSlideNavActive = true;\n    }, 500);\n  }\n});\nvar scrollLock = Vue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menuVue: menuVue,\n  scrollLock: scrollLock\n});\n\n//# sourceURL=webpack:///./src/_lib/js/global-menu.js?");
 
 /***/ }),
 
