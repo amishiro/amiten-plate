@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="ja">
+
 <head>
   <!-- base -->
   <meta charset="utf-8">
@@ -18,8 +19,8 @@
   <meta property="og:title" content="<?php $meta->title() ?>">
   <meta property="og:description" content="<?php $meta->desc() ?>">
   <?php if ($meta->ogpImg()) { ?>
-    <meta property="og:image" content="<?php echo $img . '/opg/' . $meta->ogpImg() ?>">
-    <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="<?php echo $img . '/opg/' . $meta->ogpImg() ?>">
+  <meta name="twitter:card" content="summary_large_image">
   <?php } ?>
   <!--
   <meta name="twitter:site" content="@Twitter" >
@@ -31,6 +32,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmp.min.css" crossorigin="anonymous" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- css -->
   <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
@@ -50,8 +52,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
   <?php }; ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
-  <script>objectFitImages();</script>
 
-  </head>
+</head>
 
 <body class="layout <?php $bodyClass->output(); ?>">

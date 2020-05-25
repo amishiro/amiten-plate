@@ -1,8 +1,11 @@
-
 // font
 @mixin gothic {
+  @include ie {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
   font-family: sans-serif;
 }
+
 @mixin mincho() {
   font-family: 'YakuHanMP', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
 }

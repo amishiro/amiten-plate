@@ -1,12 +1,11 @@
 html {
-  background-color: #fff;
+  background-color: $color-brand;
   font-size: 62.5%; //remベースサイズ設定 1.6rem = 16px
 }
 
 body {
   @include gothic;
-  overflow-x: hidden;
-  color: $color-dark-lighten;
+  color: $color-dark;
   font-size: 1.4rem; // 1.4rem = 14px
   @include tablet {
     font-size: 1.6rem; // 1.6rem = 16px
