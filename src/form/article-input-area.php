@@ -118,7 +118,7 @@
             </label>
           </th>
           <td>
-            <formulate-input id="form-contents" type="textarea" name="contents" error-behavior="live" validation="required|max:250,length" :help="`最大文字数は250文字[ ${form.contents.length}/250 ]`" :validation-messages="{
+            <formulate-input id="form-contents" type="textarea" name="contents" validation="required|max:250,length" :help="`最大文字数は250文字[ ${form.contents.length}/250 ]`" :validation-messages="{
               required: 'お問い合わせ内容をご記入ください',
               max: '250文字以内でご記入ください'
             }">
