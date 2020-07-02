@@ -2,11 +2,9 @@
 
 # EditorConfigは、異なるエディタ・IDE間でも一貫したコーディングスタイルを定義、維持するツールです。
 # 各種エディタに以下をインストールしてください。
-
-# atom：$apm install editorconfig (コアパッケージのWhitespaceとコンフリクトを起こすため、WhitespaceはDISABLE推奨)
-# Sublime Text：Cmd+Shift+P -> EditorConfigインストール
-# Brackets：拡張機能マネージャー -> EditorConfigインストール
-
+# - VScode: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+# - atom: https://atom.io/packages/editorconfig
+# - Sublime: https://packagecontrol.io/packages/EditorConfig
 
 # ------------ 設定 ------------#
 
