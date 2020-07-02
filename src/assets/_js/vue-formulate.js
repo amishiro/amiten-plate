@@ -17,8 +17,12 @@ export const formSampleMixin = {
       sending: false,
       form: {
         name: '',
-        mail: '',
+        nameKana: '',
+        postalCode: '',
+        addressLevel: '',
+        addressLine: '',
         tel: '',
+        mail: '',
         kind: '',
         contents: '',
         policy: ''

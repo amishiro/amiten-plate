@@ -28,7 +28,7 @@ include($inc . "/header.php");
           <p><span class="require-icon">必須</span>項目は、必ずご入力ください。</p>
           <table>
             <colgroup>
-              <col span="1" style="width: 200px;">
+              <col span="1" style="width: 220px;">
               <col span="1" style="width: auto;">
             </colgroup>
             <tbody>
@@ -39,17 +39,34 @@ include($inc . "/header.php");
                   </label>
                 </th>
                 <td>
-                  <formulate-input id="form-name" type="text" name="name" placeholder="例：網展 太郎" validation="required"></formulate-input>
+                  <formulate-input id="form-name" type="text" name="name" autocomplete="name" placeholder="例：網展 太郎" validation="required"></formulate-input>
                 </td>
               </tr>
               <tr>
                 <th>
-                  <label for="form-mail">
-                    <span class="require-icon">必須</span>Eメール
+                  <label for="form-name-kana">
+                    <span class="require-icon">必須</span>フリガナ
                   </label>
                 </th>
                 <td>
-                  <formulate-input id="form-mail" type="email" name="mail" placeholder="例：info@amiten.co.jp" validation="required|email"></formulate-input>
+                  <formulate-input id="form-name-kana" type="text" name="nameKana" placeholder="例：アミテン　タロウ" help="全角カタカナでご記入ください" validation="required|matches:/^[ア-ン゛゜ァ-ォャ-ョー「」、\s　]+$/" :validation-messages="{
+                    matches: 'Please pick your favorite food'
+                    }">
+                  </formulate-input>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label>
+                    <span class="require-icon">必須</span>ご住所
+                  </label>
+                </th>
+                <td>
+                  <formulate-input type="text" name="postalCode" label="郵便番号" autocomplete="postal-code" placeholder="例：100-8111" help="半角数字でご記入ください" validation="required|matches:/^\d{3}-?\d{4}$/" :validation-messages="{
+                    matches: '正しい郵便番号を入力してください'
+                  }"></formulate-input>
+                  <formulate-input type="text" name="addressLevel" label="都道府県、市区町村（海外の方は、国名よりご入力ください）" autocomplete="address-level1 address-level2" placeholder="例：東京都千代田区" validation="required"></formulate-input>
+                  <formulate-input type="text" name="addressLine" label="それ以降の住所（番地など）" autocomplete="address-line1 address-line2" placeholder="例：千代田1-1"></formulate-input>
                 </td>
               </tr>
               <tr>
@@ -59,7 +76,27 @@ include($inc . "/header.php");
                   </label>
                 </th>
                 <td>
-                  <formulate-input id="form-tel" type="tel" name="tel" help="半角数字でご記入ください" placeholder="例：000-0000-0000"></formulate-input>
+                  <formulate-input id="form-tel" type="tel" name="tel" autocomplete="tel" help="半角数字でご記入ください" placeholder="例：000-0000-0000" validation="required|matches:/^[0-9\-]+$/"></formulate-input>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="form-mail">
+                    <span class="require-icon">必須</span>メールアドレス
+                  </label>
+                </th>
+                <td>
+                  <formulate-input id="form-mail" type="email" name="mail" autocomplete="email" placeholder="例：info@amiten.co.jp" validation="required|email"></formulate-input>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="form-mail-confirm">
+                    <span class="require-icon">必須</span>メールアドレス（確認）
+                  </label>
+                </th>
+                <td>
+                  <formulate-input id="form-mail-confirm" help="確認のため、もう1度ご記入ください" type="email" name="mail-confirm" autocomplete="email" placeholder="例：info@amiten.co.jp" validation="required|confirm:mail"></formulate-input>
                 </td>
               </tr>
               <tr>
