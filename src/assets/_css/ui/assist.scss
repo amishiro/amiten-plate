@@ -5,8 +5,12 @@
   margin-bottom: $gap;
   background-color: $color-light;
   @include tablet {
-    padding: $gap-l;
+    padding: $gap-m;
     margin-bottom: $gap-s;
+  }
+
+  @include desktop {
+    padding: $gap-l;
   }
 
   &__inner {

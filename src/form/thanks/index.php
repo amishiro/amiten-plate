@@ -9,10 +9,6 @@ include($inc . "/header.php");
 ?>
 
 <div class="main">
-  <header class="main__header">
-    <?php include($inc . "/main-header.php"); ?>
-  </header>
-
   <nav class="main__breadcrumb">
     <?php
       $breadcrumbAry = array(
@@ -34,7 +30,7 @@ include($inc . "/header.php");
       </div>
       <div class="u-assist">
         <h3>数日たっても、担当者からの連絡がない場合</h3>
-        <p>万一ご連絡が遅れている場合は、受付が完了していない可能性がございますので、お手数ですが<a href="form/">こちら</a>より、再度、お問い合わせをお願いいたします。</p>
+        <p>万一ご連絡が遅れている場合は、受付が完了していない可能性がございますので、お手数ですが<a href="<?php echo $url; ?>/form">こちら</a>より、再度、お問い合わせをお願いいたします。</p>
       </div>
     </section>
   </div>
