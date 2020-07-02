@@ -6,7 +6,7 @@
         <div class="header__logo">
           <div class="logo" itemscope itemtype="http://schema.org/Organization">
             <a itemprop="url" href="<?php echo $url; ?>">
-              AmiTemplate-Simple
+              amitemplate
               <!-- <img itemprop="logo" src="<?php echo $img; ?>/logo.png" /> -->
             </a>
           </div>

@@ -52,6 +52,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
   <?php }; ?>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015"></script>
 
 </head>
 
