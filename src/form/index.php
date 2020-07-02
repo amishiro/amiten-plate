@@ -19,13 +19,17 @@ include($inc . "/header.php");
 
   <div class="main__content">
     <section class="main__section">
-      <h2>世界一お問い合わせしやすいフォームをめざして。</h2>
-      <a href="https://vueformulate.com/" target="_blank" rel="noopener">vue-formulate</a>を利用したフォーム。
+      <h2>一般的なフォーム</h2>
+      <p>バリデーションには<a href="https://vueformulate.com/" target="_blank" rel="noopener">vue-formulate</a>を利用。</p>
 
       <article>
         <formulate-form v-model="form" name="contact" @submit="handleTrigger">
-          <!-- <input type="hidden" name="form-name" value="contact"> -->
-          <p><span class="require-icon">必須</span>項目は、必ずご入力ください。</p>
+          <div class="u-assist is-outline">
+            <ul>
+              <li>営業時間外のお問い合わせについては、翌営業日より順次対応させていただきます。あらかじめご了承の程お願いいたします。</li>
+              <li><span class="require-icon">必須</span>項目は、必ずご記入ください。</li>
+            </ul>
+          </div>
           <table class="form-table">
             <colgroup>
               <col span="1" style="width: 220px;">
@@ -70,7 +74,7 @@ include($inc . "/header.php");
                     required: '郵便番号をご記入ください',
                     matches: '正しい郵便番号を半角数字でご記入ください'
                   }"></formulate-input>
-                  <formulate-input id="addressLevel" type="text" name="addressLevel" label="都道府県、市区町村（海外の方は、国名よりご入力ください）" autocomplete="address-level1 address-level2" placeholder="例：東京都千代田区" validation="required" 　:validation-messages="{
+                  <formulate-input id="addressLevel" type="text" name="addressLevel" label="都道府県、市区町村（海外の方は、国名よりご記入ください）" autocomplete="address-level1 address-level2" placeholder="例：東京都千代田区" validation="required" 　:validation-messages="{
                     required: '都道府県、市区町村をご記入ください'
                     }">></formulate-input>
                   <formulate-input id="addressLine" type="text" name="addressLine" label="それ以降の住所（番地など）" autocomplete="address-line1 address-line2" placeholder="例：千代田1-1"></formulate-input>
@@ -138,8 +142,9 @@ include($inc . "/header.php");
                   </label>
                 </th>
                 <td>
-                  <formulate-input id="form-contents" type="textarea" name="contents" validation="required|max:250,length" :help="`最大入力文字数は250文字[ ${form.contents.length}/250 ]`" :validation-messages="{
-                      required: 'お問い合わせ内容をご記入ください'
+                  <formulate-input id="form-contents" type="textarea" name="contents" error-behavior="live" validation="required|max:250,length" :help="`最大文字数は250文字[ ${form.contents.length}/250 ]`" :validation-messages="{
+                      required: 'お問い合わせ内容をご記入ください',
+                      max: '250文字以内でご記入ください'
                     }">></formulate-input>
                 </td>
             </tbody>
@@ -162,9 +167,9 @@ include($inc . "/header.php");
 
           <div class="u-buttons">
             <button class="u-button is-primary" type="submit">
-              入力内容を確認する
+              記入内容を確認する
             </button>
-            <button class="u-button is-cancel" type="reset" @click="handleReset()">
+            <button class="u-button is-reset" type="reset" @click="handleReset()">
               内容を削除する
             </button>
           </div>
@@ -177,8 +182,8 @@ include($inc . "/header.php");
           <div class="check-area__field">
             <div v-scroll-lock="inputFinished" class="check-area__field-inner">
               <header>
-                <h3>入力内容の確認</h3>
-                <p>ご入力内容をご確認の上、「送信する」ボタンを押してください。</p>
+                <h3>記入内容の確認</h3>
+                <p>ご記入内容をご確認の上、「送信する」ボタンを押してください。</p>
               </header>
               <dl>
                 <dt>お名前</dt>
@@ -209,10 +214,10 @@ include($inc . "/header.php");
                 <dd>{{ form.contents }}</dd>
               </dl>
               <div class="u-buttons" v-if="!sending">
-                <button class="u-button is-primary is-send" @click="handleSubmit">
+                <button class="u-button is-send" @click="handleSubmit">
                   送信する
                 </button>
-                <button class="u-button is-cancel is-reply" @click="replySubmit">
+                <button class="u-button is-reply" @click="replySubmit">
                   修正する
                 </button>
               </div>

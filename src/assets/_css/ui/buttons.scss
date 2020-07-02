@@ -99,16 +99,33 @@
     }
   }
 
-  // for form
-  &.is-reset {
+  // form
+  &.is-cancel {
     padding-left: 30px;
     color: $color-light-darken;
     background-color: white;
-    border-color: $color-light-darken;
+    border-color: $color-light;
 
     &::before {
       left: $gap;
       content: 'remove_circle_outline';
+    }
+
+    &:hover {
+      color: $color-brand;
+      border-color: $color-brand;
+    }
+  }
+
+  &.is-reply {
+    padding-left: 30px;
+    color: $color-light-darken;
+    background-color: white;
+    border-color: $color-light;
+
+    &::before {
+      left: $gap;
+      content: 'reply';
     }
 
     &:hover {
@@ -130,23 +147,6 @@
     &:hover {
       color: $color-point;
       background-color: white;
-    }
-  }
-
-  &.is-reply {
-    padding-left: 30px;
-    color: $color-light-darken;
-    background-color: white;
-    border-color: $color-light;
-
-    &::before {
-      left: $gap;
-      content: 'reply';
-    }
-
-    &:hover {
-      color: $color-brand;
-      border-color: $color-brand;
     }
   }
 }
