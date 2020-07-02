@@ -102,7 +102,7 @@
   // form
   &.is-cancel {
     padding-left: 30px;
-    color: $color-light-darken;
+    color: $color-dark-lighten;
     background-color: white;
     border-color: $color-light;
 
@@ -118,10 +118,11 @@
   }
 
   &.is-reply {
+    padding-right: 30px;
     padding-left: 30px;
-    color: $color-light-darken;
+    color: $color-dark-lighten;
     background-color: white;
-    border-color: $color-light;
+    border-color: $color-light-darken;
 
     &::before {
       left: $gap;
@@ -135,18 +136,12 @@
   }
 
   &.is-send {
+    padding-right: 30px;
     padding-left: 30px;
-    background-color: $color-point;
-    border-color: $color-point;
 
     &::before {
       left: $gap;
       content: 'send';
-    }
-
-    &:hover {
-      color: $color-point;
-      background-color: white;
     }
   }
 }

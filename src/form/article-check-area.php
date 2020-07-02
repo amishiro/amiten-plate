@@ -3,7 +3,7 @@
     <div class="check-area__background" @click="replySubmit"></div>
     <div class="check-area__field">
       <div class="check-area__field-inner" v-scroll-lock="inputFinished">
-        <header>
+        <header class="u-assist is-outline">
           <h3>記入内容の確認</h3>
           <p>ご記入内容をご確認の上、「送信する」ボタンを押してください。</p>
         </header>

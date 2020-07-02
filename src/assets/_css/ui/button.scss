@@ -119,17 +119,10 @@
 
   &.is-send {
     padding-left: 30px;
-    background-color: $color-point;
-    border-color: $color-point;
 
     &::before {
       left: $gap;
       content: 'send';
-    }
-
-    &:hover {
-      color: $color-point;
-      background-color: white;
     }
   }
 
