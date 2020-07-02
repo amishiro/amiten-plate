@@ -23,6 +23,7 @@
   // ↓コードスペルチェック除外項目
   "cSpell.userWords": [
     "amitemplate",
-    "stylelint"
+    "stylelint",
+    "mixins"
   ]
 }

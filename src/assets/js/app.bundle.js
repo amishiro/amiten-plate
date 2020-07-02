@@ -171,11 +171,11 @@ eval("/*!\n  * vue-scrollto v2.18.1\n  * (c) 2019 Randjelovic Igor\n  * @license
 /*!*******************************!*\
   !*** ./src/assets/_js/app.js ***!
   \*******************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vue_scrollto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vue-scrollto.js */ \"./src/assets/_js/vue-scrollto.js\");\n/* harmony import */ var _vue_formulate_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vue-formulate.js */ \"./src/assets/_js/vue-formulate.js\");\n/* harmony import */ var _global_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./global-menu.js */ \"./src/assets/_js/global-menu.js\");\n// import\n\n\n\n\n//# sourceURL=webpack:///./src/assets/_js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vue_scrollto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vue-scrollto.js */ \"./src/assets/_js/vue-scrollto.js\");\n/* harmony import */ var _global_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global-menu.js */ \"./src/assets/_js/global-menu.js\");\n/* harmony import */ var _vue_formulate_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./vue-formulate.js */ \"./src/assets/_js/vue-formulate.js\");\n// import\n\n\n\nvar app = new Vue({\n  mixins: [_global_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"globalSlideMenuMixin\"], _vue_formulate_js__WEBPACK_IMPORTED_MODULE_2__[\"formSampleMixin\"]],\n  el: '#app'\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  app: app\n});\n\n//# sourceURL=webpack:///./src/assets/_js/app.js?");
 
 /***/ }),
 
@@ -183,11 +183,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vue
 /*!***************************************!*\
   !*** ./src/assets/_js/global-menu.js ***!
   \***************************************/
-/*! exports provided: default */
+/*! exports provided: globalSlideMenuMixin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nvar menuVue = new Vue({\n  el: '#app',\n  data: function data() {\n    return {\n      isSlideNavOpen: false,\n      isSlideNavActive: false\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    setTimeout(function () {\n      _this.isSlideNavActive = true;\n    }, 500);\n  }\n});\nvar scrollLock = Vue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menuVue: menuVue,\n  scrollLock: scrollLock\n});\n\n//# sourceURL=webpack:///./src/assets/_js/global-menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"globalSlideMenuMixin\", function() { return globalSlideMenuMixin; });\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n\nVue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n}); // export\n\nvar globalSlideMenuMixin = {\n  data: function data() {\n    return {\n      isSlideNavOpen: false,\n      isSlideNavActive: false\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    setTimeout(function () {\n      _this.isSlideNavActive = true;\n    }, 500);\n  }\n};\n\n//# sourceURL=webpack:///./src/assets/_js/global-menu.js?");
 
 /***/ }),
 
@@ -195,11 +195,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_sc
 /*!*****************************************!*\
   !*** ./src/assets/_js/vue-formulate.js ***!
   \*****************************************/
-/*! no exports provided */
+/*! exports provided: formSampleMixin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _braid_vue_formulate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @braid/vue-formulate */ \"./node_modules/@braid/vue-formulate/dist/formulate.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nVue.use(_braid_vue_formulate__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack:///./src/assets/_js/vue-formulate.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"formSampleMixin\", function() { return formSampleMixin; });\n/* harmony import */ var _braid_vue_formulate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @braid/vue-formulate */ \"./node_modules/@braid/vue-formulate/dist/formulate.esm.js\");\n/* harmony import */ var _braid_vue_formulate_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @braid/vue-formulate-i18n */ \"./node_modules/@braid/vue-formulate-i18n/dist/locales.esm.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n// node_module\n\n // original-css\n// none\n\nVue.use(_braid_vue_formulate__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  plugins: [_braid_vue_formulate_i18n__WEBPACK_IMPORTED_MODULE_1__[\"ja\"]],\n  locale: 'ja'\n}); // export\n\nvar formSampleMixin = {\n  data: function data() {\n    return {\n      inputFinished: false,\n      sending: false,\n      form: {\n        name: '',\n        mail: '',\n        tel: '',\n        kind: '',\n        contents: '',\n        policy: ''\n      }\n    };\n  },\n  methods: {\n    handleTriger: function handleTriger() {// vue-formurateをコンポーネントから動作させるためのダミーのTriger\n    },\n    handleCheck: function handleCheck() {\n      this.inputFinished = true;\n    },\n    handleReset: function handleReset(data) {\n      for (var key in this.form) {\n        this.form[key] = '';\n      }\n\n      this.$formulate.resetValidation('contact');\n      this.inputFinished = false;\n    },\n    encode: function encode(data) {\n      return Object.keys(data).map(function (key) {\n        return \"\".concat(encodeURIComponent(key), \"=\").concat(encodeURIComponent(data[key]));\n      }).join('&');\n    },\n    handleSubmit: function handleSubmit() {\n      var _this = this;\n\n      this.sending = true;\n      var axiosConfig = {\n        header: {\n          'Content-Type': 'application/x-www-form-urlencoded'\n        }\n      };\n      this.$axios.post('/', this.encode(_objectSpread({\n        'form-name': 'contact'\n      }, this.form)), axiosConfig).then(function (res) {\n        setTimeout(function () {\n          _this.$router.push(_this.localePath('/contact/thanks'));\n        }, 1000);\n      }).catch(function (err) {\n        console.error(err); // eslint-disable-line no-console\n\n        if (true) {\n          setTimeout(function () {\n            _this.$router.push(_this.localePath('/contact/thanks'));\n          }, 1000);\n        }\n      });\n    },\n    replySubmit: function replySubmit() {\n      this.inputFinished = false;\n    }\n  }\n};\n\n//# sourceURL=webpack:///./src/assets/_js/vue-formulate.js?");
 
 /***/ }),
 
@@ -211,7 +211,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bra
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-scrollto */ \"./node_modules/vue-scrollto/vue-scrollto.js\");\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_scrollto__WEBPACK_IMPORTED_MODULE_0__);\n// node_module\n // original-css\n// none\n// export\n\nVue.use(vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default.a, {\n  duration: 700,\n  easing: [0, 0, 0.1, 1],\n  offset: -62\n});\n\n//# sourceURL=webpack:///./src/assets/_js/vue-scrollto.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-scrollto */ \"./node_modules/vue-scrollto/vue-scrollto.js\");\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_scrollto__WEBPACK_IMPORTED_MODULE_0__);\n// node_module\n // original-css\n// none\n\nVue.use(vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default.a, {\n  duration: 700,\n  easing: [0, 0, 0.1, 1],\n  offset: -62\n}); // export\n\n//# sourceURL=webpack:///./src/assets/_js/vue-scrollto.js?");
 
 /***/ })
 
