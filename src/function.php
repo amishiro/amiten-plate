@@ -15,12 +15,12 @@ $incPatch = (dirname(__FILE__));
 $severName = $_SERVER["SERVER_NAME"];
 $domain = $_SERVER["HTTP_HOST"];
 $url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $domain . $baseUrl;
-$css = $baseUrl . "/_assets/css";
-$img = $baseUrl . "/_assets/img";
-$inc = $incPatch . "/_assets/inc";
-$js = $baseUrl . "/_assets/js";
+$css = $baseUrl . "/assets/css";
+$img = $baseUrl . "/assets/img";
+$inc = $incPatch . "/assets/inc";
+$js = $baseUrl . "/assets/js";
 
-// html metas --------------------------------
+// html meta --------------------------------
 $meta = new MetaClass();
 $meta->siteName = "サイトタイトル";
 $meta->siteDesc = "サイトディスクリプション";

@@ -1,4 +1,38 @@
-node_modules
-dist
-dist_*
+# Linux #
+
+*~
+
+# Apple OS X #
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Microsoft Windows #
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# npm & bower & etc #
+
+*.log
+/.tmp/
+/node_modules/
+/bower_components/
+/_sample/
+/.vagrant/
 .env
+
+# dist directory #
+/dist/
+/dist_*/

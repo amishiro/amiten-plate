@@ -1,0 +1,115 @@
+
+form {
+  fieldset {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: $gap-m;
+    margin: $gap-l 0;
+    overflow: auto;
+    border: 1px solid $color-light;
+    border-radius: 3px;
+
+    legend {
+      padding: 0 $gap;
+      margin-left: -$gap;
+      font-weight: bold;
+      background-color: #fff;
+      font-feature-settings: 'palt';
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    min-width: 300px;
+    padding: $gap;
+    font-size: 1.6rem;
+    border: 1px solid $color-light;
+    border-radius: 2px;
+    box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+
+    &:focus {
+      border: solid 1px $color-point;
+    }
+  }
+
+  input {
+    &[type='text'] {
+    }
+
+    &[type='password'] {
+    }
+
+    &[type='url'] {
+    }
+
+    &[type='email'] {
+    }
+
+    &[type='tel'] {
+    }
+
+    &[type='search'] {
+    }
+
+    &[type='number'] {
+    }
+
+    &[type='radio'],
+    &[type='checkbox'] {
+      display: inline;
+      width: auto;
+      padding: 0;
+      margin-right: $gap/2;
+    }
+
+    &[type='submit'] {
+    }
+
+    &[type='button'] {
+    }
+
+    &[type='reset'] {
+    }
+  }
+
+  textarea {
+  }
+
+  select {
+    min-width: 300px;
+    height: 35px;
+    padding: $gap;
+    color: $color-brand;
+    vertical-align: middle;
+    background: none transparent;
+    //appearance: button;
+    border: 1px solid $color-brand;
+    border-radius: 2px;
+    outline: none;
+
+    &::after {
+      @include icon-font();
+    }
+
+    optgroup {
+    }
+
+    option {
+      color: #333;
+      background-color: #fff;
+    }
+  }
+
+  button {
+    &[type='submit'] {
+    }
+
+    &[type='button'] {
+    }
+
+    &[type='reset'] {
+    }
+  }
+}

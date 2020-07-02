@@ -1,0 +1,57 @@
+.main {
+  &__visual {
+    height: 500px;
+    margin-bottom: $gap-m;
+    @include tablet {
+      margin-bottom: $gap-l;
+    }
+    @include desktop {
+      margin-bottom: $gap-xl;
+    }
+  }
+
+  &__header {
+  }
+
+  &__breadcrumb {
+  }
+
+  &__content {
+  }
+
+  &__section {
+    @include wrapper;
+    @include first-child-heading;
+    margin-bottom: $gap-m;
+    @include tablet {
+      margin-bottom: $gap-l;
+    }
+    @include desktop {
+      margin-bottom: $gap-xl;
+    }
+  }
+
+  &__article {
+    @include wrapper;
+    @include first-child-heading;
+    margin-bottom: $gap-m;
+    @include tablet {
+      margin-bottom: $gap-l;
+    }
+    @include desktop {
+      margin-bottom: $gap-xl;
+    }
+  }
+
+  &__aside {
+    @include wrapper;
+    @include first-child-heading;
+    margin-bottom: $gap-m;
+    @include tablet {
+      margin-bottom: $gap-l;
+    }
+    @include desktop {
+      margin-bottom: $gap-xl;
+    }
+  }
+}

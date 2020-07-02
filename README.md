@@ -1,43 +1,41 @@
-### QUICK START
+# amitempalte
 
-```
+## QUICK START
+
+```zsh
 npm i
-```
 
 &
 
-```
 npm run dev
 ```
 
-### 動作確認ずみバージョン
+## versions
 
-```
-$ node -v
+```zsh
+node -v
 ↓
-v14.2.0
-```
+v14.5.0
 
-```
-$ npm -v
+npm -v
 ↓
-6.14.4
-```
+6.14.5
 
-```
-$ php -v
+php -v
 ↓
 PHP 7.3.11
 ```
 
----
+## url
 
-### テストアドレス
+### staging
+
+■閲覧用パスワード
+
+ID：xxxx / Pass：xxxx
 
 <https://>
 
-id:  / Pass:
-
-### 本番アドレス
+### production
 
 <https://>

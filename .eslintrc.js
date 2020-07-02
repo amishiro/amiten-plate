@@ -4,15 +4,19 @@ module.exports = {
     browser: true,
     node: true
   },
-  globals: { Vue: true },
+  // ↓ 基本設定
   extends: [
     'standard'
   ],
-  // add your custom rules here
+  // ↓ 追加設定 ※基本設定項目の除外がメイン
   rules: {
-    // ↓末尾のセミコロンを許容する。
-    'comma-dangle': ['error', 'only-multiline'],
-    // ↓空白行に対してwarnのみ出るようにする。
-    'no-multiple-empty-lines': ['warn', { max: 1 }]
+    'comma-dangle': ['error', 'only-multiline'], // 末尾のセミコロンを許容する。
+    'no-multiple-empty-lines': ['warn', { max: 1 }] // 空白行に対してwarnのみ出るようにする。
+  },
+  // ↓ cdn読み込みなどのグローバル変数
+  globals: {
+    Vue: true,
+    $: true,
+    Modernizr: true,
   }
 }
