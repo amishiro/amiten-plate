@@ -20,13 +20,13 @@
               <a href="<?php echo $url; ?>/element" class="gnav__link element" itemprop="URL">Element</a>
             </li>
             <li class="gnav__item" itemprop="name">
+              <a href="<?php echo $url; ?>/form" class="gnav__link form" itemprop="URL">Form</a>
+            </li>
+            <li class="gnav__item" itemprop="name">
               <a href="<?php echo $url; ?>/ui" class="gnav__link ui" itemprop="URL">UI</a>
             </li>
             <li class="gnav__item" itemprop="name">
               <a href="<?php echo $url; ?>/column" class="gnav__link column" itemprop="URL">Column</a>
-            </li>
-            <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>" class="gnav__link" itemprop="URL">Home</a>
             </li>
             <li class="gnav__item" itemprop="name">
               <a href="<?php echo $url; ?>" class="gnav__link" itemprop="URL">Home</a>
@@ -48,13 +48,13 @@
                   <a href="<?php echo $url; ?>/element" class="gnav-slide__link element" itemprop="URL">Element</a>
                 </li>
                 <li class="gnav-slide__item" itemprop="name">
+                  <a href="<?php echo $url; ?>/form" class="gnav-slide__link form" itemprop="URL">Form</a>
+                </li>
+                <li class="gnav-slide__item" itemprop="name">
                   <a href="<?php echo $url; ?>/ui" class="gnav-slide__link ui" itemprop="URL">UI</a>
                 </li>
                 <li class="gnav-slide__item" itemprop="name">
                   <a href="<?php echo $url; ?>/column" class="gnav-slide__link column" itemprop="URL">Column</a>
-                </li>
-                <li class="gnav-slide__item" itemprop="name">
-                  <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
                 </li>
                 <li class="gnav-slide__item" itemprop="name">
                   <a href="<?php echo $url; ?>" class="gnav-slide__link" itemprop="URL">Home</a>
