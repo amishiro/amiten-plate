@@ -1,15 +1,5 @@
-// node_module
-import VueFormulate from '@braid/vue-formulate'
-import { ja } from '@braid/vue-formulate-i18n'
-// original-css
-// none
+import axios from 'axios'
 
-Vue.use(VueFormulate, {
-  plugins: [ja],
-  locale: 'ja'
-})
-
-// export
 export const formSampleMixin = {
   data () {
     return {
@@ -30,10 +20,7 @@ export const formSampleMixin = {
     }
   },
   methods: {
-    handleTriger () {
-      // vue-formurateをコンポーネントから動作させるためのダミーのTriger
-    },
-    handleCheck () {
+    handleTrigger () {
       this.inputFinished = true
     },
     handleReset (data) {
@@ -55,9 +42,8 @@ export const formSampleMixin = {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      this.$axios
-        .post(
-          '/',
+      axios
+        .post('/assists/php/dummy.php',
           this.encode({
             'form-name': 'contact',
             ...this.form
@@ -65,15 +51,16 @@ export const formSampleMixin = {
           axiosConfig
         )
         .then((res) => {
+          console.log('success') // eslint-disable-line no-console
           setTimeout(() => {
-            this.$router.push(this.localePath('/contact/thanks'))
+            window.location.href = 'form/thanks/'
           }, 1000)
         })
         .catch((err) => {
           console.error(err) // eslint-disable-line no-console
           if (process.env.NODE_ENV === 'development') {
             setTimeout(() => {
-              this.$router.push(this.localePath('/contact/thanks'))
+              window.location.href = 'form/thanks/'
             }, 1000)
           }
         })
@@ -81,5 +68,7 @@ export const formSampleMixin = {
     replySubmit () {
       this.inputFinished = false
     }
+  },
+  mounted () {
   },
 }

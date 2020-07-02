@@ -76,8 +76,9 @@ $formulate-white: #fff;
 // -----------------------------------------------------------------------------
 
 .formulate-input {
-  margin-bottom: 1.5em;
+  margin-bottom: $gap;
   // ↓customize comment out & use elements.scss
+  // margin-bottom: 1.5em;
   // font-family: $formulate-font-stack;
 
   .formulate-input-label {
@@ -87,6 +88,10 @@ $formulate-white: #fff;
     // font-size: 0.9em;
     // font-weight: 600;
     // margin-bottom: 0.1em;
+    &--before {
+      margin-bottom: $gap/2;
+      color: black;
+    }
 
     &--before + .formulate-input-help--before {
       margin-top: -0.25em;

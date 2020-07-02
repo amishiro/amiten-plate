@@ -23,10 +23,10 @@ include($inc . "/header.php");
       <a href="https://vueformulate.com/" target="_blank" rel="noopener">vue-formulate</a>を利用したフォーム。
 
       <article>
-        <formulate-form v-model="form" name="contact">
+        <formulate-form v-model="form" name="contact" @submit="handleTrigger">
           <!-- <input type="hidden" name="form-name" value="contact"> -->
           <p><span class="require-icon">必須</span>項目は、必ずご入力ください。</p>
-          <table>
+          <table class="form-table">
             <colgroup>
               <col span="1" style="width: 220px;">
               <col span="1" style="width: auto;">
@@ -66,14 +66,14 @@ include($inc . "/header.php");
                   </label>
                 </th>
                 <td>
-                  <formulate-input type="text" name="postalCode" label="郵便番号" autocomplete="postal-code" placeholder="例：100-8111" help="半角数字でご記入ください" validation="required|matches:/^\d{3}-?\d{4}$/" :validation-messages="{
+                  <formulate-input id="postalCode" type="text" name="postalCode" label="郵便番号" autocomplete="postal-code" placeholder="例：100-8111" help="半角数字でご記入ください" validation="required|matches:/^\d{3}-?\d{4}$/" :validation-messages="{
                     required: '郵便番号をご記入ください',
                     matches: '正しい郵便番号を半角数字でご記入ください'
                   }"></formulate-input>
-                  <formulate-input type="text" name="addressLevel" label="都道府県、市区町村（海外の方は、国名よりご入力ください）" autocomplete="address-level1 address-level2" placeholder="例：東京都千代田区" validation="required" 　:validation-messages="{
+                  <formulate-input id="addressLevel" type="text" name="addressLevel" label="都道府県、市区町村（海外の方は、国名よりご入力ください）" autocomplete="address-level1 address-level2" placeholder="例：東京都千代田区" validation="required" 　:validation-messages="{
                     required: '都道府県、市区町村をご記入ください'
                     }">></formulate-input>
-                  <formulate-input type="text" name="addressLine" label="それ以降の住所（番地など）" autocomplete="address-line1 address-line2" placeholder="例：千代田1-1"></formulate-input>
+                  <formulate-input id="addressLine" type="text" name="addressLine" label="それ以降の住所（番地など）" autocomplete="address-line1 address-line2" placeholder="例：千代田1-1"></formulate-input>
                 </td>
               </tr>
               <tr>
@@ -146,9 +146,9 @@ include($inc . "/header.php");
           </table>
 
           <div class="u-assist">
-            <h4>
+            <h5>
               <span class="require-icon">必須</span>個人情報の取り扱いについて
-            </h4>
+            </h5>
             <p>
               ご提供いただきましたお客さまの個人情報につきましては、弊社の<a href="#" target="_blank">プライバシーポリシー</a>に従い利用および管理を行ないます。
             </p>
@@ -164,12 +164,68 @@ include($inc . "/header.php");
             <button class="u-button is-primary" type="submit">
               入力内容を確認する
             </button>
-            <button class="u-button is-cancel">
+            <button class="u-button is-cancel" type="reset" @click="handleReset()">
               内容を削除する
             </button>
           </div>
         </formulate-form>
       </article>
+
+      <transition name="fade">
+        <article v-show="inputFinished" class="check-area">
+          <div class="check-area__background" @click="replySubmit"></div>
+          <div class="check-area__field">
+            <div v-scroll-lock="inputFinished" class="check-area__field-inner">
+              <header>
+                <h3>入力内容の確認</h3>
+                <p>ご入力内容をご確認の上、「送信する」ボタンを押してください。</p>
+              </header>
+              <dl>
+                <dt>お名前</dt>
+                <dd>{{ form.name }}</dd>
+              </dl>
+              <dl>
+                <dt>フリガナ</dt>
+                <dd>{{ form.nameKana }}</dd>
+              </dl>
+              <dl>
+                <dt>ご住所</dt>
+                <dd>〒{{ form.postalCode }}{{ form.addressLevel }}{{ form.addressLine }}</dd>
+              </dl>
+              <dl>
+                <dt>電話番号</dt>
+                <dd>{{ form.tel }}</dd>
+              </dl>
+              <dl>
+                <dt>メールアドレス</dt>
+                <dd>{{ form.mail }}</dd>
+              </dl>
+              <dl>
+                <dt>お問い合わせ項目</dt>
+                <dd>{{ form.kind }}</dd>
+              </dl>
+              <dl>
+                <dt>お問い合わせ内容</dt>
+                <dd>{{ form.contents }}</dd>
+              </dl>
+              <div class="u-buttons" v-if="!sending">
+                <button class="u-button is-primary is-send" @click="handleSubmit">
+                  送信する
+                </button>
+                <button class="u-button is-cancel is-reply" @click="replySubmit">
+                  修正する
+                </button>
+              </div>
+              <div v-if="sending" class="check-area__sending">
+                <i class="material-icons">sync</i>送信中...
+              </div>
+            </div>
+            <div class="check-area__close" @click="replySubmit">
+              <i class="material-icons">close</i>
+            </div>
+          </div>
+        </article>
+      </transition>
 
     </section>
   </div>

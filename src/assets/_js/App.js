@@ -1,7 +1,9 @@
 // import
-import './vue-scrollto.js'
-import { globalSlideMenuMixin } from './global-menu.js'
-import { formSampleMixin } from './vue-formulate.js'
+import './plugins/vue-scrollto.js'
+import './plugins/vue-formulate.js'
+
+import { globalSlideMenuMixin } from './layouts/global-menu.js'
+import { formSampleMixin } from './pages/form.js'
 
 const app = new Vue({
   mixins: [
