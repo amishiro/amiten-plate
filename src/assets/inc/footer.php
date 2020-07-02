@@ -1,4 +1,3 @@
-</div>
 </main>
 
 <footer class="layout__footer">
@@ -31,5 +30,3 @@
     </address>
   </div>
 </footer>
-
-</div>

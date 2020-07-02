@@ -1,5 +1,4 @@
 .breadcrumb {
-  $this: '.pan';
   padding: $gap-s 0;
 
   &__wrapper {
@@ -35,6 +34,6 @@
       span {
         display: none;
       }
-    }//home
+    }
   }
 }

@@ -57,8 +57,8 @@ const settings = {
   distDir: './dist/',
   issue: null,
   deployDir: 'test', // deploy先のディレクトリを指定
-  deployUrl: 'https://haseko.aws-testserver.com/', // deploy先のURLを指定
-  deployRoot: '/var/www/html/haseko/', // deploy先のドキュメントルートを指定
+  deployUrl: 'https://xxxxx.aws-testserver.com/', // deploy先のURLを指定
+  deployRoot: '/var/www/html/xxxxx/', // deploy先のドキュメントルートを指定
   ftpUser: process.env.FTP_USER,
   ftpPassword: process.env.FTP_PASS,
   ftpHost: process.env.FTP_HOST,

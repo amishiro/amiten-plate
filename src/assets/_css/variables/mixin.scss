@@ -49,10 +49,6 @@
   }
 }
 
-.wrapper {
-  @include wrapper;
-}
-
 // material-icons
 @mixin material-icons {
   display: inline-block;
@@ -72,10 +68,10 @@
 
 // first-child-headding
 @mixin first-child-heading {
-  h2,
-  h3,
-  h4,
-  h5 {
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5 {
     &:first-child {
       margin-top: 0;
     }

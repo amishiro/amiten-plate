@@ -57,3 +57,4 @@
 </head>
 
 <body class="layout <?php $bodyClass->output(); ?>">
+  <div class="layout" id="app">

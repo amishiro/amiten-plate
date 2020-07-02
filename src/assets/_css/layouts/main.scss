@@ -30,4 +30,28 @@
       margin-bottom: $gap-xl;
     }
   }
+
+  &__article {
+    @include wrapper;
+    @include first-child-heading;
+    margin-bottom: $gap-m;
+    @include tablet {
+      margin-bottom: $gap-l;
+    }
+    @include desktop {
+      margin-bottom: $gap-xl;
+    }
+  }
+
+  &__aside {
+    @include wrapper;
+    @include first-child-heading;
+    margin-bottom: $gap-m;
+    @include tablet {
+      margin-bottom: $gap-l;
+    }
+    @include desktop {
+      margin-bottom: $gap-xl;
+    }
+  }
 }
