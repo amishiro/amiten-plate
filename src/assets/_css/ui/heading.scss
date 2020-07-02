@@ -1,0 +1,77 @@
+/*
+見出し関連のサイズを調整します。
+
+```html
+<h2 class="heading-l">大きい見出し</h3>
+<p>見出し説明テキスト<br>説明テキスト説明テキスト</p>
+```
+```html
+<h3 class="heading-m heading">小見出し見出し</h3>
+<p>見出し説明テキスト<br>説明テキスト説明テキスト</p>
+```
+```html
+<h4 class="heading-s">小見出し見出し</h3>
+<p>見出し説明テキスト<br>説明テキスト説明テキスト</p>
+```
+*/
+
+.heading-l {
+  @include wrapper;
+  box-sizing: border-box;
+  margin: 4em 0 1em;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  color: $color-dark;
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  & + p {
+    margin-top: -0.5em;
+  }
+}
+
+.heading,
+.heading-m {
+  margin: $gap-m * 2 0 $gap-m;
+  font-size: 2rem;
+  font-weight: bold;
+  color: $black;
+  text-align: center;
+  font-feature-settings: 'palt';
+  @include tablet {
+    margin: $gap-m * 2 0 $gap-m*2;
+    font-size: 3rem;
+  }
+
+  & + p {
+    margin-top: -$gap-m;
+    margin-bottom: $gap-m;
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+    @include tablet {
+      margin-top: -$gap-m * 2;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.heading-s {
+  box-sizing: border-box;
+  margin: 1em 0 0.5em;
+  line-height: 1.4;
+  color: #000;
+  font-feature-settings: 'palt';
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

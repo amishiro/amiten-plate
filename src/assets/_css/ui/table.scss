@@ -1,0 +1,157 @@
+/*
+---
+name: table
+category:
+- ui/table
+tag:
+- base
+compile: false
+---
+
+テーブル
+
+```html
+<table class="u-table has-data-label">
+  <caption>テーブルサンプル</caption>
+  <colgroup>
+    <col span="1" style="width:30%;">
+    <col span="3" style="width:20%;">
+    <col span="1" style="width:10%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>{{ key }}</th>
+      <th>{{ key }}</th>
+      <th>{{ key }}</th>
+      <th>{{ key }}</th>
+      <th>{{ key }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="key">長いvalueです。ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</td>
+      <td data-label="長いkeyです。ダミーダミーダミーダミー。">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+    </tr>
+    <tr>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+    </tr>
+    <tr>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+      <td data-label="key">{{ value }}</td>
+    </tr>
+  </tbody>
+</table>
+```
+*/
+
+.u-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-feature-settings: 'palt';
+  @include mobile {
+    thead,
+    tfoot {
+      display: none;
+    }
+
+    tr,
+    td,
+    th {
+      display: block;
+    }
+
+    tr {
+      margin-bottom: $gap-m;
+      border-top: 1px solid $color-light;
+    }
+
+    th {
+      box-sizing: border-box;
+      padding: $gap;
+      font-weight: bold;
+      line-height: 1;
+      color: $color-dark;
+      background-color: $color-light-darken;
+    }
+
+    td {
+      padding: $gap;
+      margin-top: -1px;
+      border: 1px solid $color-light-darken;
+    }
+  }
+  @include tablet {
+    tr,
+    td,
+    th {
+      box-sizing: border-box;
+      padding: $gap-m;
+      line-height: 1.4;
+      text-align: left;
+      vertical-align: middle;
+      border: 1px solid $color-light-darken;
+    }
+
+    thead {
+      tr {
+        color: white;
+        background-color: $color-brand;
+      }
+    }
+
+    tfoot {
+      tr {
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(2n + 2) {
+          background-color: $color-light;
+        }
+      }
+
+      th {
+      }
+
+      td {
+      }
+    }
+  }
+
+  &.has-data-label {
+    @include mobile {
+      td {
+        display: flex;
+        align-items: flex-start;
+        padding: $gap-m;
+
+        &::before {
+          $flex-w: 80px;
+          flex: 0 0 $flex-w;
+          max-width: $flex-w;
+          margin-right: $gap-m;
+          font-size: 1.4rem;
+          font-weight: bold;
+          content: attr(data-label);
+        }
+      }
+    }
+  }
+
+  caption {
+    margin-bottom: $gap;
+    font-weight: bold;
+    text-align: left;
+  }
+}

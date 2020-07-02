@@ -5,7 +5,7 @@ RewriteEngine on
 # === RewriteRuleセット ================================
 
 #↓ドキュメントルートを設定する
-RewriteBase /sumaifair/
+RewriteBase /
 
 # --- index.html/phpなしに統一 ---
 
@@ -26,17 +26,31 @@ RewriteCond %{SERVER_PORT} 80
 #RewriteCond %{REQUEST_URI} !(xxx/)
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# --- URL末尾スラッシュを自動保管 ---
+
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[^/\.]+$
+RewriteRule .* %{REQUEST_URI}/ [R=301,L]
+
 # === 各種リダイレクト ================================
-#↓リダイレクト関連はドキュメントルートで記述
+
 
 # --- 404リダイレクト ---
+#Errorリダイレクトはドキュメントルートで記述
 
-#ErrorDocument 404 /sumaifair/http404.php
-#ErrorDocument 403 /sumaifair/http404.php
+#ErrorDocument 404 /http404.php
+#ErrorDocument 403 /http404.php
 
 # --- 各種リダイレクト ---
 
-#Redirect permanent /xxx/sample/ /xxx/sample2
+# 301サイト内リダイレクト
+# RewriteRule ^company/sample/$ ^sample/ [R=301,L]
+
+# 301サイト外リダイレクト
+# RewriteRule ^company/sample/$ https://google.com/ [R=301,L]
+
+# 301まとめてリダクレイ（漏れ対応）
+# RewriteRule ^company/(.*)$ ^ [R=301,L]
 
 # === キャッシュコントロール ================================
 #Thanks：https://html5boilerplate.com/

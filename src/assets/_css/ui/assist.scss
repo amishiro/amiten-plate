@@ -1,0 +1,92 @@
+.u-assist {
+  @include first-child-heading;
+  box-sizing: border-box;
+  padding: $gap-s;
+  margin-bottom: $gap;
+  background-color: $color-light;
+  @include tablet {
+    padding: $gap-l;
+    margin-bottom: $gap-s;
+  }
+
+  &__inner {
+    @include first-child-heading;
+    box-sizing: border-box;
+    padding: $gap-m;
+    background-color: white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      border-bottom: 1px solid $color-light !important;
+    }
+  }
+
+  &.is-info {
+    background-color: $color-info-lighten;
+    border-left: 2px solid $color-info;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      border-bottom: 1px solid $color-info;
+    }
+  }
+
+  &.is-warning {
+    background-color: $color-warning-lighten;
+    border-left: 2px solid $color-warning;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      border-bottom: 1px solid $color-warning;
+    }
+  }
+
+  &.is-point {
+    background-color: $color-point-lighten;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      border-bottom: 1px solid $color-point;
+    }
+  }
+
+  &.is-outline {
+    background: none;
+    border: 1px solid $color-light;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      border-bottom: 1px solid $color-light;
+    }
+  }
+
+  & + small {
+    @include tablet {
+      margin-top: -$gap-s;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid $color-light-darken;
+  }
+}

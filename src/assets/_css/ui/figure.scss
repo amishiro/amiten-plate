@@ -1,0 +1,40 @@
+.u-figure {
+  position: relative;
+  box-sizing: border-box;
+  border: 4px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    $cap: &;
+    position: absolute;
+    right: $gap;
+    bottom: $gap;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: $color-light;
+    text-shadow: 0 0 3px #000;
+
+    &.is-darken {
+      color: $color-dark;
+      text-shadow: 0 0 3px #fff;
+    }
+
+    &.is-left {
+      right: auto;
+      left: $gap;
+
+      &_darken {
+        color: $color-dark;
+        text-shadow: 0 0 3px #fff;
+      }
+    }
+  }
+}
