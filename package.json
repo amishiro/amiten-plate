@@ -27,6 +27,7 @@
     "lint:css": "stylelint 'src/assets/_css/**/*.scss'"
   },
   "dependencies": {
+    "@braid/vue-formulate": "^2.4.2",
     "v-scroll-lock": "^1.2.0",
     "vue-scrollto": "^2.18.1"
   },
