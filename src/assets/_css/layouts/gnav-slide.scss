@@ -104,7 +104,7 @@
         }
       }
     }
-    @each $class in home, column, element, ui {
+    @each $class in home, column, element, ui, form {
       &.#{$class} {
         body.#{$class} & {
           color: white;

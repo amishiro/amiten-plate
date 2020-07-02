@@ -66,7 +66,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-// first-child-headding
+// first-child-heading
 @mixin first-child-heading {
   & > h2,
   & > h3,
@@ -86,7 +86,6 @@
 
 // small font
 @mixin font-small {
-  margin-left: 1em;
   font-size: 1.1rem;
   color: $color-dark-lighten;
 }

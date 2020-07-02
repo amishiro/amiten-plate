@@ -86,6 +86,8 @@ if (settings._.indexOf('dist') >= 0 || settings.dist) {
   mode.production = true
   mode.dist = true
 }
+// env set
+if (mode.development) process.env.NODE_ENV = mode.development
 console.log('mode:', mode)
 
 /**

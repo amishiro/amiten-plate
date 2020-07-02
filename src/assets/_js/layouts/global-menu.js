@@ -4,9 +4,12 @@ import VScrollLock from 'v-scroll-lock'
 // original-css
 // none
 
+Vue.use(VScrollLock, {
+  reserveScrollBarGap: true,
+})
+
 // export
-const menuVue = new Vue({
-  el: '#app',
+export const globalSlideMenuMixin = {
   data () {
     return {
       isSlideNavOpen: false,
@@ -17,11 +20,5 @@ const menuVue = new Vue({
     setTimeout(() => {
       this.isSlideNavActive = true
     }, 500)
-  },
-})
-
-const scrollLock = Vue.use(VScrollLock, {
-  reserveScrollBarGap: true,
-})
-
-export default { menuVue, scrollLock }
+  }
+}

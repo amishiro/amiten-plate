@@ -40,7 +40,7 @@
       background-color: $color-brand;
       transition: all 0.3s;
     }
-    @each $class in home, column, ui, contact, element {
+    @each $class in home, column, ui, contact, element, form {
       &.#{$class} {
         body.#{$class} & {
           color: #fff;
