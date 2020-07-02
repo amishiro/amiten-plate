@@ -1,7 +1,9 @@
-// valiables & mixins
-@import './valiables.scss';
-@import './mixins.scss';
-@import './elements.scss';
-@import './ui/**/*.scss';
+// variables
+@import './variables/variable.scss';
+@import './variables/mixin.scss';
+@import './variables/element.scss';
+
+// etc
 @import './layouts/**/*.scss';
+@import './ui/**/*.scss';
 @import './pages/**/*.scss';
