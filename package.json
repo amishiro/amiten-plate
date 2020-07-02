@@ -19,6 +19,8 @@
     "gulp": "gulp",
     "dev": "gulp",
     "dist": "gulp dist",
+    "css": "gulp css",
+    "js": "gulp js",
     "deploy": "gulp deploy",
     "disconnect": "gulp disconnect",
     "lint:js": "eslint 'src/assets/_js/**/*.js'",

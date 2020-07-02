@@ -36,7 +36,7 @@
 
   <!-- css -->
   <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
-  <link href="<?php echo $css ?>/app.bandle.css" rel="stylesheet">
+  <link href="<?php echo $css ?>/app.bundle.css" rel="stylesheet">
 
   <!-- icons -->
   <link href="<?php echo $img . "/icons" ?>/apple-touch-icon.png" rel="apple-touch-icon">

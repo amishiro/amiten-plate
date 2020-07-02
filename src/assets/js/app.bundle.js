@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/_lib/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/_js/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -109,39 +109,39 @@ eval("/*!\n  * vue-scrollto v2.18.1\n  * (c) 2019 Randjelovic Igor\n  * @license
 
 /***/ }),
 
-/***/ "./src/_lib/app.js":
-/*!*************************!*\
-  !*** ./src/_lib/app.js ***!
-  \*************************/
+/***/ "./src/assets/_js/app.js":
+/*!*******************************!*\
+  !*** ./src/assets/_js/app.js ***!
+  \*******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_vue_scrollto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/vue-scrollto.js */ \"./src/_lib/js/vue-scrollto.js\");\n/* harmony import */ var _js_global_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/global-menu.js */ \"./src/_lib/js/global-menu.js\");\n// import\n\n\n\n//# sourceURL=webpack:///./src/_lib/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vue_scrollto_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vue-scrollto.js */ \"./src/assets/_js/vue-scrollto.js\");\n/* harmony import */ var _global_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global-menu.js */ \"./src/assets/_js/global-menu.js\");\n// import\n\n\n\n//# sourceURL=webpack:///./src/assets/_js/app.js?");
 
 /***/ }),
 
-/***/ "./src/_lib/js/global-menu.js":
-/*!************************************!*\
-  !*** ./src/_lib/js/global-menu.js ***!
-  \************************************/
+/***/ "./src/assets/_js/global-menu.js":
+/*!***************************************!*\
+  !*** ./src/assets/_js/global-menu.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nvar menuVue = new Vue({\n  el: '#app',\n  data: function data() {\n    return {\n      isSlideNavOpen: false,\n      isSlideNavActive: false\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    setTimeout(function () {\n      _this.isSlideNavActive = true;\n    }, 500);\n  }\n});\nvar scrollLock = Vue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menuVue: menuVue,\n  scrollLock: scrollLock\n});\n\n//# sourceURL=webpack:///./src/_lib/js/global-menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-scroll-lock */ \"./node_modules/v-scroll-lock/dist/v-scroll-lock.esm.js\");\n// node_module\n // original-css\n// none\n// export\n\nvar menuVue = new Vue({\n  el: '#app',\n  data: function data() {\n    return {\n      isSlideNavOpen: false,\n      isSlideNavActive: false\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    setTimeout(function () {\n      _this.isSlideNavActive = true;\n    }, 500);\n  }\n});\nvar scrollLock = Vue.use(v_scroll_lock__WEBPACK_IMPORTED_MODULE_0__[\"default\"], {\n  reserveScrollBarGap: true\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menuVue: menuVue,\n  scrollLock: scrollLock\n});\n\n//# sourceURL=webpack:///./src/assets/_js/global-menu.js?");
 
 /***/ }),
 
-/***/ "./src/_lib/js/vue-scrollto.js":
-/*!*************************************!*\
-  !*** ./src/_lib/js/vue-scrollto.js ***!
-  \*************************************/
+/***/ "./src/assets/_js/vue-scrollto.js":
+/*!****************************************!*\
+  !*** ./src/assets/_js/vue-scrollto.js ***!
+  \****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-scrollto */ \"./node_modules/vue-scrollto/vue-scrollto.js\");\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_scrollto__WEBPACK_IMPORTED_MODULE_0__);\n// node_module\n // original-css\n// none\n// export\n\nVue.use(vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default.a, {\n  duration: 700,\n  easing: [0, 0, 0.1, 1],\n  offset: -62\n});\n\n//# sourceURL=webpack:///./src/_lib/js/vue-scrollto.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-scrollto */ \"./node_modules/vue-scrollto/vue-scrollto.js\");\n/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_scrollto__WEBPACK_IMPORTED_MODULE_0__);\n// node_module\n // original-css\n// none\n// export\n\nVue.use(vue_scrollto__WEBPACK_IMPORTED_MODULE_0___default.a, {\n  duration: 700,\n  easing: [0, 0, 0.1, 1],\n  offset: -62\n});\n\n//# sourceURL=webpack:///./src/assets/_js/vue-scrollto.js?");
 
 /***/ })
 

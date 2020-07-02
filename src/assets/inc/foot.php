@@ -1,4 +1,4 @@
-<script src="<?php echo $js ?>/app.bandle.js"></script>
+<script src="<?php echo $js ?>/app.bundle.js"></script>
 <script>
 objectFitImages();
 </script>
