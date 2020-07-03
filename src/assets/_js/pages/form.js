@@ -43,7 +43,7 @@ export const formSampleMixin = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
       axios
-        .post('/assists/php/dummy.php',
+        .post(window.location.href + '/send_mail.php',
           this.encode({
             'form-name': 'contact',
             ...this.form
@@ -53,14 +53,14 @@ export const formSampleMixin = {
         .then((res) => {
           console.log('success') // eslint-disable-line no-console
           setTimeout(() => {
-            window.location.href = 'form/thanks/'
+            window.location.href = window.location.href + '/thanks/'
           }, 1000)
         })
         .catch((err) => {
           console.error(err) // eslint-disable-line no-console
           if (process.env.NODE_ENV === 'development') {
             setTimeout(() => {
-              window.location.href = 'form/thanks/'
+              window.location.href = window.location.href + '/thanks/'
             }, 1000)
           }
         })
