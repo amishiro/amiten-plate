@@ -103,7 +103,7 @@
             <formulate-input id="form-kind" type="radio" name="kind" validation="required" :options="{
               'WEB・アプリ企画・制作に関する内容': 'WEB・アプリ企画・制作に関する内容',
               'プログラミング教室・教材に関する内容': 'プログラミング教室・教材に関する内容',
-              '個人情報関するお問い合わせ': '個人情報関するお問い合わせ',
+              '個人情報に関するお問い合わせ': '個人情報に関するお問い合わせ',
               'その他': 'その他'
             }" :validation-messages="{
               required: 'お問い合わせ項目をお選びください'
