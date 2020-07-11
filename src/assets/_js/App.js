@@ -8,14 +8,14 @@ import { formSampleMixin } from './pages/form.js'
 import Test from './components/test.vue'
 
 const app = new Vue({
-  mixins: [
-    globalSlideMenuMixin,
-    formSampleMixin
-  ],
+  el: '#app',
   components: {
     Test,
   },
-  el: '#app'
+  mixins: [
+    globalSlideMenuMixin,
+    formSampleMixin
+  ]
 })
 
 export default { app }

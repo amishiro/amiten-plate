@@ -23,7 +23,7 @@
     "js": "gulp js",
     "deploy": "gulp deploy",
     "disconnect": "gulp disconnect",
-    "lint:js": "eslint 'src/assets/_js/**/*.js'",
+    "lint:js": "eslint 'src/assets/_js/**/*.{js, vue}'",
     "lint:css": "stylelint 'src/assets/_css/**/*.scss'"
   },
   "dependencies": {
@@ -42,11 +42,13 @@
     "css-loader": "^3.6.0",
     "del": "^5.1.0",
     "dotenv": "^8.2.0",
+    "eslint": "^7.4.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^7.0.0-alpha.9",
     "ftp-deploy": "^2.3.7",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",

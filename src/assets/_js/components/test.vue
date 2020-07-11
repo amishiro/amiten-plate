@@ -1,15 +1,17 @@
 <template>
   <div>
-    <div class="box">test</div>
+    <div class="box">
+      test
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    console.log("vueFile");
+  mounted () {
+    console.log('vueFile')
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

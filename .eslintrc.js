@@ -6,7 +6,8 @@ module.exports = {
   },
   // ↓ 基本設定
   extends: [
-    'standard'
+    'standard',
+    'plugin:vue/vue3-recommended'
   ],
   // ↓ 追加設定 ※基本設定項目の除外がメイン
   rules: {
