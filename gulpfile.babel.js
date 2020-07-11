@@ -37,6 +37,7 @@ import gulpCleanCSS from 'gulp-clean-css'
 // Compile js to es2015
 import webpack from 'webpack'
 import webpackStream from 'webpack-stream'
+import VueLoaderPlugin from 'vue-loader/lib/plugin'
 // dist
 import del from 'del'
 // deploy & .env
@@ -91,17 +92,17 @@ if (mode.development) process.env.NODE_ENV = mode.development
 console.log('mode:', mode)
 
 /**
- * set path
+ * set paths
  * 各種パスを指定 ※通常は変更の必要はありません。
  */
-const path = {
+const paths = {
   js: settings.srcDir + 'assets/js/',
   css: settings.srcDir + 'assets/css/',
   target: {
     php: settings.srcDir + '**/*.{php, html}',
     css: settings.srcDir + 'assets/_css/**/*.scss',
     cssFile: settings.srcDir + 'assets/_css/app.scss',
-    js: settings.srcDir + 'assets/_js/**/*.js',
+    js: settings.srcDir + 'assets/_js/**/*.{vue, js}',
     jsFile: settings.srcDir + 'assets/_js/app.js',
     dist: [
       settings.srcDir + '**/*',
@@ -119,26 +120,26 @@ const path = {
 
 /**
  * eslint: eslint with eslint-config-standard
- * 対象: path.target.js
+ * 対象: paths.target.js
  * 作業中ターミナルへeslintErrorを出力
  * etc: npm run lint:js でeslintErrorを出力
  * etc: npm run lint:js -- --fix でeslintErrorを修正
  */
 export const eslint = () => {
-  return gulp.src(path.target.js)
+  return gulp.src(paths.target.js)
     .pipe(gulpEslint())
     .pipe(gulpEslint.format())
 }
 
 /**
  * stylelint: stylelint with stylelint-config-standard-scss & order
- * 対象: path.target.css
+ * 対象: paths.target.css
  * 作業中ターミナルへstylelintErrorを出力
  * etc: npm run lint:css でstylelintErrorを出力
  * etc: npm run lint:css -- --fix でstylelintErrorを修正
  */
 export const stylelint = () => {
-  return gulp.src(path.target.css)
+  return gulp.src(paths.target.css)
     .pipe(gulpStylelint({
       reporters: [{ formatter: 'string', console: true }]
     }))
@@ -148,7 +149,7 @@ export const lint = gulp.series(eslint, stylelint)
 
 /**
  * css: Compile scss to css
- * 対象：path.target.cssFile
+ * 対象：paths.target.cssFile
  * scssをコンパイルしてcssへ書き出します。
  * 1. パターンマッチでファイルをimport ※アンダーバー付きファイルを除外
  * 2. scssソースマップを出力
@@ -157,10 +158,10 @@ export const lint = gulp.series(eslint, stylelint)
  * 5. distモードの場合は、圧縮してdistフォルダへ出力
  */
 export const css = () => {
-  return gulp.src(path.target.cssFile)
+  return gulp.src(paths.target.cssFile)
     .pipe(gulpSourcemaps.init())
     .pipe(gulpSassGlob({
-      ignorePaths: ['**/_*.*']
+      ignorePathss: ['**/_*.*']
     }))
     .pipe(gulpSass({ outputStyle: 'expanded' }).on('error', gulpSass.logError))
     .pipe(gulpPostcss([
@@ -168,28 +169,28 @@ export const css = () => {
     ]))
     .pipe(gulpSourcemaps.write())
     .pipe(gulpRename({ suffix: '.bundle' }))
-    .pipe(gulpIf(mode.development, gulp.dest(path.css)))
+    .pipe(gulpIf(mode.development, gulp.dest(paths.css)))
     .pipe(gulpIf(mode.dist, gulpCleanCSS({
       format: 'keep-breaks'
     })))
-    .pipe(gulpIf(mode.dist, gulp.dest(path.dist.css)))
+    .pipe(gulpIf(mode.dist, gulp.dest(paths.dist.css)))
 }
 
 /**
  * js: Compile js to es2015
- * 対象：path.target.js
+ * 対象：paths.target.js
  * 1. es20xx をes2015へ書き出す
  * 2。*.bundle.js名でjsフォルダへ書き出し
  * 3. distモードの場合は、圧縮してdistフォルダへ出力
  */
 export const js = () => {
   const modeName = mode.development ? 'development' : 'production'
-  return gulp.src(path.target.jsFile)
+  return gulp.src(paths.target.jsFile)
     .pipe(
       webpackStream({
         mode: modeName,
         entry: {
-          app: path.target.jsFile
+          app: paths.target.jsFile
         },
         output: {
           filename: '[name].bundle.js'
@@ -197,31 +198,53 @@ export const js = () => {
         module: {
           rules: [
             {
+              test: /\.(css|scss)$/,
+              use: [
+                'vue-style-loader',
+                'css-loader',
+                'sass-loader'
+              ]
+            },
+            {
+              test: /\.vue$/,
+              loader: 'vue-loader'
+            },
+            {
               test: /\.js$/,
               exclude: /node_modules/,
               use: ['babel-loader'],
             }
           ]
         },
+        resolve: {
+          extensions: ['.js', '.vue'],
+          alias: {
+            // vue-template-compilerに読ませてコンパイルするために必要
+            vue$: 'vue/dist/vue.esm.js',
+          },
+        },
+        plugins: [
+          new VueLoaderPlugin()]
+        ,
       }, webpack)
     )
-    .pipe(gulpIf(mode.development, gulp.dest(path.js)))
-    .pipe(gulpIf(mode.dist, gulp.dest(path.dist.js)))
+    .pipe(gulpIf(mode.development, gulp.dest(paths.js)))
+    .pipe(gulpIf(mode.dist, gulp.dest(paths.dist.js)))
 }
 
 /**
  * dist
- * 対象：path.dist
+ * 対象：paths.dist
  * 1. distディレクトリを削除
  * 2. srcディレクトリをdistへコピー
  * 3. gulpTaskのcss、jsを実行
  */
 const removeDistDir = () => {
-  return del(path.dist.dir)
+  return del(paths.dist.dir)
 }
 export const copy = () => {
-  return gulp.src(path.target.dist)
-    .pipe(gulp.dest(path.dist.dir))
+  return gulp.src(paths.target.dist)
+    .pipe(gulp.dest(paths.dist.dir))
 }
 export const dist = gulp.series(removeDistDir, copy, css, js)
 
@@ -262,9 +285,9 @@ const reload = (done) => {
   done()
 }
 const watch = () => {
-  gulp.watch(path.target.php, reload)
-  gulp.watch(path.target.css, gulp.series(stylelint, css, reload))
-  gulp.watch(path.target.js, gulp.series(eslint, js, reload))
+  gulp.watch(paths.target.php, reload)
+  gulp.watch(paths.target.css, gulp.series(stylelint, css, reload))
+  gulp.watch(paths.target.js, gulp.series(eslint, js, reload))
 }
 
 export default gulp.series(sync, watch, disconnect)
@@ -287,7 +310,7 @@ const upload = (done) => {
     password: settings.ftpPassword,
     host: settings.ftpHost,
     port: settings.ftpPort,
-    localRoot: path.dist.dir,
+    localRoot: paths.dist.dir,
     remoteRoot: remoteRoot,
     include: ['**/*'],
     deleteRemote: false,
