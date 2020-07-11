@@ -99,10 +99,13 @@ const paths = {
   js: settings.srcDir + 'assets/js/',
   css: settings.srcDir + 'assets/css/',
   target: {
-    php: settings.srcDir + '**/*.{php, html}',
+    php: settings.srcDir + '**/*.php',
     css: settings.srcDir + 'assets/_css/**/*.scss',
     cssFile: settings.srcDir + 'assets/_css/app.scss',
-    js: settings.srcDir + 'assets/_js/**/*.{vue, js}',
+    js: [
+      settings.srcDir + 'assets/_js/**/*.js',
+      settings.srcDir + 'assets/_js/**/*.vue'
+    ],
     jsFile: settings.srcDir + 'assets/_js/app.js',
     dist: [
       settings.srcDir + '**/*',

@@ -1,4 +1,5 @@
 // node_module
+import Vue from 'vue'
 import VScrollLock from 'v-scroll-lock'
 
 // original-css

@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 // import
 import './plugins/vue-scrollto.js'
 import './plugins/vue-formulate.js'
@@ -15,7 +17,10 @@ const app = new Vue({
   mixins: [
     globalSlideMenuMixin,
     formSampleMixin
-  ]
+  ],
+  mounted () {
+    console.log('test1')
+  },
 })
 
 export default { app }
