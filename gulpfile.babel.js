@@ -264,6 +264,7 @@ export const sync = (done) => {
   gulpConnect.server({
     port: settings.port,
     base: settings.srcDir,
+    stdio: 'ignore'
   }, () => {
     browserSync.init({
       proxy: `localhost:${settings.port}`
@@ -293,7 +294,7 @@ const watch = () => {
   gulp.watch(paths.target.js, gulp.series(eslint, js, reload))
 }
 
-export default gulp.series(sync, watch, disconnect)
+export default gulp.series(sync, disconnect, watch)
 
 // deploy
 /**
