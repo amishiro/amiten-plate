@@ -205,6 +205,16 @@ export const js = () => {
               use: [
                 'vue-style-loader',
                 'css-loader',
+                {
+                  loader: 'postcss-loader',
+                  options: {
+                    plugins: [
+                      require('autoprefixer')({
+                        grid: 'autoplace'
+                      })
+                    ]
+                  }
+                },
                 'sass-loader'
               ]
             },

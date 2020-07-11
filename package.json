@@ -29,6 +29,7 @@
   "dependencies": {
     "@braid/vue-formulate": "^2.4.2",
     "axios": "^0.19.2",
+    "postcss-loader": "^3.0.0",
     "v-scroll-lock": "^1.2.0",
     "vue": "^2.6.11",
     "vue-scrollto": "^2.18.1"

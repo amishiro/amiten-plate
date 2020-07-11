@@ -19,6 +19,7 @@ export default {
 @import "../../_css/variables/mixin";
 
 .box {
+  display: flex;
   color: $color-brand;
 }
 </style>
