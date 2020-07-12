@@ -23,7 +23,8 @@
     "js": "gulp js",
     "deploy": "gulp deploy",
     "disconnect": "gulp disconnect",
-    "lint:js": "eslint 'src/assets/_js/**/*.{js, vue}'",
+    "lint:js": "eslint 'src/assets/_js/**/*.js'",
+    "lint:vue": "eslint 'src/assets/_js/**/*.vue'",
     "lint:css": "stylelint 'src/assets/_css/**/*.scss'"
   },
   "dependencies": {

@@ -23,7 +23,7 @@
               <a href="form/" class="gnav__link form" itemprop="URL">Form</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="ui/" class="gnav__link ui" itemprop="URL">UI</a>
+              <a href="components/" class="gnav__link components" itemprop="URL">Components</a>
             </li>
             <li class="gnav__item" itemprop="name">
               <a href="column/" class="gnav__link column" itemprop="URL">Column</a>

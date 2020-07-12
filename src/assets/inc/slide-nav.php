@@ -15,7 +15,7 @@
           <a href="form/" class="slide-nav__link form" itemprop="URL">Form</a>
         </li>
         <li class="slide-nav__item" itemprop="name">
-          <a href="ui/" class="slide-nav__link ui" itemprop="URL">UI</a>
+          <a href="components/" class="slide-nav__link components" itemprop="URL">Components</a>
         </li>
         <li class="slide-nav__item" itemprop="name">
           <a href="column/" class="slide-nav__link column" itemprop="URL">Column</a>
