@@ -92,6 +92,18 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
 
 /***/ }),
 
+/***/ "./src/assets/_js/components/layouts/object-fit-images.js":
+/*!****************************************************************!*\
+  !*** ./src/assets/_js/components/layouts/object-fit-images.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  mounted: function mounted() {\n    this.$nextTick(function () {\n      // eslint-disable-next-line no-undef\n      objectFitImages();\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/assets/_js/components/layouts/object-fit-images.js?");
+
+/***/ }),
+
 /***/ "./src/assets/_js/components/layouts/slide-nav.js":
 /*!********************************************************!*\
   !*** ./src/assets/_js/components/layouts/slide-nav.js ***!
@@ -208,7 +220,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _the_test_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./the/test.vue */ \"./src/assets/_js/components/the/test.vue\");\n/* harmony import */ var _the_test2_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./the/test2.vue */ \"./src/assets/_js/components/the/test2.vue\");\n/* harmony import */ var _layouts_slide_nav_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layouts/slide-nav.js */ \"./src/assets/_js/components/layouts/slide-nav.js\");\n\n\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].component('Test', _the_test_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].component('Test2', _the_test2_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].mixin(_layouts_slide_nav_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\n\n//# sourceURL=webpack:///./src/assets/_js/components/vendor.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var _the_test_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./the/test.vue */ \"./src/assets/_js/components/the/test.vue\");\n/* harmony import */ var _the_test2_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./the/test2.vue */ \"./src/assets/_js/components/the/test2.vue\");\n/* harmony import */ var _layouts_slide_nav_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layouts/slide-nav.js */ \"./src/assets/_js/components/layouts/slide-nav.js\");\n/* harmony import */ var _layouts_object_fit_images_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layouts/object-fit-images.js */ \"./src/assets/_js/components/layouts/object-fit-images.js\");\n\n\n\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].component('Test', _the_test_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].component('Test2', _the_test2_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].mixin(_layouts_slide_nav_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].mixin(_layouts_object_fit_images_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n\n//# sourceURL=webpack:///./src/assets/_js/components/vendor.js?");
 
 /***/ })
 

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import './plugins/vendor.js'
 import './components/vendor.js'
 
-// pages import
+// add import
 import './plugins/vue-formulate.js'
 import axios from 'axios'
 
@@ -25,8 +25,6 @@ const app = new Vue({
         policy: ''
       }
     }
-  },
-  mounted () {
   },
   methods: {
     clickTest () {

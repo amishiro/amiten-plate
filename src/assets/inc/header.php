@@ -4,7 +4,7 @@
       <div class="header__logo">
         <div class="logo" itemscope itemtype="http://schema.org/Organization">
           <a itemprop="url" href="<?php echo $url; ?>">
-            amitemplate
+            amiten-plate
             <!-- <img itemprop="logo" src="assets/img/logo.png" /> -->
           </a>
         </div>
