@@ -93,6 +93,8 @@ include($inc . "header.php");
         <br>
         <base-button color="point">point</base-button>
         <br>
+        <base-button color="outline">outline</base-button>
+        <br>
         <base-button color="reset" icon="reset" type="reset">reset</base-button>
       </article>
 

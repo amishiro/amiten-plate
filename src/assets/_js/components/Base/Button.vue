@@ -99,6 +99,7 @@ export default {
       return {
         'is-point': this.color === 'point',
         'is-reset': this.color === 'reset',
+        'is-outline': this.color === 'outline',
       }
     },
   }
@@ -148,6 +149,19 @@ $min-height: 48px;
       &:hover {
         color: $color-point;
         background-color: white;
+      }
+    }
+
+    &.is-outline {
+      color: $color-brand;
+      background-color: transparent;
+      border-color: $color-brand;
+      box-shadow: none;
+
+      &:hover {
+        color: white;
+        background-color: $color-brand;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
       }
     }
 
