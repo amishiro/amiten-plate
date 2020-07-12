@@ -23,7 +23,7 @@ export default {
     margin-right: -$gap;
     margin-bottom: -$gap/2;
     margin-left: -$gap;
-    @include tablet {
+    @include desktop {
       flex-direction: row;
     }
 
