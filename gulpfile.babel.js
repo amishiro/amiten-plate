@@ -191,7 +191,6 @@ export const css = () => {
  */
 export const js = () => {
   const modeName = mode.development ? 'development' : 'production'
-                      })
   return webpackStream({
     mode: modeName,
     entry: paths.target.jsFiles,

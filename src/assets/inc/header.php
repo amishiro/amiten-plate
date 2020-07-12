@@ -5,7 +5,7 @@
         <div class="logo" itemscope itemtype="http://schema.org/Organization">
           <a itemprop="url" href="<?php echo $url; ?>">
             amitemplate
-            <!-- <img itemprop="logo" src="<?php echo $img; ?>/logo.png" /> -->
+            <!-- <img itemprop="logo" src="assets/img/logo.png" /> -->
           </a>
         </div>
       </div>
@@ -14,30 +14,30 @@
         <nav class="gnav">
           <ul class="gnav__wrapper" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
             <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>" class="gnav__link home" itemprop="URL">Home</a>
+              <a href="" class="gnav__link home" itemprop="URL">Home</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>/element" class="gnav__link element" itemprop="URL">Element</a>
+              <a href="element/" class="gnav__link element" itemprop="URL">Element</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>/form" class="gnav__link form" itemprop="URL">Form</a>
+              <a href="form/" class="gnav__link form" itemprop="URL">Form</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>/ui" class="gnav__link ui" itemprop="URL">UI</a>
+              <a href="ui/" class="gnav__link ui" itemprop="URL">UI</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>/column" class="gnav__link column" itemprop="URL">Column</a>
+              <a href="column/" class="gnav__link column" itemprop="URL">Column</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="<?php echo $url; ?>" class="gnav__link" itemprop="URL">Home</a>
+              <a href="" class="gnav__link" itemprop="URL">Home</a>
             </li>
           </ul>
         </nav>
       </div>
 
       <div class="header__slide-nav" id="slide-nav">
-        <?php include($inc.'/slide-nav-menu.php') ;?>
-        <?php include($inc.'/slide-nav.php') ;?>
+        <?php include($inc . "slide-nav-menu.php") ;?>
+        <?php include($inc . "slide-nav.php") ;?>
       </div>
 
     </div>

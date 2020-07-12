@@ -4,17 +4,19 @@ $meta->pageName = "エレメント";
 // $meta->pageDesc = "ページ個別のディスクリプションがあれば記載";
 // $meta->pageImg = "ページ個別のogpImageがあれば記載";
 $bodyClass = new BodyClass('');
-include($inc . "/head.php");
-include($inc . "/header.php");
+$addStyles[] = '';
+$addScripts[] = '<script src="assets/js/app.bundle.js"></script>';
+include($inc . "head.php");
+include($inc . "header.php");
 ?>
 
 <div class="main">
   <header class="main__header">
-    <?php include($inc . "/main-header.php"); ?>
+    <?php include($inc . "main-header.php"); ?>
   </header>
 
   <nav class="main__breadcrumb">
-    <?php include($inc . "/main-breadcrumb.php"); ?>
+    <?php include($inc . "main-breadcrumb.php"); ?>
   </nav>
 
   <div class="main__content">
@@ -307,6 +309,6 @@ p q r s t u v w x y z { | } ~
 </div>
 
 <?php
-include($inc . "/footer.php");
-include($inc . "/foot.php");
+include($inc . "footer.php");
+include($inc . "foot.php");
 ?>

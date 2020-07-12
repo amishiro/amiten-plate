@@ -1,17 +1,17 @@
 </main>
 
 <footer class="layout__footer">
-  <?php include($inc.'/page-top.php') ;?>
+  <?php include($inc .'page-top.php') ;?>
   <div class="footer">
 
     <nav class="footer__nav ">
       <div class="fnav">
         <ul class="fnav__wrapper">
           <li class="fnav__item">
-            <a href="<?php echo $url ?>/" class="fnav__link sub-item">subItem</a>
+            <a href="" class="fnav__link sub-item">subItem</a>
           </li>
           <li class="fnav__item">
-            <a href="<?php echo $url ?>/" class="fnav__link sub-item">subItem</a>
+            <a href="" class="fnav__link sub-item">subItem</a>
           </li>
           <li class="fnav__item">
             <a href="https://www.google.co.jp/" class="fnav__link company" target="_blank" rel="nofollow">google</a>

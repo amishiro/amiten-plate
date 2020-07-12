@@ -1,7 +1,7 @@
 <div class="breadcrumb">
   <ul class="breadcrumb__wrapper" itemscope itemtype="http://data-vocabulary.org/Breadcrumab">
     <li class="breadcrumb__item">
-      <a href="<?php echo $url; ?>" class="breadcrumb__link is-home" itemprop="url">
+      <a href="" class="breadcrumb__link is-home" itemprop="url">
         <i class="material-icons">home</i>
         <span itemprop="title"><?php echo $meta->siteName; ?> ホーム</span>
       </a>
@@ -9,8 +9,8 @@
     <?php
     //パンくずに階層がある場合は、設置箇所に以下を記述する
     // $breadcrumbAry = array(
-    //   array("/test/url/index.php", "パンくず名"),
-    //   array("/test/url/index.php", "パンくず名")
+    //   array("test/url/index.php", "パンくず名"),
+    //   array("test/url/index.php", "パンくず名")
     // );
     if (!empty($breadcrumbAry)) {
       foreach ($breadcrumbAry as $v) {

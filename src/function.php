@@ -3,7 +3,7 @@
 #-------- settings -------#
 
 #1) [ $baseUrl ]を、ディレクトリ構成に合わせて修正してください
-$baseUrl = str_replace($_SERVER['DOCUMENT_ROOT'], '', dirname(__FILE__));
+$baseUrl = str_replace($_SERVER['DOCUMENT_ROOT'], '', dirname(__FILE__)) . "/";
 
 #2) 開発環境に合わせて、エラーハンドリングしてください
 ini_set('display_errors', 1);
@@ -12,13 +12,10 @@ ini_set('display_errors', 1);
 $incPatch = (dirname(__FILE__));
 
 // links --------------------------------
-$severName = $_SERVER["SERVER_NAME"];
+$serverName = $_SERVER["SERVER_NAME"];
 $domain = $_SERVER["HTTP_HOST"];
 $url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $domain . $baseUrl;
-$css = $baseUrl . "/assets/css";
-$img = $baseUrl . "/assets/img";
-$inc = $incPatch . "/assets/inc";
-$js = $baseUrl . "/assets/js";
+$inc = $incPatch . "/assets/inc/";
 
 // html meta --------------------------------
 $meta = new MetaClass();

@@ -4,17 +4,19 @@ $meta->pageName = "送信完了";
 // $meta->pageDesc = "ページ個別のディスクリプションがあれば記載";
 // $meta->pageImg = "ページ個別のogpImageがあれば記載";
 $bodyClass = new BodyClass('');
-include($inc . "/head.php");
-include($inc . "/header.php");
+$addStyles[] = '';
+$addScripts[] = '<script src="assets/js/app.bundle.js"></script>';
+include($inc . "head.php");
+include($inc . "header.php");
 ?>
 
 <div class="main">
   <nav class="main__breadcrumb">
     <?php
       $breadcrumbAry = array(
-        array("/form", "Form")
+        array("form", "Form")
       );
-      include($inc . "/main-breadcrumb.php");
+      include($inc . "main-breadcrumb.php");
     ?>
   </nav>
 
@@ -30,13 +32,13 @@ include($inc . "/header.php");
       </div>
       <div class="u-assist">
         <h3>数日たっても、担当者からの連絡がない場合</h3>
-        <p>万一ご連絡が遅れている場合は、受付が完了していない可能性がございますので、お手数ですが<a href="<?php echo $url; ?>/form">こちら</a>より、再度、お問い合わせをお願いいたします。</p>
+        <p>万一ご連絡が遅れている場合は、受付が完了していない可能性がございますので、お手数ですが<a href="form">こちら</a>より、再度、お問い合わせをお願いいたします。</p>
       </div>
     </section>
   </div>
 </div>
 
 <?php
-include($inc . "/footer.php");
-include($inc . "/foot.php");
+include($inc . "footer.php");
+include($inc . "foot.php");
 ?>

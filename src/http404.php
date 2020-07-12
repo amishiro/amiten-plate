@@ -4,17 +4,19 @@ $meta->pageName = "404";
 // $meta->pageDesc = "ページ個別のディスクリプションがあれば記載";
 // $meta->pageImg = "ページ個別のogpImageがあれば記載";
 $bodyClass = new BodyClass('http404');
-include($inc . "/head.php");
-include($inc . "/header.php");
+$addStyles[] = '';
+$addScripts[] = '<script src="assets/js/app.bundle.js"></script>';
+include($inc . "head.php");
+include($inc . "header.php");
 ?>
 
 <div class="main">
   <header class="main__header">
-    <?php include($inc . "/main-header.php"); ?>
+    <?php include($inc . "main-header.php"); ?>
   </header>
 
   <div class="main__breadcrumb">
-    <?php include($inc . "/main-breadcrumb.php"); ?>
+    <?php include($inc . "main-breadcrumb.php"); ?>
   </div>
 
   <div class="main__content">
@@ -35,6 +37,6 @@ include($inc . "/header.php");
 </div>
 
 <?php
-include($inc . "/footer.php");
-include($inc . "/foot.php");
+include($inc . "footer.php");
+include($inc . "foot.php");
 ?>
