@@ -1,9 +1,6 @@
 <template>
   <div class="base-buttons">
-    <div
-      class="base-buttons__wrapper"
-      :class="{'no-column': noColumn, 'is-left': isLeft}"
-    >
+    <div class="base-buttons__wrapper">
       <slot />
     </div>
   </div>
