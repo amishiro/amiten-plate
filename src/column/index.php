@@ -4,16 +4,18 @@ $meta->pageName = "カラムテスト";
 // $meta->pageDesc = "ページ個別のディスクリプションがあれば記載";
 // $meta->pageImg = "ページ個別のogpImageがあれば記載";
 $bodyClass = new BodyClass('');
-include($inc . "/head.php");
-include($inc . "/header.php");
+$addStyles[] = '';
+$addScripts[] = '<script src="assets/js/app.bundle.js"></script>';
+include($inc . "head.php");
+include($inc . "header.php");
 ?>
 <div class="main">
   <header class="main__header">
-    <?php include($inc . "/main-header.php"); ?>
+    <?php include($inc . "main-header.php"); ?>
   </header>
 
   <nav class="main__breadcrumb">
-    <?php include($inc . "/main-breadcrumb.php"); ?>
+    <?php include($inc . "main-breadcrumb.php"); ?>
   </nav>
 
   <div class="main__content">
@@ -51,14 +53,14 @@ include($inc . "/header.php");
         <div class="u-grid">
           <div class="u-grid__item">
             <figure>
-              <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-max">
+              <img src="assets/img/dummy/yamato.png" alt="" class="u-img-max">
             </figure>
             <h3>h3.heading</h3>
             <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
           </div>
           <div class="u-grid__item">
             <figure>
-              <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-max">
+              <img src="assets/img/dummy/yamato.png" alt="" class="u-img-max">
             </figure>
             <h3>h3.heading つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</h3>
             <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
@@ -74,7 +76,7 @@ include($inc . "/header.php");
             <div class="u-column__item">
               <div class="u-column__inner">
                 <figure>
-                  <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-max">
+                  <img src="assets/img/dummy/yamato.png" alt="" class="u-img-max">
                 </figure>
                 <h3>h3.heading</h3>
                 <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
@@ -83,7 +85,7 @@ include($inc . "/header.php");
             <div class="u-column__item">
               <div class="u-column__inner">
                 <figure>
-                  <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-max">
+                  <img src="assets/img/dummy/yamato.png" alt="" class="u-img-max">
                 </figure>
                 <h3>h3.heading つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</h3>
                 <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
@@ -92,7 +94,7 @@ include($inc . "/header.php");
             <div class="u-column__item">
               <div class="u-column__inner">
                 <figure>
-                  <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-max">
+                  <img src="assets/img/dummy/yamato.png" alt="" class="u-img-max">
                 </figure>
                 <h3>h3.heading</h3>
                 <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
@@ -101,7 +103,7 @@ include($inc . "/header.php");
             <div class="u-column__item">
               <div class="u-column__inner">
                 <figure>
-                  <img src="<?php echo $img; ?>/dummy/yamato.png" alt="" class="u-img-max">
+                  <img src="assets/img/dummy/yamato.png" alt="" class="u-img-max">
                 </figure>
                 <h3>h3.heading</h3>
                 <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
@@ -118,6 +120,6 @@ include($inc . "/header.php");
 </div>
 
 <?php
-include($inc . "/footer.php");
-include($inc . "/foot.php");
+include($inc . "footer.php");
+include($inc . "foot.php");
 ?>

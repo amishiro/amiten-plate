@@ -1,0 +1,32 @@
+.slide-nav-menu {
+  &__item {
+    z-index: 12;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: $color-dark;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-brand;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    top: 0;
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  &__text {
+    position: relative;
+    top: -7px;
+    font-size: 10px;
+    line-height: 1;
+  }
+}

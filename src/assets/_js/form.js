@@ -1,6 +1,13 @@
+import Vue from 'vue'
+import './plugins/vendor.js'
+import './components/vendor.js'
+
+// add import
+import './plugins/vue-formulate.js'
 import axios from 'axios'
 
-export const formSampleMixin = {
+const app = new Vue({
+  el: '#app',
   data () {
     return {
       inputFinished: false,
@@ -20,6 +27,9 @@ export const formSampleMixin = {
     }
   },
   methods: {
+    clickTest () {
+      console.log('test')
+    },
     handleTrigger () {
       this.inputFinished = true
     },
@@ -69,6 +79,6 @@ export const formSampleMixin = {
       this.inputFinished = false
     }
   },
-  mounted () {
-  },
-}
+})
+
+export default { app }

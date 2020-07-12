@@ -4,13 +4,15 @@ include("function.php");
 // $meta->pageDesc = "ページ個別のディスクリプションがあれば記載";
 // $meta->pageImg = "ページ個別のogpImageがあれば記載";
 $bodyClass = new BodyClass('home');
-include($inc . "/head.php");
-include($inc . "/header.php");
+$addStyles[] = '';
+$addScripts[] = '<script src="assets/js/app.bundle.js"></script>';
+include($inc . "head.php");
+include($inc . "header.php");
 ?>
 
 <div class="main">
   <section class="main__visual">
-    <img src="<?php echo $img; ?>/dummy/yamato.png" alt="dummy画像" class="u-img-fit">
+    <img src="assets/img/dummy/yamato.png" alt="dummy画像" class="u-img-fit">
   </section>
   <div class="main__content">
     <section class="main__section">
@@ -22,6 +24,7 @@ include($inc . "/header.php");
       <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
     </article>
     <aside class="main__aside">
+      <test></test>
       <h2>h2.heading aside</h2>
       <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
     </aside>
@@ -29,6 +32,6 @@ include($inc . "/header.php");
 </div>
 
 <?php
-include($inc . "/footer.php");
-include($inc . "/foot.php");
+include($inc . "footer.php");
+include($inc . "foot.php");
 ?>
