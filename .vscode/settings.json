@@ -28,6 +28,7 @@
     "mixins",
     "amiten",
     "amishiro",
-    "masato"
+    "masato",
+    "scrollto"
   ]
 }
