@@ -121,32 +121,37 @@ include($inc . "header.php");
       </article>
 
       <article id="base-assist">
-        <h2>u-assist</h2>
+        <h2>base-assist</h2>
         <h3>base</h3>
-        <div class="u-assist">
+        <base-assist>
           <h3>hedding</h3>
           <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
-        </div>
-        <h3>is-point</h3>
-        <div class="u-assist is-point">
-          <h3>hedding</h3>
+        </base-assist>
+        <h3>type</h3>
+        <base-assist type="point">
+          <h3>point</h3>
           <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
-        </div>
-        <h3>is-outline</h3>
-        <div class="u-assist is-outline">
-          <h3>hedding</h3>
+        </base-assist>
+        <base-assist type="outline">
+          <h3>outline</h3>
           <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
-        </div>
-        <h3>is-info</h3>
-        <div class="u-assist is-info">
-          <h3>hedding</h3>
+        </base-assist>
+        <base-assist type="info">
+          <h3>info</h3>
           <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
-        </div>
-        <h3>is-warning</h3>
-        <div class="u-assist is-warning">
-          <h3>hedding</h3>
+        </base-assist>
+        <base-assist type="warning">
+          <h3>warning</h3>
           <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
-        </div>
+        </base-assist>
+
+        <h3>with buttons</h3>
+        <base-assist>
+          <base-buttons>
+            <base-button>test</base-button>
+            <base-button>test</base-button>
+          </base-buttons>
+        </base-assist>
       </article>
 
     </section>
