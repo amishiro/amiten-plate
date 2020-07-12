@@ -22,7 +22,7 @@ $js = $baseUrl . "/assets/js";
 
 // html meta --------------------------------
 $meta = new MetaClass();
-$meta->siteName = "サイトタイトル";
+$meta->siteName = "amiten-plate";
 $meta->siteDesc = "サイトディスクリプション";
 $meta->siteImg = "opg-image.png";
 

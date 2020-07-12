@@ -106,7 +106,10 @@ const paths = {
       settings.srcDir + 'assets/_js/**/*.js',
       settings.srcDir + 'assets/_js/**/*.vue'
     ],
-    jsFile: settings.srcDir + 'assets/_js/app.js',
+    jsFiles: {
+      app: settings.srcDir + 'assets/_js/app.js',
+      form: settings.srcDir + 'assets/_js/form.js',
+    },
     dist: [
       settings.srcDir + '**/*',
       '!' + settings.srcDir + '**/_**',
@@ -188,59 +191,79 @@ export const css = () => {
  */
 export const js = () => {
   const modeName = mode.development ? 'development' : 'production'
-  return gulp.src(paths.target.jsFile)
-    .pipe(
-      webpackStream({
-        mode: modeName,
-        entry: {
-          app: paths.target.jsFile
-        },
-        output: {
-          filename: '[name].bundle.js'
-        },
-        module: {
-          rules: [
-            {
-              test: /\.(css|scss)$/,
-              use: [
-                'vue-style-loader',
-                'css-loader',
-                {
-                  loader: 'postcss-loader',
-                  options: {
-                    plugins: [
-                      require('autoprefixer')({
-                        grid: 'autoplace'
                       })
-                    ]
-                  }
-                },
-                'sass-loader'
-              ]
-            },
+  return webpackStream({
+    mode: modeName,
+    entry: paths.target.jsFiles,
+    output: {
+      filename: '[name].bundle.js'
+    },
+    optimization: {
+      // 2回以上利用している共通箇所を切り出して出力
+      // Docs: https://webpack.js.org/plugins/split-chunks-plugin/
+      splitChunks: {
+        cacheGroups: {
+          // 2回以上利用しているnode_moduleをまとめる
+          vendor: {
+            test: /node_modules/,
+            name: 'vendor',
+            chunks: 'initial',
+            minChunks: 2,
+            enforce: true
+          },
+          components: {
+            // 2回以上利用しているコンポーネントをまとめる
+            test: /src\/assets\/_js\/components/,
+            name: 'components',
+            chunks: 'initial',
+            minChunks: 2,
+            enforce: true
+          }
+        }
+      }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(css|scss)$/,
+          use: [
+            'vue-style-loader',
+            'css-loader',
             {
-              test: /\.vue$/,
-              loader: 'vue-loader'
+              loader: 'postcss-loader',
+              options: {
+                plugins: [
+                  require('autoprefixer')({
+                    grid: 'autoplace'
+                  })
+                ]
+              }
             },
-            {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              use: ['babel-loader'],
-            }
+            'sass-loader'
           ]
         },
-        resolve: {
-          extensions: ['.js', '.vue'],
-          alias: {
-            // vue-template-compilerに読ませてコンパイルするために必要
-            vue$: 'vue/dist/vue.esm.js',
-          },
+        {
+          test: /\.vue$/,
+          loader: 'vue-loader'
         },
-        plugins: [
-          new VueLoaderPlugin()]
-        ,
-      }, webpack)
-    )
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: ['babel-loader'],
+        }
+      ]
+    },
+    resolve: {
+      extensions: ['.js', '.vue'],
+      alias: {
+        // vue-template-compilerに読ませてコンパイルするために必要
+        vue$: 'vue/dist/vue.esm.js',
+      },
+    },
+    plugins: [
+      new VueLoaderPlugin()]
+    ,
+  }, webpack)
     .pipe(gulpIf(mode.development, gulp.dest(paths.js)))
     .pipe(gulpIf(mode.dist, gulp.dest(paths.dist.js)))
 }

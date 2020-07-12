@@ -51,5 +51,5 @@
 
 </head>
 
-<body class="layout <?php $bodyClass->output(); ?>">
+<body class="<?php $bodyClass->output(); ?>">
   <div class="layout" id="app">

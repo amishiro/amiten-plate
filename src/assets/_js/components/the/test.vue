@@ -8,18 +8,17 @@
 
 <script>
 export default {
-  mounted () {
-    console.log('vueFile')
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "../../_css/variables/variable";
-@import "../../_css/variables/mixin";
+@import "../../../_css/variables/variable";
+@import "../../../_css/variables/mixin";
 
 .box {
   display: flex;
+  justify-items: center;
   color: $color-brand;
+  background-color: red;
 }
 </style>

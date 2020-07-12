@@ -1,26 +1,22 @@
 import Vue from 'vue'
+import './plugins/vendor.js'
+import './components/vendor.js'
 
-// import
-import './plugins/vue-scrollto.js'
-import './plugins/vue-formulate.js'
-
-import { globalSlideMenuMixin } from './layouts/global-menu.js'
-import { formSampleMixin } from './pages/form.js'
-
-import Test from './components/test.vue'
-
+// eslint-disable-next-line no-unused-vars
 const app = new Vue({
   el: '#app',
-  components: {
-    Test,
-  },
-  mixins: [
-    globalSlideMenuMixin,
-    formSampleMixin
-  ],
   mounted () {
-    console.log('test1')
+    this.$nextTick(() => {
+      // eslint-disable-next-line no-undef
+      objectFitImages()
+    })
+    this.$nextTick(() => {
+      // eslint-disable-next-line no-undef
+      console.log('nextTick1')
+    })
+    this.$nextTick(() => {
+      // eslint-disable-next-line no-undef
+      console.log('nextTick2')
+    })
   },
 })
-
-export default { app }

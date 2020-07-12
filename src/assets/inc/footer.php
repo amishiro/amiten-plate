@@ -1,7 +1,7 @@
 </main>
 
 <footer class="layout__footer">
-  <a href="#" v-scroll-to="'#app'" class="page-top"><i class="material-icons">keyboard_arrow_up</i></a>
+  <?php include($inc.'/page-top.php') ;?>
   <div class="footer">
 
     <nav class="footer__nav ">
