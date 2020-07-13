@@ -21,6 +21,7 @@ include($inc . "header.php");
 
   <div class="main__content">
     <section class="main__section">
+
       <h2>Vue components</h2>
       <p><code>the</code><code>base</code>vueコンポーネントのテストページです</p>
       <nav>
@@ -34,11 +35,19 @@ include($inc . "header.php");
           <li>
             <a href="#" v-scroll-to="'#base-assist'">base-assist</a>
           </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-heading'">base-heading</a>
+          </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-sub-nav'">base-sub-nav</a>
+          </li>
         </ul>
       </nav>
 
       <article id="base-button">
-        <h2>base-button</h2>
+        <base-heading size='large' tag="h2">
+          base-button
+        </base-heading>
 
         <h3>base</h3>
         <base-button>button</base-button>
@@ -99,7 +108,9 @@ include($inc . "header.php");
       </article>
 
       <article id="base-buttons">
-        <h2>base-buttons</h2>
+        <base-heading size='large' tag="h2">
+          base-buttons
+        </base-heading>
 
         <h3>base</h3>
         <base-buttons></base-buttons>
@@ -123,12 +134,16 @@ include($inc . "header.php");
       </article>
 
       <article id="base-assist">
-        <h2>base-assist</h2>
+        <base-heading size='large' tag="h2">
+          base-assist
+        </base-heading>
+
         <h3>base</h3>
         <base-assist>
           <h3>hedding</h3>
           <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
         </base-assist>
+
         <h3>type</h3>
         <base-assist type="point">
           <h3>point</h3>
@@ -156,7 +171,173 @@ include($inc . "header.php");
         </base-assist>
       </article>
 
+      <article id="base-heading">
+        <base-heading size='large' tag="h2">
+          base-heading
+        </base-heading>
+        <h3>base</h3>
+
+        <base-heading tag="h3">
+          default slot only
+        </base-heading>
+
+        <base-heading tag="h3">
+          default slot
+          <template v-slot:ex>
+            <p>add ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <base-heading tag="h3">
+          <template v-slot:sub>
+            <p>add sub slot</p>
+          </template>
+          default slot
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <h3>size</h3>
+
+        <base-heading size="small" tag="h3">
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          size="small"
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <base-heading size="medium" tag="h3">
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          size="medium"
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <base-heading size="large" tag="h3">
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          size="large"
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <h3>position</h3>
+
+        <base-heading position="left" tag="h3">
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          position="left"
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <base-heading position="center" tag="h3">
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          position="center"
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <base-heading position="right" tag="h3">
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          position="right"
+          <template v-slot:ex>
+            <p>ex slot: つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書（５０文字）</p>
+          </template>
+        </base-heading>
+
+        <h3>etc</h3>
+
+        <base-heading size="large" position="center" tag="h3">
+          size="large" position="center"
+          <template v-slot:sub>
+            <p>sub slot</p>
+          </template>
+          <template v-slot:ex>
+            <p>サイト、アプリに合わせて修正</p>
+          </template>
+        </base-heading>
+
+      </article>
+
+      <article id="base-sub-nav">
+        <base-heading size='large' tag="h2">
+          base-sub-nav
+        </base-heading>
+        <h3>base</h3>
+
+        <base-sub-nav>
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+        <base-sub-nav>
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+            <li>
+              <a href="">item3</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+        <base-sub-nav>
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+            <li>
+              <a href="">item3</a>
+            </li>
+            <li>
+              <a href="">item4</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+
+        <h3>bottom</h3>
+
+        <base-sub-nav position="bottom">
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+      </article>
+
     </section>
+
   </div>
 </div>
 
