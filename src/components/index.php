@@ -21,6 +21,7 @@ include($inc . "header.php");
 
   <div class="main__content">
     <section class="main__section">
+
       <h2>Vue components</h2>
       <p><code>the</code><code>base</code>vueコンポーネントのテストページです</p>
       <nav>
@@ -36,6 +37,9 @@ include($inc . "header.php");
           </li>
           <li>
             <a href="#" v-scroll-to="'#base-heading'">base-heading</a>
+          </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-sub-nav'">base-sub-nav</a>
           </li>
         </ul>
       </nav>
@@ -272,7 +276,68 @@ include($inc . "header.php");
 
       </article>
 
+      <article id="base-sub-nav">
+        <base-heading size='large' tag="h2">
+          base-sub-nav
+        </base-heading>
+        <h3>base</h3>
+
+        <base-sub-nav>
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+        <base-sub-nav>
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+            <li>
+              <a href="">item3</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+        <base-sub-nav>
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+            <li>
+              <a href="">item3</a>
+            </li>
+            <li>
+              <a href="">item4</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+
+        <h3>bottom</h3>
+
+        <base-sub-nav position="bottom">
+          <ul>
+            <li>
+              <a href="" class="is-active">item1</a>
+            </li>
+            <li>
+              <a href="">item2</a>
+            </li>
+          </ul>
+        </base-sub-nav>
+      </article>
+
     </section>
+
   </div>
 </div>
 
