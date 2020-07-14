@@ -6,6 +6,7 @@ import BaseButtons from './Base/buttons.vue'
 import BaseCard from './Base/Card.vue'
 import BaseHeading from './Base/Heading.vue'
 import BaseSubNav from './Base/SubNav.vue'
+import BaseWrapper from './Base/Wrapper.vue'
 import slideNav from './layouts/slide-nav.js'
 import objectFitImages from './layouts/object-fit-images.js'
 
@@ -17,6 +18,7 @@ Vue.mixin({
     BaseCard,
     BaseHeading,
     BaseSubNav,
+    BaseWrapper,
   },
 })
 Vue.mixin(slideNav)
