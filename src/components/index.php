@@ -20,11 +20,10 @@ include($inc . "header.php");
   </nav>
 
   <div class="main__content">
-    <section class="main__section">
-
-      <h2>Vue components</h2>
-      <p><code>the</code><code>base</code>vueコンポーネントのテストページです</p>
-      <nav>
+    <section>
+      <base-wrapper tag="nav">
+        <h2>Vue components</h2>
+        <p><code>the</code><code>base</code>vueコンポーネントのテストページです</p>
         <ul>
           <li>
             <a href="#" v-scroll-to="'#base-button'">base-button</a>
@@ -44,10 +43,13 @@ include($inc . "header.php");
           <li>
             <a href="#" v-scroll-to="'#base-card'">base-card</a>
           </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-wrapper'">base-wrapper</a>
+          </li>
         </ul>
-      </nav>
+      </base-wrapper>
 
-      <article id="base-button">
+      <base-wrapper tag="article" id="base-button">
         <base-heading size='large' tag="h2">
           base-button
         </base-heading>
@@ -108,9 +110,10 @@ include($inc . "header.php");
         <base-button color="outline">outline</base-button>
         <br>
         <base-button color="reset" icon="reset" type="reset">reset</base-button>
-      </article>
+      </base-wrapper>
 
-      <article id="base-buttons">
+      <base-wrapper tag="article" id="base-buttons">
+
         <base-heading size='large' tag="h2">
           base-buttons
         </base-heading>
@@ -134,9 +137,9 @@ include($inc . "header.php");
           <base-button>button</base-button>
           <base-button>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</base-button>
         </base-buttons>
-      </article>
+      </base-wrapper>
 
-      <article id="base-assist">
+      <base-wrapper tag="article" id="base-assist">
         <base-heading size='large' tag="h2">
           base-assist
         </base-heading>
@@ -172,9 +175,10 @@ include($inc . "header.php");
             <base-button>test</base-button>
           </base-buttons>
         </base-assist>
-      </article>
+      </base-wrapper>
 
-      <article id="base-heading">
+      <base-wrapper tag="article" id="base-heading">
+
         <base-heading size='large' tag="h2">
           base-heading
         </base-heading>
@@ -276,10 +280,10 @@ include($inc . "header.php");
             <p>サイト、アプリに合わせて修正</p>
           </template>
         </base-heading>
+      </base-wrapper>
 
-      </article>
+      <base-wrapper tag="article" id="base-sub-nav">
 
-      <article id="base-sub-nav">
         <base-heading size='large' tag="h2">
           base-sub-nav
         </base-heading>
@@ -337,9 +341,10 @@ include($inc . "header.php");
             </li>
           </ul>
         </base-sub-nav>
-      </article>
+      </base-wrapper>
 
-      <article id="base-card">
+      <base-wrapper tag="article" id="base-card">
+
         <base-heading size='large' tag="h2">
           base-card
         </base-heading>
@@ -390,6 +395,57 @@ include($inc . "header.php");
             <base-button color="outline" size="small">shoe more</base-button>
           </template>
         </base-card>
+      </base-wrapper>
+
+      <base-wrapper tag="article" id="base-wrapper">
+        <base-heading size='large' tag="h2">
+          base-wrapper
+        </base-heading>
+
+        <base-wrapper>
+          <h3>base</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+
+        <base-wrapper tag="aside">
+          <h3>tag="aside"</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+
+        <base-wrapper position="none">
+          <h3>position="none"</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+
+        <base-wrapper position="full">
+          <h3>position="full"</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+
+        <base-wrapper position="left">
+          <h3>position="left"</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+
+        <base-wrapper position="right">
+          <h3>position="right"</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+
+        <base-wrapper margin="none" position="none">
+          <h3>margin="none" position="none"</h3>
+          <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          <img src="assets/img/dummy/bronze.png" alt="dummy">
+        </base-wrapper>
+        <div>dummy</div>
+
+      </base-wrapper>
 
     </section>
 

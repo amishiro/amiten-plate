@@ -1,4 +1,6 @@
 .main {
+  overflow: hidden;
+
   &__visual {
     height: 500px;
     margin-bottom: $gap-m;
