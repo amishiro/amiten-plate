@@ -41,6 +41,9 @@ include($inc . "header.php");
           <li>
             <a href="#" v-scroll-to="'#base-sub-nav'">base-sub-nav</a>
           </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-card'">base-card</a>
+          </li>
         </ul>
       </nav>
 
@@ -335,6 +338,58 @@ include($inc . "header.php");
           </ul>
         </base-sub-nav>
       </article>
+
+      <article id="base-card">
+        <base-heading size='large' tag="h2">
+          base-card
+        </base-heading>
+        <h3>base</h3>
+
+        <base-card>
+          <template v-slot:image>
+            <img src="assets/img/dummy/square.png" alt="dummy">
+          </template>
+          <template v-slot:body>
+            <base-heading tag="h4" size="small">
+              <template v-slot:sub>
+                sub title
+              </template>
+              TITLE
+            </base-heading>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          </template>
+        </base-card>
+
+        <base-card type="reverse">
+          <template v-slot:image>
+            <img src="assets/img/dummy/square.png" alt="dummy">
+          </template>
+          <template v-slot:body>
+            <base-heading tag="h4" size="small">
+              <template v-slot:sub>
+                sub title
+              </template>
+              type="reverse"
+            </base-heading>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+          </template>
+        </base-card>
+
+        <base-card href="components/#base-card" target="_blank">
+          <template v-slot:image>
+            <img src="assets/img/dummy/square.png" alt="dummy">
+          </template>
+          <template v-slot:body>
+            <base-heading tag="h4" size="small">
+              <template v-slot:sub>
+                sub title
+              </template>
+              Add Href
+            </base-heading>
+            <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
+            <base-button color="outline" size="small">shoe more</base-button>
+          </template>
+        </base-card>
 
     </section>
 

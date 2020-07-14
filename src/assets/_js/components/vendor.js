@@ -3,6 +3,7 @@ import Vue from 'vue'
 import BaseAssist from './Base/Assist.vue'
 import BaseButton from './Base/button.vue'
 import BaseButtons from './Base/buttons.vue'
+import BaseCard from './Base/Card.vue'
 import BaseHeading from './Base/Heading.vue'
 import BaseSubNav from './Base/SubNav.vue'
 import slideNav from './layouts/slide-nav.js'
@@ -13,6 +14,7 @@ Vue.mixin({
     BaseAssist,
     BaseButton,
     BaseButtons,
+    BaseCard,
     BaseHeading,
     BaseSubNav,
   },
