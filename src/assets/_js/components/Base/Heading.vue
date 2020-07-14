@@ -67,17 +67,20 @@ $this: '.base-heading';
 }
 
 #{$this}__sub {
+  width: 100%; // ie11
   margin: 0;
   color: $color-brand;
 }
 
 #{$this}__title {
+  width: 100%; // ie11
   margin-top: 0;
   font-weight: normal;
   color: brack;
 }
 
 #{$this}__ex {
+  width: 100%; // ie11
 }
 
 #{$this} {

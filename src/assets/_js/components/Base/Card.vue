@@ -100,6 +100,9 @@ export default {
   }
 
   &__image {
+    @include ie {
+      min-height: 0%;
+    }
     @include tablet {
       flex: 0 0 60%;
       max-width: 60%;
@@ -112,6 +115,9 @@ export default {
   }
 
   &__body {
+    @include ie {
+      overflow: hidden;
+    }
     @include tablet {
       display: flex;
       flex: 1 1 auto;
