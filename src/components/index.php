@@ -46,6 +46,12 @@ include($inc . "header.php");
           <li>
             <a href="#" v-scroll-to="'#base-wrapper'">base-wrapper</a>
           </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-grid'">base-grid</a>
+          </li>
+          <li>
+            <a href="#" v-scroll-to="'#base-columns'">base-columns / base-column</a>
+          </li>
         </ul>
       </base-wrapper>
 
@@ -445,6 +451,36 @@ include($inc . "header.php");
         </base-wrapper>
         <div>dummy</div>
 
+      </base-wrapper>
+
+      <base-wrapper tag="article" id="base-grid">
+        <base-heading size="large" tag="h2">
+          base-grid
+        </base-heading>
+        <h3>base</h3>
+        <base-grid>
+          <div style="background: #eee;">test</div>
+          <div style="background: #eee;">test</div>
+          <div style="background: #eee;">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</div>
+        </base-grid>
+      </base-wrapper>
+
+      <base-wrapper tag="article" id="base-columns">
+        <base-heading size="large" tag="h2">
+          base-columns/base-column
+        </base-heading>
+        <h3>base</h3>
+        <base-columns>
+          <base-column>
+            <div style="background: #eee; height: 100%;">test</div>
+          </base-column>
+          <base-column>
+            <div style="background: #eee; height: 100%;">test</div>
+          </base-column>
+          <base-column>
+            <div style="background: #eee; height: 100%;">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</div>
+          </base-column>
+        </base-columns>
       </base-wrapper>
 
     </section>

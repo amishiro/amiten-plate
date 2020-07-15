@@ -4,6 +4,9 @@ import BaseAssist from './Base/Assist.vue'
 import BaseButton from './Base/button.vue'
 import BaseButtons from './Base/buttons.vue'
 import BaseCard from './Base/Card.vue'
+import BaseColumn from './Base/Column.vue'
+import BaseColumns from './Base/Columns.vue'
+import BaseGrid from './Base/Grid.vue'
 import BaseHeading from './Base/Heading.vue'
 import BaseSubNav from './Base/SubNav.vue'
 import BaseWrapper from './Base/Wrapper.vue'
@@ -16,6 +19,9 @@ Vue.mixin({
     BaseButton,
     BaseButtons,
     BaseCard,
+    BaseColumn,
+    BaseColumns,
+    BaseGrid,
     BaseHeading,
     BaseSubNav,
     BaseWrapper,
