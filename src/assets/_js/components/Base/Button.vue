@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="base-button"
-    :style="styles"
-  >
+  <div class="base-button" :style="styles">
     <component
       :is="tag"
       class="base-button__link"
@@ -53,57 +50,57 @@ export default {
     color: {
       type: String,
       default: null
-    },
+    }
   },
   computed: {
-    tag () {
-      if (this.href != null) return 'a'
-      if (this.to != null) return 'nuxt-link'
-      return 'button'
+    tag() {
+      if (this.href != null) return "a";
+      if (this.to != null) return "nuxt-link";
+      return "button";
     },
-    attrs () {
-      const attrs = []
-      if (this.href != null) attrs.push({ href: this.href })
-      if (this.to != null) attrs.push({ to: this.to })
-      if (this.target != null) attrs.push({ target: this.target })
-      if (this.type != null) attrs.push({ type: this.type })
-      return attrs
+    attrs() {
+      const attrs = [];
+      if (this.href != null) attrs.push({ href: this.href });
+      if (this.to != null) attrs.push({ to: this.to });
+      if (this.target != null) attrs.push({ target: this.target });
+      if (this.type != null) attrs.push({ type: this.type });
+      return attrs;
     },
-    iconSet () {
-      if (this.icon === 'pdf') return 'picture_as_pdf'
-      if (this.icon === 'exit') return 'exit_to_app'
-      if (this.icon === 'reset' || this.type === 'reset') return 'cancel'
-      if (this.icon != null) return this.icon
-      return 'arrow_right'
+    iconSet() {
+      if (this.icon === "pdf") return "picture_as_pdf";
+      if (this.icon === "exit") return "exit_to_app";
+      if (this.icon === "reset" || this.type === "reset") return "cancel";
+      if (this.icon != null) return this.icon;
+      return "arrow_right";
     },
-    styles () {
-      const styles = {}
+    styles() {
+      const styles = {};
       // size
       if (this.size != null) {
-        if (this.size === 'small') styles.maxWidth = '160px'
-        else if (this.size === 'medium') styles.maxWidth = '320px'
-        else if (this.size === 'large') styles.maxWidth = '480px'
-        else styles.maxWidth = this.size
+        if (this.size === "small") styles.maxWidth = "160px";
+        else if (this.size === "medium") styles.maxWidth = "320px";
+        else if (this.size === "large") styles.maxWidth = "480px";
+        else styles.maxWidth = this.size;
       }
       if (this.position != null) {
-        if (this.position === 'left') styles.marginRight = 'auto'
-        if (this.position === 'right') styles.marginLeft = 'auto'
-        if (this.position === 'center') {
-          styles.marginRight = 'auto'
-          styles.marginLeft = 'auto'
+        if (this.position === "left") styles.marginRight = "auto";
+        if (this.position === "right") styles.marginLeft = "auto";
+        if (this.position === "center") {
+          styles.marginRight = "auto";
+          styles.marginLeft = "auto";
         }
       }
-      return styles
+      return styles;
     },
-    addClass () {
+    addClass() {
       return {
-        'is-point': this.color === 'point',
-        'is-reset': this.color === 'reset',
-        'is-outline': this.color === 'outline',
-      }
-    },
+        "is-point": this.color === "point",
+        "is-reset": this.color === "reset",
+        "is-outline": this.color === "outline"
+      };
+    }
   }
-}
+};
 </script>
 
 <style lang="scss">
