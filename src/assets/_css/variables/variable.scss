@@ -9,9 +9,9 @@ $gap-xl: $gap*8; //64px
 
 //--------------------横幅の設定
 
-$width-xs: 320px; //iphone5
-$width-s: 480px; //スマートフォン
-$width-m: 768px; //ipad縦
+$width-xs: 320px; //最小サイズのスマートフォン縦
+$width-s: 560px; //概ね全てのスマートフォン縦
+$width-m: 800px; //概ね全てのタブレット縦
 $width-l: 1128px; // 8カラム*120ox+(24pxガップ*7個) = 1,128px
 $width-xl: 1600px;
 
