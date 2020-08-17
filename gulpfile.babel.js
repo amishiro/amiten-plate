@@ -245,8 +245,8 @@ export const js = () => {
               loader: 'sass-resources-loader',
               options: {
                 resources: [
-                  path.resolve(__dirname, 'src/assets/_css/variables/variable.scss'),
-                  path.resolve(__dirname, 'src/assets/_css/variables/mixin.scss'),
+                  path.resolve(__dirname, 'src/assets/_css/settings/variables.scss'),
+                  path.resolve(__dirname, 'src/assets/_css/settings/mixins.scss'),
                 ]
               }
             }

@@ -94,7 +94,7 @@ small {
   position: relative;
   display: block;
   margin-bottom: 0.5em;
-  @include font-small;
+  @include small;
 
   &::before {
     position: absolute;

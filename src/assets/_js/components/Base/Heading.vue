@@ -59,6 +59,7 @@ export default {
 
 <style lang="scss">
 $this: '.base-heading';
+
 #{$this}__wrapper {
   margin-top: 2em;
 }

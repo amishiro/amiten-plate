@@ -107,7 +107,7 @@ $formulate-white: #fff;
 
   .formulate-input-help {
     // ↓customize comment out & use variables.scss
-    @include font-small;
+    @include small;
     // color: $formulate-gray-ddd;
     // font-size: 0.7em;
     // font-weight: 400;
