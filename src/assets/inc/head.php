@@ -36,7 +36,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- css -->
-  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
   <link href="assets/css/app.bundle.css" rel="stylesheet">
 
   <!-- icons -->

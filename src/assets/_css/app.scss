@@ -1,11 +1,11 @@
-// settings
-// グローバル変数やプリプロセッサ用のmixin
+// settings　グローバル変数やプリプロセッサ用のmixin
 @import './settings/variables.scss';
 @import './settings/mixins.scss';
 
-// base
-// 要素型セレクタのルールセット
-@import './base/**/*.scss';
+// base　要素型セレクタやフォーム用
+@import './base/reset.scss';
+@import './base/element.scss';
+@import './base/vue-formulate.scss';
 
 // etc
 @import './layouts/**/*.scss';
