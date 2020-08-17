@@ -39,9 +39,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 .base-wrapper {
   @include wrapper;
   @include first-child-heading;

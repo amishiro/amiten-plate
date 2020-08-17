@@ -7,9 +7,6 @@
 </template>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 .base-columns {
   &__wrapper {
     display: flex;

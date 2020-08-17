@@ -107,9 +107,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 // settings
 $min-height: 48px;
 
@@ -125,7 +122,6 @@ $min-height: 48px;
     padding: calc((#{$min-height} - 1.2em) / 2) $gap-m;
     font-weight: bold;
     line-height: 1.2;
-    color: $black;
     color: white;
     text-decoration: none;
     cursor: pointer;

@@ -12,9 +12,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 .base-buttons {
   &__wrapper {
     display: flex;

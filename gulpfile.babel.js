@@ -16,7 +16,7 @@
 /**
  * import files
  */
-
+import path from 'path'
 import gulp from 'gulp'
 import gulpIf from 'gulp-if'
 import minimist from 'minimist'
@@ -229,6 +229,7 @@ export const js = () => {
             'vue-style-loader',
             'css-loader',
             {
+              // for .vue:autoprefixer
               loader: 'postcss-loader',
               options: {
                 plugins: [
@@ -238,7 +239,17 @@ export const js = () => {
                 ]
               }
             },
-            'sass-loader'
+            'sass-loader',
+            {
+              // for .vue:グローバルscssファイル読み込み
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [
+                  path.resolve(__dirname, 'src/assets/_css/variables/variable.scss'),
+                  path.resolve(__dirname, 'src/assets/_css/variables/mixin.scss'),
+                ]
+              }
+            }
           ]
         },
         {
@@ -322,7 +333,7 @@ const reload = (done) => {
 }
 const watch = () => {
   gulp.watch(paths.target.php, reload)
-  gulp.watch(paths.target.css, gulp.series(stylelint, css, reload))
+  gulp.watch(paths.target.css, gulp.series(stylelint, css, js, reload))
   gulp.watch(paths.target.js, gulp.series(eslint, js, reload))
 }
 

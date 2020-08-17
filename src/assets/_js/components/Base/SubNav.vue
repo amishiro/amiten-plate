@@ -32,9 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 $sub-nav-height: 48px;
 
 $this: '.base-sub-nav';

@@ -58,9 +58,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 $this: '.base-heading';
 #{$this}__wrapper {
   margin-top: 2em;

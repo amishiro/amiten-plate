@@ -37,9 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 .base-assist {
   @include first-child-heading;
   box-sizing: border-box;

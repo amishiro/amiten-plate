@@ -5,9 +5,6 @@
 </template>
 
 <style lang="scss">
-@import "../../../_css/variables/variable";
-@import "../../../_css/variables/mixin";
-
 .base-grid {
   display: grid;
   grid-template-rows: repeat(3, auto);
