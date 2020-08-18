@@ -11,16 +11,11 @@ include($inc . "header.php");
 ?>
 
 <div class="main">
-  <header class="main__header">
-    <?php include($inc . "main-header.php"); ?>
-  </header>
+  <the-header title="Form"></the-header>
+  <the-breadcrumb :breadcrumb="[{title:'Form', url: '/form'}]"></the-breadcrumb>
 
-  <nav class="main__breadcrumb">
-    <?php include($inc . "main-breadcrumb.php"); ?>
-  </nav>
-
-  <div class="main__content">
-    <section class="main__section">
+  <section>
+    <base-wrapper tag="article">
       <h2>一般的なフォーム</h2>
       <p>バリデーションには<a href="https://vueformulate.com/" target="_blank" rel="noopener">vue-formulate</a>を利用。</p>
       <aside class="u-assist is-outline">
@@ -32,9 +27,8 @@ include($inc . "header.php");
 
       <?php include("./article-input-area.php"); ?>
       <?php include("./article-check-area.php"); ?>
-
-    </section>
-  </div>
+    </base-wrapper>
+  </section>
 </div>
 
 <?php

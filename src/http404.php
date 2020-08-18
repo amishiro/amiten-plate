@@ -11,29 +11,21 @@ include($inc . "header.php");
 ?>
 
 <div class="main">
-  <header class="main__header">
-    <?php include($inc . "main-header.php"); ?>
-  </header>
+  <the-header title="404"></the-header>
+  <the-breadcrumb :breadcrumb="[{title:'404', url: '/http404'}]"></the-breadcrumb>
 
-  <div class="main__breadcrumb">
-    <?php include($inc . "main-breadcrumb.php"); ?>
-  </div>
-
-  <div class="main__content">
-    <section class="main__section">
+  <section>
+    <base-wrapper tag="article">
       <h2>音速で探しましたが、お探しのページが見つかりませんでした。</h2>
       <p>
         お客さまがお探しのページが見つかりませんでした。URLが正しく入力されているかどうか、もう一度ご確認ください。
-        <br>
-        正しく入力してもページが表示されない場合は、ページが移動したか、もしくは掲載期間が終了し削除された可能性がございます。
+        <br>正しく入力してもページが表示されない場合は、ページが移動したか、もしくは掲載期間が終了し削除された可能性がございます。
       </p>
-      <p>
-        <a href="<?php echo $baseUrl; ?>/" class="u-icon">
-          <?php echo $meta->siteName; ?>トップへ
-        </a>
-      </p>
-    </section>
-  </div>
+      <base-button href="/">
+        <?php echo $meta->siteName; ?>トップへ
+      </base-button>
+    </base-wrapper>
+  </section>
 </div>
 
 <?php

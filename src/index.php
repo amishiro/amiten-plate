@@ -11,23 +11,24 @@ include($inc . "header.php");
 ?>
 
 <div class="main">
-  <section class="main__visual">
-    <img src="assets/img/dummy/yamato.png" alt="dummy画像" class="u-img-fit">
+  <section class="visual">
+    <img src="assets/img/dummy/yamato.png" alt="dummy画像">
   </section>
-  <div class="main__content">
-    <section class="main__section">
+
+  <section>
+    <base-wrapper tag="section">
       <h2>h2.heading section</h2>
       <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-    </section>
-    <article class="main__article">
+    </base-wrapper>
+    <base-wrapper tag="article">
       <h2>h2.heading article</h2>
       <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-    </article>
-    <aside class="main__aside">
+    </base-wrapper>
+    <base-wrapper tag="aside">
       <h2>h2.heading aside</h2>
       <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</p>
-    </aside>
-  </div>
+    </base-wrapper>
+  </section>
 </div>
 
 <?php

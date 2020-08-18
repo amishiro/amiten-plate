@@ -1,13 +1,15 @@
 export default {
   data () {
     return {
-      isSlideNavOpen: false,
-      isSlideNavActive: false
+      slideNav: {
+        isOpen: false,
+        isActive: false,
+      }
     }
   },
   mounted () {
     setTimeout(() => {
-      this.isSlideNavActive = true
+      this.slideNav.isActive = true
     }, 500)
   },
 }

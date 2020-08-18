@@ -104,7 +104,9 @@ const paths = {
     cssFile: settings.srcDir + 'assets/_css/app.scss',
     js: [
       settings.srcDir + 'assets/_js/**/*.js',
-      settings.srcDir + 'assets/_js/**/*.vue'
+      settings.srcDir + 'assets/_js/**/*.vue',
+      settings.srcDir + 'assets/_components/**/*.js',
+      settings.srcDir + 'assets/_components/**/*.vue'
     ],
     jsFiles: {
       app: settings.srcDir + 'assets/_js/app.js',

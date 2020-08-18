@@ -11,62 +11,55 @@ include($inc . "header.php");
 ?>
 
 <div class="main">
-  <header class="main__header">
-    <?php include($inc . "main-header.php"); ?>
-  </header>
+  <the-header title="エレメント"></the-header>
+  <the-breadcrumb :breadcrumb="[{title:'エレメント', url: '/element'}]"></the-breadcrumb>
 
-  <nav class="main__breadcrumb">
-    <?php include($inc . "main-breadcrumb.php"); ?>
-  </nav>
-
-  <div class="main__content">
-    <!-- thanks : https://github.com/cbracco/html5-test-page -->
-    <section class="main__section">
+  <!-- thanks : https://github.com/cbracco/html5-test-page -->
+  <section>
+    <base-wrapper tag="nav">
       <h2>HTML5 Test Page</h2>
       <p>CSSでスタイリングするための、一般的なHTML要素のテストページです。</p>
-      <nav>
-        <ul>
-          <li>
-            <a href="#" v-scroll-to="'#text__headings'">Headings（見出し）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__paragraphs'">Paragraphs（段落）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__blockquotes'">Blockquotes（Blockquotes）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__lists'">Lists（リスト）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__hr'">Horizontal rules（水平ルール）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__tables'">Tabular data（表データ）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__code'">Code（コード）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#text__inline'">Inline elements（インライン要素）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#embedded__images'">Images（画像）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#embedded__audio'">Audio（オーディオ）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#embedded__video'">Video（動画）</a>
-          </li>
-          <li>
-            <a href="#" v-scroll-to="'#embedded__iframe'">IFrames（iFrame）</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
+      <ul>
+        <li>
+          <a href="#" v-scroll-to="'#text__headings'">Headings（見出し）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__paragraphs'">Paragraphs（段落）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__blockquotes'">Blockquotes（Blockquotes）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__lists'">Lists（リスト）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__hr'">Horizontal rules（水平ルール）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__tables'">Tabular data（表データ）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__code'">Code（コード）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#text__inline'">Inline elements（インライン要素）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#embedded__images'">Images（画像）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#embedded__audio'">Audio（オーディオ）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#embedded__video'">Video（動画）</a>
+        </li>
+        <li>
+          <a href="#" v-scroll-to="'#embedded__iframe'">IFrames（iFrame）</a>
+        </li>
+      </ul>
+    </base-wrapper>
 
-    <section class="main__section" id="text__headings">
+    <base-wrapper tag="article" id="text__headings">
       <h2>Headings（見出し）</h2>
       <h1>Heading 1（見出し1）</h1>
       <h2>Heading 2（見出し2）</h2>
@@ -74,15 +67,15 @@ include($inc . "header.php");
       <h4>Heading 4（見出し4）</h4>
       <h5>Heading 5（見出し5）</h5>
       <h6>Heading 6（見出し6）</h6>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__paragraphs">
+    <base-wrapper tag="article" id="text__paragraphs">
       <h2>Paragraphs（段落）</h2>
       <p>段落（ギリシャ語の段落の "横に書く"または "横に書いた"）は、特定のポイントやアイデアを扱う書面による自己完結型の単位です。段落は、1つ以上の文から構成されます。パラグラフは、言語の構文では必須ではありませんが、通常、長い散文を整理するために使用される、正式な文章の一部です。</p>
       <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__blockquotes">
+    <base-wrapper tag="article" id="text__blockquotes">
       <h2>Blockquotes</h2>
       <div>
         <blockquote>
@@ -95,9 +88,9 @@ include($inc . "header.php");
           </cite>
         </blockquote>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__lists">
+    <base-wrapper tag="article" id="text__lists">
       <h2>Lists（リスト）</h2>
       <div>
         <h3>Definition list（定義リスト：dl）</h3>
@@ -130,16 +123,16 @@ include($inc . "header.php");
           </li>
         </ul>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__hr">
+    <base-wrapper tag="article" id="text__hr">
       <h2>Horizontal rules（水平ルール）</h2>
       <div>
         <hr>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__tables">
+    <base-wrapper tag="article" id="text__tables">
       <h2>Tabular data（表形式のデータ）</h2>
       <table class="u-table has-data-label">
         <caption>テーブルサンプル</caption>
@@ -183,9 +176,9 @@ include($inc . "header.php");
           </tr>
         </tbody>
       </table>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__code">
+    <base-wrapper tag="article" id="text__code">
       <h2>Code（コード）</h2>
       <div>
         <p>
@@ -210,9 +203,9 @@ p q r s t u v w x y z { | } ~
 </pre>
         </p>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="text__inline">
+    <base-wrapper tag="article" id="text__inline">
       <h2>Inline elements（インライン要素）</h2>
       <div>
         <p>a :
@@ -256,9 +249,9 @@ p q r s t u v w x y z { | } ~
           <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q>
         </p>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="embedded__images">
+    <base-wrapper tag="article" id="embedded__images">
       <h2>Images(画像)</h2>
       <div>
         <h3>
@@ -282,30 +275,29 @@ p q r s t u v w x y z { | } ~
           <figcaption>画像のキャプションを表示</figcaption>
         </figure>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="embedded__audio">
+    <base-wrapper tag="article" id="embedded__audio">
       <h2>Audio（オーディオ）</h2>
       <div>
         <audio controls="">audio</audio>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="embedded__video">
+    <base-wrapper tag="article" id="embedded__video">
       <h2>Video（動画）</h2>
       <div>
         <video controls="">video</video>
       </div>
-    </section>
+    </base-wrapper>
 
-    <section class="main__section" id="embedded__iframe">
+    <base-wrapper tag="article" id="embedded__iframe">
       <h2>IFrame</h2>
       <div>
         <iframe src="./" height="300"></iframe>
       </div>
-    </section>
-
-  </div>
+    </base-wrapper>
+  </section>
 </div>
 
 <?php

@@ -2,12 +2,12 @@
 @import './settings/variables.scss';
 @import './settings/mixins.scss';
 
-// base　要素型セレクタやフォーム用
-@import './base/reset.scss';
-@import './base/element.scss';
-@import './base/vue-formulate.scss';
+// generic　要素型セレクタやフォーム用
+@import './generic/reset.scss';
+@import './generic/element.scss';
+@import './generic/vue-formulate.scss';
 
 // etc
 @import './layouts/**/*.scss';
-@import './ui/**/*.scss';
+// @import './ui/**/*.scss';
 @import './pages/**/*.scss';

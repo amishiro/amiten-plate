@@ -1,4 +1,15 @@
-.page-top {
+<template>
+  <div>
+    <a
+      v-scroll-to="'#app'"
+      href="#"
+      class="the-page-top"
+    ><i class="material-icons">keyboard_arrow_up</i></a>
+  </div>
+</template>
+
+<style lang="scss">
+.the-page-top {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -18,3 +29,5 @@
     background-color: $color-brand;
   }
 }
+
+</style>
