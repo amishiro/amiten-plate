@@ -1,0 +1,66 @@
+//--------------------ベースマージンの設定
+
+$gap: 8px; //ベースマージンサイズ 8pxは扱いやすい
+
+$gap-s: $gap*2; //16px
+$gap-m: $gap*3; //24px
+$gap-l: $gap*5; //40px
+$gap-xl: $gap*8; //64px
+
+//--------------------横幅の設定
+
+$width-xs: 320px; //最小サイズのスマートフォン縦
+$width-s: 560px; //概ね全てのスマートフォン縦
+$width-m: 800px; //概ね全てのタブレット縦
+$width-l: 1128px; // 8カラム*120ox+(24pxガップ*7個) = 1,128px
+$width-xl: 1600px;
+
+//--------------------グローバルナビの設定
+
+//暗い色
+$color-dark: #3c3c48;
+$color-dark-darken: darken($color-dark, 5%);
+$color-dark-lighten: lighten($color-dark, 10%);
+$color-dark-more-lighten: lighten($color-dark, 35%);
+
+//明るい色
+$color-light: #eee;
+$color-light-darken: darken($color-light, 15%);
+$color-light-lighten: lighten($color-light, 5%);
+
+//ブランドカラー
+$color-brand: #d28f97;
+$color-brand-darken: darken($color-brand, 15%);
+$color-brand-lighten: lighten($color-brand, 15%);
+$color-brand-lightness: lighten($color-brand, 40%);
+
+//ポイントカラー
+$color-point: #ffc759;
+$color-point-darken: darken($color-point, 15%);
+$color-point-lighten: lighten($color-point, 15%);
+$color-point-lightness: lighten($color-point, 40%);
+
+//その他
+$color-etc: #3b5998;
+$color-etc-darken: darken($color-etc, 5%);
+$color-etc-lighten: lighten($color-etc, 15%);
+
+$white: #fff;
+$black: #000;
+
+//エラーメッセージ
+$color-info: #00529b;
+$color-info-lighten: #bde5f8;
+$color-success: #4f8a10;
+$color-success-lighten: #dff2bf;
+$color-warning: #9f6000;
+$color-warning-lighten: #feefb3;
+$color-error: #d8000c;
+$color-error-lighten: #ffbaba;
+
+//snsカラー
+$color-line: #1dcd00;
+$color-facebook: #3b5998;
+$color-twitter: #55acee;
+$color-youtube: #ec3324;
+$color-instagram: #cda98a;

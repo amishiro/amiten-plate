@@ -16,7 +16,7 @@
 /**
  * import files
  */
-
+import path from 'path'
 import gulp from 'gulp'
 import gulpIf from 'gulp-if'
 import minimist from 'minimist'
@@ -104,7 +104,9 @@ const paths = {
     cssFile: settings.srcDir + 'assets/_css/app.scss',
     js: [
       settings.srcDir + 'assets/_js/**/*.js',
-      settings.srcDir + 'assets/_js/**/*.vue'
+      settings.srcDir + 'assets/_js/**/*.vue',
+      settings.srcDir + 'assets/_components/**/*.js',
+      settings.srcDir + 'assets/_components/**/*.vue'
     ],
     jsFiles: {
       app: settings.srcDir + 'assets/_js/app.js',
@@ -229,6 +231,7 @@ export const js = () => {
             'vue-style-loader',
             'css-loader',
             {
+              // for .vue:autoprefixer
               loader: 'postcss-loader',
               options: {
                 plugins: [
@@ -238,7 +241,17 @@ export const js = () => {
                 ]
               }
             },
-            'sass-loader'
+            'sass-loader',
+            {
+              // for .vue:グローバルscssファイル読み込み
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [
+                  path.resolve(__dirname, 'src/assets/_css/settings/variables.scss'),
+                  path.resolve(__dirname, 'src/assets/_css/settings/mixins.scss'),
+                ]
+              }
+            }
           ]
         },
         {
@@ -322,7 +335,7 @@ const reload = (done) => {
 }
 const watch = () => {
   gulp.watch(paths.target.php, reload)
-  gulp.watch(paths.target.css, gulp.series(stylelint, css, reload))
+  gulp.watch(paths.target.css, gulp.series(stylelint, css, js, reload))
   gulp.watch(paths.target.js, gulp.series(eslint, js, reload))
 }
 

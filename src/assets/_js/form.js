@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import './plugins/vendor.js'
-import './components/vendor.js'
+import '../_components/vendor.js'
 
 // add import
 import './plugins/vue-formulate.js'

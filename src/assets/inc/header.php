@@ -26,9 +26,6 @@
               <a href="components/" class="gnav__link components" itemprop="URL">Components</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="column/" class="gnav__link column" itemprop="URL">Column</a>
-            </li>
-            <li class="gnav__item" itemprop="name">
               <a href="" class="gnav__link" itemprop="URL">Home</a>
             </li>
           </ul>
@@ -36,8 +33,8 @@
       </div>
 
       <div class="header__slide-nav" id="slide-nav">
-        <?php include($inc . "slide-nav-menu.php") ;?>
-        <?php include($inc . "slide-nav.php") ;?>
+        <the-slide-nav-menu></the-slide-nav-menu>
+        <the-slide-nav></the-slide-nav>
       </div>
 
     </div>

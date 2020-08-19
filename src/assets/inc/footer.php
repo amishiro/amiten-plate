@@ -1,7 +1,7 @@
 </main>
 
 <footer class="layout__footer">
-  <?php include($inc .'page-top.php') ;?>
+  <the-page-top></the-page-top>
   <div class="footer">
 
     <nav class="footer__nav ">
