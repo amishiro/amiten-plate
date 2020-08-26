@@ -26,7 +26,7 @@
               <a href="components/" class="gnav__link components" itemprop="URL">Components</a>
             </li>
             <li class="gnav__item" itemprop="name">
-              <a href="" class="gnav__link" itemprop="URL">Home</a>
+              <a href="test/" class="gnav__link" itemprop="URL">Test</a>
             </li>
           </ul>
         </nav>

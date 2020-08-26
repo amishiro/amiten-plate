@@ -63,10 +63,10 @@
               itemprop="name"
             >
               <a
-                href=""
+                href="test/"
                 class="the-slide-nav__link"
                 itemprop="URL"
-              >Home</a>
+              >Test</a>
             </li>
             <li
               class="the-slide-nav__item"
