@@ -11,8 +11,8 @@ include($inc . "header.php");
 ?>
 
 <div class="main">
-  <the-header title="エレメント"></the-header>
-  <the-breadcrumb :breadcrumb="[{title:'エレメント', url: '/element'}]"></the-breadcrumb>
+  <the-header title="VueTestPage"></the-header>
+  <the-breadcrumb :breadcrumb="[{title:'VueTestPage', url: '/test'}]"></the-breadcrumb>
 
   <!-- thanks : https://github.com/cbracco/html5-test-page -->
   <section>
