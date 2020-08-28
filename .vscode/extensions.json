@@ -1,6 +1,7 @@
 {
   // このワークスペースのユーザーに推奨される拡張機能のリストです。
   "recommendations": [
+    "octref.vetur",
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
