@@ -66,8 +66,14 @@ const settings = {
   ftpPort: process.env.FTP_PORT,
 }
 
-// phpの実行ファイルへの絶対パスを指定
-const phpPath = 'C:/PATH/TO/YOUR/php.exe'
+/**
+ * phpPathは環境に合わせてどちらかをコメントアウトする
+ */
+// mac,linuxで既にphpがインストールしてある場合
+const phpPath = undefined
+
+// windowsまたはphpのバージョンを指定したい場合
+// const phpPath = 'C:/PATH/TO/YOUR/php.exe'
 
 // setting update
 const argv = minimist(process.argv.slice(2))
