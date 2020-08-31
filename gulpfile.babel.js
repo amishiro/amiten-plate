@@ -65,6 +65,14 @@ const settings = {
   ftpHost: process.env.FTP_HOST,
   ftpPort: process.env.FTP_PORT,
 }
+
+/**
+ * phpPath
+ * windowsまたはphpのバージョンを指定したい場合はpathを指定
+ * 例：const phpPath = 'C:/PATH/TO/YOUR/php.exe'
+ */
+const phpPath = 'php'
+
 // setting update
 const argv = minimist(process.argv.slice(2))
 for (const key in argv) {
@@ -309,7 +317,8 @@ export const sync = (done) => {
   gulpConnect.server({
     port: settings.port,
     base: settings.srcDir,
-    stdio: 'ignore'
+    stdio: 'ignore',
+    bin: phpPath
   }, () => {
     browserSync.init({
       proxy: `localhost:${settings.port}`
