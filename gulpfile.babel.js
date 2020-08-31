@@ -67,13 +67,11 @@ const settings = {
 }
 
 /**
- * phpPathは環境に合わせてどちらかをコメントアウトする
+ * phpPath
+ * windowsまたはphpのバージョンを指定したい場合はpathを指定
+ * 例：const phpPath = 'C:/PATH/TO/YOUR/php.exe'
  */
-// mac,linuxで既にphpがインストールしてある場合
-const phpPath = undefined
-
-// windowsまたはphpのバージョンを指定したい場合
-// const phpPath = 'C:/PATH/TO/YOUR/php.exe'
+const phpPath = 'php'
 
 // setting update
 const argv = minimist(process.argv.slice(2))
