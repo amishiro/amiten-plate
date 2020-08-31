@@ -67,11 +67,13 @@ const settings = {
 }
 
 /**
- * phpPath
- * windowsまたはphpのバージョンを指定したい場合はpathを指定
- * 例：const phpPath = 'C:/PATH/TO/YOUR/php.exe'
+ * phpPathは環境に合わせてどちらかをコメントアウトする
  */
+// mac,linuxで既にphpがインストールしてある場合
 const phpPath = undefined
+
+// windowsまたはphpのバージョンを指定したい場合
+// const phpPath = 'C:/PATH/TO/YOUR/php.exe'
 
 // setting update
 const argv = minimist(process.argv.slice(2))
@@ -314,13 +316,12 @@ export const dist = gulp.series(removeDistDir, copy, css, js)
  * sync終了後もportが閉じない場合に利用
  */
 export const sync = (done) => {
-  const gulpConnectOption = {
+  gulpConnect.server({
     port: settings.port,
     base: settings.srcDir,
-    stdio: 'ignore'
-  }
-  if (phpPath) gulpConnectOption.bin(phpPath)
-  gulpConnect.server(gulpConnectOption, () => {
+    stdio: 'ignore',
+    bin: phpPath
+  }, () => {
     browserSync.init({
       proxy: `localhost:${settings.port}`
     })
