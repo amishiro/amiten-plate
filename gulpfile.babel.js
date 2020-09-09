@@ -47,31 +47,39 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 /**
- * parameter settings
+ * env settings
  * sync用ポート番号を初め、各種パラメーターを設定します。
  * minimistを利用して、gulp実行時にオプションを渡します。
  * dotenvを利用して、process.envにデーターを渡します。
  */
-const settings = {
-  port: 8080,
-  srcDir: './src/',
-  distDir: './dist/',
-  issue: null,
-  deployDir: 'test', // deploy先のディレクトリを指定
-  deployUrl: 'https://xxxxx.aws-testserver.com/', // deploy先のURLを指定
-  deployRoot: '/var/www/html/xxxxx/', // deploy先のドキュメントルートを指定
-  ftpUser: process.env.FTP_USER,
-  ftpPassword: process.env.FTP_PASS,
-  ftpHost: process.env.FTP_HOST,
-  ftpPort: process.env.FTP_PORT,
+class EnvSettings {
+  constructor () {
+    // proxyのport設定
+    this.port = process.env.PORT || 8080
+    // proxyのhost設定
+    this.host = process.env.HOST || 'localhost'
+    // srcファイルの格納ディレクトリ
+    this.srcDir = process.env.SRC_DIR || './src/'
+    // 書き出し先のディレクトリ
+    this.distDir = process.env.DIST_DIR || './dist/'
+    // windowsまたはphpのバージョンを指定したい場合はpathを指定
+    this.phpPath = process.env.PHP_PATH || 'php'
+    // deploy先のディレクトリを指定
+    this.deployDir = process.env.DEPLOY_DIR || 'test'
+    // deploy先のディレクトリへissue番号をつけてたい場合にissue番号を記載
+    this.issue = process.env.ISSUE || null
+    // deploy先のURLを指定
+    this.deployUrl = process.env.DEPLOY_URL || 'https://xxxxx.aws-testserver.com/'
+    // deploy先のドキュメントルートを指定
+    this.deployRoot = process.env.DEPLOY_ROOT || '/var/www/html/xxxxx/'
+    // 以下deploy先のFTP情報
+    this.ftpUser = process.env.FTP_USER || null
+    this.ftpPassword = process.env.FTP_PASS || null
+    this.ftpHost = process.env.FTP_HOST || null
+    this.ftpPort = process.env.FTP_PORT || null
+  }
 }
-
-/**
- * phpPath
- * windowsまたはphpのバージョンを指定したい場合はpathを指定
- * 例：const phpPath = 'C:/PATH/TO/YOUR/php.exe'
- */
-const phpPath = 'php'
+const settings = new EnvSettings()
 
 // setting update
 const argv = minimist(process.argv.slice(2))
@@ -318,10 +326,10 @@ export const sync = (done) => {
     port: settings.port,
     base: settings.srcDir,
     stdio: 'ignore',
-    bin: phpPath
+    bin: settings.phpPath
   }, () => {
     browserSync.init({
-      proxy: `localhost:${settings.port}`
+      proxy: `${settings.host}:${settings.port}`
     })
   })
   done()
