@@ -2,6 +2,9 @@ import Vue from 'vue'
 import './plugins/vendor.js'
 import '../_components/vendor.js'
 
+// plugin
+import axios from 'axios'
+
 // eslint-disable-next-line no-unused-vars
 const app = new Vue({
   el: '#app',
@@ -34,7 +37,13 @@ const app = new Vue({
           name: 'Mia Svensson',
           city: 'Berlin'
         }
-      ]
+      ],
+      openData: undefined
     }
+  },
+  mounted () {
+    axios.get('http://opendata.city.kitamoto.saitama.jp/dataset/ba6e829f-1e64-4daf-948a-9de5b33ab0fe/resource/3dcc9337-c166-45e9-987f-a27c211f3985/download/homewwwhtdocsappappconsolecommandjsonconvertjsondata.json').then((res) => {
+      this.openData = res.data.dataset
+    })
   },
 })
