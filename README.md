@@ -3,10 +3,12 @@
 ## QUICK START
 
 ```zsh
-npm i
+// インストール
+npm ci
 
 &
 
+// 開発環境立ち上げ
 npm run dev
 ```
 
