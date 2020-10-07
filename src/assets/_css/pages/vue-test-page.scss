@@ -1,0 +1,39 @@
+body.vue-test-page {
+  // vue-test-pageの記述は以下へ記載してください。
+
+  // 課題7
+  .three-layout {
+
+    // .three-layout__wrapper
+    &__wrapper {
+    }
+
+    // .three-layout__item
+    &__item {
+    }
+  }
+
+  // 課題8
+  .open-data-item {
+
+    // .open-data-item__wrapper
+    &__wrapper {
+    }
+
+    // .open-data-item__name
+    &__name {
+    }
+
+    // .open-data-item__info
+    &__info {
+    }
+
+    // .open-data-item__info-kind
+    &__info-kind {
+    }
+
+    // .open-data-item__info-place
+    &__info-place {
+    }
+  }
+}
