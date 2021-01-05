@@ -142,13 +142,13 @@
       </div>
     </div>
 
-    <div class="u-buttons">
-      <button class="u-button is-primary" type="submit">
+    <base-buttons>
+      <base-button class="u-button is-primary" type="submit">
         記入内容を確認する
-      </button>
-      <button class="u-button is-reset" type="reset" @click="handleReset()">
+      </base-button>
+      <base-button class="u-button is-reset" type="reset" color="reset" @click="handleReset()">
         内容を削除する
-      </button>
-    </div>
+      </base-button>
+    </base-buttons>
   </formulate-form>
 </article>

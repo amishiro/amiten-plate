@@ -21,11 +21,11 @@ export default {
 
 <style lang="scss">
 .the-header {
-  padding: $gap-m 0;
+  box-sizing: border-box;
+  padding: $gap-xl 0 $gap-m;
   background-color: $color-light;
   @include tablet {
-    height: 130px;
-    padding: 0 0;
+    padding: $gap-xl 0 0;
   }
 
   &__wrapper {
@@ -34,6 +34,9 @@ export default {
     align-items: center;
     justify-content: center;
     height: 100%;
+    @include tablet {
+      height: 160px;
+    }
   }
 
   &__title {

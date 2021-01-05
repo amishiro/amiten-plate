@@ -10,13 +10,13 @@ include($inc . "head.php");
 include($inc . "header.php");
 ?>
 
-<div class="main">
+<div>
   <the-header title="エレメント"></the-header>
   <the-breadcrumb :breadcrumb="[{title:'エレメント', url: '/element'}]"></the-breadcrumb>
 
   <!-- thanks : https://github.com/cbracco/html5-test-page -->
-  <section>
-    <base-wrapper tag="nav">
+  <section class="u-wrapper">
+    <nav>
       <h2>HTML5 Test Page</h2>
       <p>CSSでスタイリングするための、一般的なHTML要素のテストページです。</p>
       <ul>
@@ -57,9 +57,9 @@ include($inc . "header.php");
           <a href="#" v-scroll-to="'#embedded__iframe'">IFrames（iFrame）</a>
         </li>
       </ul>
-    </base-wrapper>
+    </nav>
 
-    <base-wrapper tag="article" id="text__headings">
+    <article id="text__headings">
       <h2>Headings（見出し）</h2>
       <h1>Heading 1（見出し1）</h1>
       <h2>Heading 2（見出し2）</h2>
@@ -67,15 +67,15 @@ include($inc . "header.php");
       <h4>Heading 4（見出し4）</h4>
       <h5>Heading 5（見出し5）</h5>
       <h6>Heading 6（見出し6）</h6>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__paragraphs">
+    <article id="text__paragraphs">
       <h2>Paragraphs（段落）</h2>
       <p>段落（ギリシャ語の段落の "横に書く"または "横に書いた"）は、特定のポイントやアイデアを扱う書面による自己完結型の単位です。段落は、1つ以上の文から構成されます。パラグラフは、言語の構文では必須ではありませんが、通常、長い散文を整理するために使用される、正式な文章の一部です。</p>
       <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__blockquotes">
+    <article id="text__blockquotes">
       <h2>Blockquotes</h2>
       <div>
         <blockquote>
@@ -88,9 +88,9 @@ include($inc . "header.php");
           </cite>
         </blockquote>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__lists">
+    <article id="text__lists">
       <h2>Lists（リスト）</h2>
       <div>
         <h3>Definition list（定義リスト：dl）</h3>
@@ -123,16 +123,16 @@ include($inc . "header.php");
           </li>
         </ul>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__hr">
+    <article id="text__hr">
       <h2>Horizontal rules（水平ルール）</h2>
       <div>
         <hr>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__tables">
+    <article id="text__tables">
       <h2>Tabular data（表形式のデータ）</h2>
       <table class="u-table has-data-label">
         <caption>テーブルサンプル</caption>
@@ -176,9 +176,9 @@ include($inc . "header.php");
           </tr>
         </tbody>
       </table>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__code">
+    <article id="text__code">
       <h2>Code（コード）</h2>
       <div>
         <p>
@@ -192,7 +192,7 @@ include($inc . "header.php");
           <samp>これは、コンピュータプログラムからのサンプル出力です。</samp>
         </p>
         <p>Pre-formatted text（pre）
-          <pre>
+        <pre>
 P R E F O R M A T T E D T E X T
 ! " # $ % &amp; ' ( ) * + , - . /
 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
@@ -203,9 +203,9 @@ p q r s t u v w x y z { | } ~
 </pre>
         </p>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="text__inline">
+    <article id="text__inline">
       <h2>Inline elements（インライン要素）</h2>
       <div>
         <p>a :
@@ -249,9 +249,9 @@ p q r s t u v w x y z { | } ~
           <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q>
         </p>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="embedded__images">
+    <article id="embedded__images">
       <h2>Images(画像)</h2>
       <div>
         <h3>
@@ -275,28 +275,28 @@ p q r s t u v w x y z { | } ~
           <figcaption>画像のキャプションを表示</figcaption>
         </figure>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="embedded__audio">
+    <article id="embedded__audio">
       <h2>Audio（オーディオ）</h2>
       <div>
         <audio controls="">audio</audio>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="embedded__video">
+    <article id="embedded__video">
       <h2>Video（動画）</h2>
       <div>
         <video controls="">video</video>
       </div>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="embedded__iframe">
+    <article id="embedded__iframe">
       <h2>IFrame</h2>
       <div>
         <iframe src="./" height="300"></iframe>
       </div>
-    </base-wrapper>
+    </article>
   </section>
 </div>
 

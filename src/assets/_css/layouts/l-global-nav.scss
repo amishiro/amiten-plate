@@ -1,4 +1,4 @@
-.gnav {
+.l-global-nav {
   display: none;
   width: 100%;
   height: 100%;
@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: $gap-l;
     padding: 0 $gap-s;
     font-size: 1.4rem;
     color: $color-dark;
@@ -40,17 +40,17 @@
       background-color: $color-brand;
       transition: all 0.3s;
     }
-    @each $class in home, column, components, contact, element, form {
+    @each $class in home, column, components, contact, element, form, test {
       &.#{$class} {
         body.#{$class} & {
           color: #fff;
           background-color: $color-brand;
         }
       }
-    }//each
+    } //each
     &.contact {
       color: $color-light;
-      background-color: $color-point;
+      background-color: $color-primary;
     }
   }
 }

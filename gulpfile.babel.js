@@ -1,9 +1,9 @@
 /**
  * use...
- * % npm run dev = 更新を検知して、自動で書き出し＆ブラウザを更新
- * % npm run dist = 納品用に整形してdistフォルダーへ書き出し
+ * % npm run dev = 更新を検知して自動でブラウザを更新
  * % npm run css = scssをcssへ書き出し
- * % npm run js = es201xを後方互換
+ * % npm run js = es20xxをes2015へ後方互換
+ * % npm run dist = 納品用に整形して書き出し
  * % npm run deploy = distデーターをdeploy
  * % npm run disconnect = sync終了後もportが閉じない場合に利用
  *

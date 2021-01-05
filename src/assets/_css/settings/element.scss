@@ -5,12 +5,8 @@ html {
 
 body {
   @include gothic;
-  font-size: 1.4rem; // 1.4rem = 14px
+  font-size: 1.6rem; // 1.6rem = 16px
   color: $color-dark;
-
-  @include tablet {
-    font-size: 1.6rem; // 1.6rem = 16px
-  }
 }
 
 // section {}
@@ -96,14 +92,7 @@ em {
 
 small {
   position: relative;
-  display: block;
   @include small;
-
-  &::before {
-    position: absolute;
-    left: -1em;
-    content: "※";
-  }
 }
 
 blockquote {
@@ -200,7 +189,7 @@ pre {
   padding: $gap-m;
   margin: 0;
   overflow: auto;
-  border-left: 4px solid $color-point;
+  border-left: 4px solid $color-primary;
 }
 
 sup,
@@ -300,7 +289,7 @@ table {
     tfoot {
       tr {
         color: white;
-        background-color: $color-point;
+        background-color: $color-primary;
       }
     }
 
@@ -429,7 +418,7 @@ form {
     box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
 
     &:focus {
-      border: solid 1px $color-point;
+      border: solid 1px $color-primary;
     }
   }
 
@@ -448,7 +437,7 @@ form {
     appearance: button; // Dealt down arrow
 
     &:focus {
-      border: solid 1px $color-point;
+      border: solid 1px $color-primary;
     }
 
     // &::after {}

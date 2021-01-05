@@ -52,4 +52,4 @@
 </head>
 
 <body class="<?php $bodyClass->output(); ?>">
-  <div class="layout" id="app">
+  <div class="l-layout" id="app">

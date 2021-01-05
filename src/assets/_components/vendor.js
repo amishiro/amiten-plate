@@ -1,23 +1,23 @@
 import Vue from 'vue'
 
 // base
-import BaseAssist from './base/Assist.vue'
-import BaseButton from './base/button.vue'
-import BaseButtons from './base/buttons.vue'
-import BaseCard from './base/Card.vue'
-import BaseColumn from './base/Column.vue'
-import BaseColumns from './base/Columns.vue'
-import BaseGrid from './base/Grid.vue'
-import BaseHeading from './base/Heading.vue'
-import BaseSubNav from './base/SubNav.vue'
-import BaseWrapper from './base/Wrapper.vue'
+import BaseAssist from './BaseAssist.vue'
+import BaseButton from './Basebutton.vue'
+import BaseButtons from './Basebuttons.vue'
+import BaseCard from './BaseCard.vue'
+import BaseColumn from './BaseColumn.vue'
+import BaseColumns from './BaseColumns.vue'
+import BaseGrid from './BaseGrid.vue'
+import BaseHeading from './BaseHeading.vue'
+import BaseSubNav from './BaseSubNav.vue'
+import BaseWrapper from './BaseWrapper.vue'
 
 // the
-import TheBreadcrumb from './the/Breadcrumb.vue'
-import TheHeader from './the/Header.vue'
-import ThePageTop from './the/PageTop.vue'
-import TheSlideNav from './the/SlideNav.vue'
-import TheSlideNavMenu from './the/SlideNavMenu.vue'
+import TheBreadcrumb from './THeBreadcrumb.vue'
+import TheHeader from './THeHeader.vue'
+import ThePageTop from './THePageTop.vue'
+import TheSlideNav from './THeSlideNav.vue'
+import TheSlideNavMenu from './THeSlideNavMenu.vue'
 
 Vue.mixin({
   components: {

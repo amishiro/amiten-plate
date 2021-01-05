@@ -1,13 +1,39 @@
-// settings　グローバル変数やプリプロセッサ用のmixin
-@import './settings/variables.scss';
-@import './settings/mixins.scss';
+/**
+ * settings
+ */
 
-// generic　要素型セレクタやフォーム用
-@import './generic/reset.scss';
-@import './generic/element.scss';
-@import './generic/vue-formulate.scss';
+// グローバル変数
+@import "./settings/variables.scss";
 
-// etc
-@import './layouts/**/*.scss';
-// @import './ui/**/*.scss';
-@import './pages/**/*.scss';
+// mixin
+@import "./settings/mixins.scss";
+
+// リセットCSS
+@import "./settings/reset.scss";
+
+// 要素型CSS
+@import "./settings/element.scss";
+
+// フォームCSS
+@import "./settings/vue-formulate.scss";
+
+// トランジションCSS
+@import "./settings/transition.scss";
+
+/**
+ * layouts: ベースレイアウトCSS
+ */
+
+@import "./layouts/**/*.scss";
+
+/**
+ * pages: 各ページCSS
+ */
+
+@import "./pages/**/*.scss";
+
+/**
+ * units: 各パーツCSS
+ */
+
+@import "./units/**/*.scss";

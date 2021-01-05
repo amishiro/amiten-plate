@@ -10,13 +10,13 @@ include($inc . "head.php");
 include($inc . "header.php");
 ?>
 
-<div class="main">
+<div>
 
   <the-header title="Components"></the-header>
   <the-breadcrumb :breadcrumb="[{title:'Components', url: '/components'}]"></the-breadcrumb>
 
-  <section>
-    <base-wrapper tag="nav">
+  <section class="u-wrapper">
+    <nav>
       <h2>Vue components</h2>
       <p><code>the</code><code>base</code>vueコンポーネントのテストページです</p>
       <ul>
@@ -48,9 +48,9 @@ include($inc . "header.php");
           <a href="#" v-scroll-to="'#base-columns'">base-columns / base-column</a>
         </li>
       </ul>
-    </base-wrapper>
+    </nav>
 
-    <base-wrapper tag="article" id="base-button">
+    <article id="base-button">
       <base-heading size='large' tag="h2">
         base-button
       </base-heading>
@@ -111,9 +111,9 @@ include($inc . "header.php");
       <base-button color="outline">outline</base-button>
       <br>
       <base-button color="reset" icon="reset" type="reset">reset</base-button>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-buttons">
+    <article id="base-buttons">
 
       <base-heading size='large' tag="h2">
         base-buttons
@@ -138,9 +138,9 @@ include($inc . "header.php");
         <base-button>button</base-button>
         <base-button>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</base-button>
       </base-buttons>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-assist">
+    <article id="base-assist">
       <base-heading size='large' tag="h2">
         base-assist
       </base-heading>
@@ -176,9 +176,9 @@ include($inc . "header.php");
           <base-button>test</base-button>
         </base-buttons>
       </base-assist>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-heading">
+    <article id="base-heading">
 
       <base-heading size='large' tag="h2">
         base-heading
@@ -281,9 +281,9 @@ include($inc . "header.php");
           <p>サイト、アプリに合わせて修正</p>
         </template>
       </base-heading>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-sub-nav">
+    <article id="base-sub-nav">
 
       <base-heading size='large' tag="h2">
         base-sub-nav
@@ -342,9 +342,9 @@ include($inc . "header.php");
           </li>
         </ul>
       </base-sub-nav>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-card">
+    <article id="base-card">
 
       <base-heading size='large' tag="h2">
         base-card
@@ -396,9 +396,9 @@ include($inc . "header.php");
           <base-button color="outline" size="small">shoe more</base-button>
         </template>
       </base-card>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-wrapper">
+    <article id="base-wrapper">
       <base-heading size='large' tag="h2">
         base-wrapper
       </base-heading>
@@ -446,9 +446,9 @@ include($inc . "header.php");
       </base-wrapper>
       <div>dummy</div>
 
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-grid">
+    <article id="base-grid">
       <base-heading size="large" tag="h2">
         base-grid
       </base-heading>
@@ -458,9 +458,9 @@ include($inc . "header.php");
         <div style="background: #eee;">test</div>
         <div style="background: #eee;">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</div>
       </base-grid>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article" id="base-columns">
+    <article id="base-columns">
       <base-heading size="large" tag="h2">
         base-columns/base-column
       </base-heading>
@@ -476,7 +476,7 @@ include($inc . "header.php");
           <div style="background: #eee; height: 100%;">つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）つれづれなるまゝに、日暮らし（１００文字）</div>
         </base-column>
       </base-columns>
-    </base-wrapper>
+    </article>
 
   </section>
 

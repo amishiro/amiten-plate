@@ -13,9 +13,8 @@ include($inc . "header.php");
 <div class="main">
   <the-header title="404"></the-header>
   <the-breadcrumb :breadcrumb="[{title:'404', url: '/http404'}]"></the-breadcrumb>
-
   <section>
-    <base-wrapper tag="article">
+    <article class="u-wrapper">
       <h2>音速で探しましたが、お探しのページが見つかりませんでした。</h2>
       <p>
         お客さまがお探しのページが見つかりませんでした。URLが正しく入力されているかどうか、もう一度ご確認ください。
@@ -24,7 +23,8 @@ include($inc . "header.php");
       <base-button href="/">
         <?php echo $meta->siteName; ?>トップへ
       </base-button>
-    </base-wrapper>
+
+    </article>
   </section>
 </div>
 

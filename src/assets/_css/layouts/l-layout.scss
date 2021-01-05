@@ -1,0 +1,21 @@
+.l-layout {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: $color-brand;
+
+  &__header {
+  }
+
+  &__main {
+    display: block;
+    padding-bottom: $gap-m;
+    background-color: white;
+    @include tablet {
+      padding-bottom: $gap-xl;
+    }
+  }
+
+  &__footer {
+    background-color: white;
+  }
+}

@@ -1,21 +1,23 @@
-.header {
+.l-header {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 3;
   height: $gap-xl;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
   @include tablet {
     position: fixed;
   }
 
   &__wrapper {
-    @include wrapper;
     display: flex;
     align-items: center;
     height: 100%;
+    padding: $gap;
+    @include tablet {
+      padding: $gap-l;
+    }
   }
 
   &__logo {
@@ -26,7 +28,7 @@
     margin-right: auto;
     font-size: 1.6rem;
 
-    a {
+    &-link {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,6 +44,5 @@
   }
 
   &__slide-nav-menu {
-
   }
 }

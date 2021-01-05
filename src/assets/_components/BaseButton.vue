@@ -139,11 +139,11 @@ $min-height: 48px;
 
     &.is-point {
       color: white;
-      background-color: $color-point;
-      border-color: $color-point;
+      background-color: $color-primary;
+      border-color: $color-primary;
 
       &:hover {
-        color: $color-point;
+        color: $color-primary;
         background-color: white;
       }
     }

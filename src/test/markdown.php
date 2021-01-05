@@ -15,18 +15,18 @@ include($inc . "header.php");
   <the-breadcrumb :breadcrumb="[{title:'TestPages', url: '/test'},{title:'MarkDownTestPage', url: '/test/markdown.php'}]"></the-breadcrumb>
 
   <section>
-    <base-wrapper tag="article">
+    <article>
       <h1>Markdown用です。</h1>
       <p>課題1: <a href="https://typora.io/">typora</a>で書いたMarkdownをhtmlへ変換してページを作成する。</p>
-    </base-wrapper>
+    </article>
 
-    <base-wrapper tag="article">
+    <article>
 
       <!-- ↓ マークダウンから出力したhtmlをペースト -->
 
       <!-- ↑ マークダウンから出力したhtmlをペースト -->
 
-    </base-wrapper>
+    </article>
   </section>
 </div>
 

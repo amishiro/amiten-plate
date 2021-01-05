@@ -10,18 +10,19 @@ include($inc . "head.php");
 include($inc . "header.php");
 ?>
 
-<div class="main">
+<div>
   <the-header title="TestPages"></the-header>
   <the-breadcrumb :breadcrumb="[{title:'TestPages', url: '/test'}]"></the-breadcrumb>
-  <section>
-    <base-wrapper tag="article">
+
+  <section class="u-wrapper">
+    <article>
       <h1>テストページの一覧</h1>
       <p>amiten-plateを使った修学用テストページの一覧です。</p>
       <ul>
         <li><a href="test/vue.php">Vue Test page</a></li>
         <li><a href="test/markdown.php">Markdown Test page</a></li>
       </ul>
-    </base-wrapper>
+    </article>
   </section>
 </div>
 

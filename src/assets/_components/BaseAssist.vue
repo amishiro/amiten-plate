@@ -70,14 +70,14 @@ export default {
   }
 
   &.is-point {
-    background-color: $color-point-lighten;
+    background-color: $color-primary-lighten;
 
     h1,
     h2,
     h3,
     h4,
     h5 {
-      border-bottom: 1px solid $color-point;
+      border-bottom: 1px solid $color-primary;
     }
   }
 

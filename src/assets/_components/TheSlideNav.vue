@@ -220,7 +220,7 @@
     }
 
     &.contact {
-      color: $color-point;
+      color: $color-primary;
 
       &::before {
         margin-right: $gap/2;
@@ -231,7 +231,7 @@
       body.contact &,
       &:hover {
         color: white;
-        background-color: $color-point;
+        background-color: $color-primary;
 
         &::before {
           color: white;
@@ -245,7 +245,7 @@
           background-color: $color-brand;
 
           &::before {
-            color: $color-point;
+            color: $color-primary;
           }
         }
       }
@@ -291,10 +291,10 @@
       @each $class in faq, policy {
         &.#{$class} {
           body.#{$class} & {
-            color: $color-point;
+            color: $color-primary;
 
             &::before {
-              color: $color-point;
+              color: $color-primary;
             }
           }
         }

@@ -10,14 +10,15 @@ include($inc . "head.php");
 include($inc . "header.php");
 ?>
 
-<div class="main">
+<div>
   <the-header title="Form"></the-header>
   <the-breadcrumb :breadcrumb="[{title:'Form', url: '/form'}]"></the-breadcrumb>
 
-  <section>
-    <base-wrapper tag="article">
+  <section class="u-wrapper">
+    <article>
       <h2>一般的なフォーム</h2>
-      <p>バリデーションには<a href="https://vueformulate.com/" target="_blank" rel="noopener">vue-formulate</a>を利用。</p>
+      <p>バリデーションには<a href="https://vueformulate.com/" target="_blank" rel="noopener">vue-formulate</a>を利用。<small>※vee-validateへ変更する可能性あり。</small></p>
+
       <aside class="u-assist is-outline">
         <ul>
           <li>営業時間外のお問い合わせについては、翌営業日より順次対応させていただきます。あらかじめご了承の程お願いいたします。</li>
@@ -27,7 +28,7 @@ include($inc . "header.php");
 
       <?php include("./article-input-area.php"); ?>
       <?php include("./article-check-area.php"); ?>
-    </base-wrapper>
+    </article>
   </section>
 </div>
 

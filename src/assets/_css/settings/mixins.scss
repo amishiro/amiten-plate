@@ -1,13 +1,10 @@
 // font
 @mixin gothic {
-  @include ie {
-    font-family: 'Noto Sans JP', sans-serif;
-  }
-  font-family: sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @mixin mincho() {
-  font-family: 'YakuHanMP', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+  font-family: "YakuHanMP", "Noto Serif JP", "Yu Mincho", "YuMincho", serif;
 }
 
 // breakpoint
@@ -30,7 +27,7 @@
 }
 
 @mixin desktop {
-  @media screen and (min-width: $width-m) {
+  @media screen and (min-width: $width-m + 1) {
     @content;
   }
 }
@@ -45,14 +42,14 @@
     padding: 0 $gap-l;
   }
   @include desktop {
-    max-width: $width-l + $gap-l*2;
+    max-width: $width-xl + $gap-l * 2;
   }
 }
 
 // material-icons
 @mixin material-icons {
   display: inline-block;
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 24px;
   font-style: normal;
   font-weight: normal;
@@ -61,7 +58,7 @@
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
-  font-feature-settings: 'liga'; /* Support for IE. */
+  font-feature-settings: "liga"; /* Support for IE. */
   direction: ltr;
   -webkit-font-smoothing: antialiased;
 }
@@ -94,7 +91,7 @@
 @mixin object-fit {
   width: 100%;
   height: 100%;
-  font-family: 'object-fit: cover;'; // IE11
+  font-family: "object-fit: cover;"; // IE11
   object-fit: cover;
 }
 

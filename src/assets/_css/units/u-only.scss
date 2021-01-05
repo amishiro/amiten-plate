@@ -1,16 +1,16 @@
-.mobile {
+.u-mobile {
   @include tablet() {
     display: none;
   }
 }
 
-.tablet {
+.u-tablet {
   @include mobile {
     display: none;
   }
 }
 
-.tablet-only {
+.u-tablet-only {
   @include mobile {
     display: none;
   }
@@ -19,13 +19,13 @@
   }
 }
 
-.desktop {
+.u-desktop {
   @include desktop() {
     display: none;
   }
 }
 
-.desktop-only {
+.u-desktop-only {
   @include mobile() {
     display: none;
   }
