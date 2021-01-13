@@ -1,6 +1,6 @@
 .l-footer {
   position: relative;
-  background-color: #fff;
+  padding-top: $gap-xl;
 
   &__nav {
   }
@@ -9,18 +9,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: $gap-m 0;
-    color: $white;
-    background-color: $color-brand;
+    padding: $gap-xl 0 $gap-l;
   }
 
   &__copyright {
-    font-size: 1.2rem;
-    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+    @include gothic-en;
+
+    del {
+      color: $color-light-darken;
+    }
 
     &-mark {
       position: relative;
-      top: 3px;
+      top: 2px;
       font-size: 2rem;
       line-height: 1;
     }
@@ -105,5 +109,46 @@
         }
       }
     } //each
+  }
+}
+
+// follow links
+
+.follow {
+  // .follow__title
+
+  &__title {
+    @include gothic-en;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: Medium;
+    line-height: 1;
+    text-align: center;
+  }
+
+  // .follow__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  // .follow__item
+
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .follow__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px 0;
   }
 }

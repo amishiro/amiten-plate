@@ -1,21 +1,22 @@
 .l-layout {
   min-height: 100vh;
   overflow: hidden;
-  background-color: $color-brand;
+  background-color: $color-secondary;
 
   &__header {
   }
 
   &__main {
     display: block;
+    padding-top: 58px;
     padding-bottom: $gap-m;
-    background-color: white;
+    background-color: $color-secondary;
     @include tablet {
       padding-bottom: $gap-xl;
     }
   }
 
   &__footer {
-    background-color: white;
+    background-color: $color-secondary;
   }
 }

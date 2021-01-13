@@ -12,7 +12,7 @@ include($inc . "header.php");
 
 <div>
   <!-- contents -->
-  <section>
+  <section class="u-wrapper">
     <h1>ブログ始めました</h1>
     <img src="assets/img/dummy/square.png" alt="">
     <p>1927年にもなって今更ですが、この頃の都心における文明開化はめざましいもので、自分も一つ日常を書き残そうかとブログを始めてみました。</p>
@@ -23,7 +23,7 @@ include($inc . "header.php");
   <!-- /contents -->
 
   <!-- articles -->
-  <section>
+  <section class="u-wrapper">
 
     <div class="articles">
       <div class="articles__wrapper">

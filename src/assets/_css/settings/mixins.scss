@@ -43,7 +43,7 @@
 // wrapper
 @mixin wrapper {
   width: 100%;
-  padding: 0 $gap-s;
+  padding: 0 32px;
   margin-right: auto;
   margin-left: auto;
   @include tablet {
