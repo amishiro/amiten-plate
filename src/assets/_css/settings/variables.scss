@@ -18,19 +18,19 @@ $width-xl: 1160px;
 //--------------------グローバルナビの設定
 
 //暗い色
-$color-dark: #3c3c48;
-$color-dark-darken: darken($color-dark, 5%);
-$color-dark-lighten: lighten($color-dark, 10%);
-$color-dark-more-lighten: lighten($color-dark, 35%);
+$color-dark: #212121;
+$color-dark-lighten: #535364;
+$color-dark-darken: #000;
+// $color-dark-more-lighten: lighten($color-dark, 35%);
 
 //明るい色
-$color-light: #eee;
+$color-light: #ddd;
 $color-light-darken: darken($color-light, 15%);
 $color-light-lighten: lighten($color-light, 5%);
 
 //ブランドカラー
-$color-brand: #d28f97;
-$color-brand-darken: darken($color-brand, 15%);
+$color-brand: #b18a57;
+$color-brand-darken: #7e5520;
 $color-brand-lighten: lighten($color-brand, 15%);
 
 //プライマリーカラー（コンバージョンなどに利用）
@@ -40,7 +40,7 @@ $color-primary-lighten: lighten($color-primary, 15%);
 $color-primary-lightness: lighten($color-primary, 40%);
 
 //セカンダリーカラー（背景色などに利用）
-$color-secondary: #3b5998;
+$color-secondary: #f6f4ef;
 $color-secondary-darken: darken($color-secondary, 5%);
 $color-secondary-lighten: lighten($color-secondary, 15%);
 

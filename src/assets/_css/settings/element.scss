@@ -1,6 +1,6 @@
 html {
   font-size: 62.5%; //remベースサイズ設定 1.6rem = 16px
-  background-color: white;
+  background-color: $color-secondary;
 }
 
 body {
@@ -23,7 +23,6 @@ h6 {
   line-height: 1.4;
   color: $black;
   font-feature-settings: "palt";
-
   @include tablet {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
@@ -31,52 +30,78 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  position: relative;
+  padding-top: 8px;
+  font-size: 1.6rem;
+  @include gothic-midashi;
+
+  &::before {
+    content: "#";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    content: "";
+    border-top: 1px solid $color-light;
+    border-bottom: 1px solid $color-light;
+  }
+
   @include desktop {
     font-size: 3.6rem;
   }
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
+  @include gothic-midashi;
   @include desktop {
     font-size: 3.2rem;
   }
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   @include desktop {
     font-size: 2.4rem;
   }
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: normal;
   @include desktop {
     font-size: 2rem;
   }
 }
 
 h5 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 h6 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 p {
   margin-bottom: 0.8em;
   line-height: 1.6;
+  color: $color-dark;
 }
 
 a {
   color: $color-brand;
   -webkit-tap-highlight-color: transparent; //タップ時のハイライト削除
+  text-decoration: none;
+
   &:hover {
-    text-decoration: none;
+    color: $color-brand-darken;
+    text-decoration: underline;
   }
 }
 

@@ -3,6 +3,14 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+@mixin gothic-midashi {
+  font-family: "Yusei Magic", sans-serif;
+}
+
+@mixin gothic-en {
+  font-family: "Raleway", "Yusei Magic", sans-serif;
+}
+
 @mixin mincho() {
   font-family: "YakuHanMP", "Noto Serif JP", "Yu Mincho", "YuMincho", serif;
 }

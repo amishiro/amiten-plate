@@ -30,10 +30,8 @@
   -->
 
   <!-- font -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmp.min.css" crossorigin="anonymous" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Raleway:wght@300;500&family=Yusei+Magic&display=swap" rel="stylesheet">
 
   <!-- css -->
   <link href="assets/css/app.bundle.css" rel="stylesheet">
