@@ -11,7 +11,7 @@ const app = new Vue({
   data () {
     return {
       // menuの開閉をコントロール
-      menu: true,
+      menu: false,
 
       // 以下はテスト用のデーターです。消しても大丈夫。
       testMessage: 'これはテストメッセージです',
