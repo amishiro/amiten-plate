@@ -33,10 +33,34 @@
       </div>
 -->
       <div class="l-header__menu">
-        <span></span>
-        <span></span>
-        <!-- <the-slide-nav-menu></the-slide-nav-menu>
-        <the-slide-nav></the-slide-nav> -->
+        <!-- menu-icon -->
+        <div class="l-menu-icon" @click="menu = !menu">
+          <span :class="{'is-active': menu }"></span>
+          <span :class="{'is-active': menu }"></span>
+        </div>
+        <!-- menu-navigation -->
+        <nav class="l-menu-navigation" :class="{'is-active': menu }">
+
+          <ul class="l-menu-navigation__list" :class="{'is-active': menu }">
+            <li class="l-menu-navigation__list-item" :class="{'is-active': menu }">
+              <a href="" class="l-menu-navigation__list-link">HOME</a>
+            </li>
+            <li class="l-menu-navigation__list-item" :class="{'is-active': menu }">
+              <a href="about/" class="l-menu-navigation__list-link">ABOUT me</a>
+            </li>
+            <li class="l-menu-navigation__list-item" :class="{'is-active': menu }">
+              <a href="what/" class="l-menu-navigation__list-link">WHAT is this</a>
+            </li>
+            <li class="l-menu-navigation__list-item" :class="{'is-active': menu }">
+              <a href="link/" class="l-menu-navigation__list-link">LINKs</a>
+            </li>
+          </ul>
+
+          <div class="l-menu-navigation__follow">
+            <!-- follow -->
+            <?php include($inc . '/BaseFooter.php'); ?>
+          </div>
+        </nav>
       </div>
 
     </div>

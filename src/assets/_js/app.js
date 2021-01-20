@@ -10,6 +10,10 @@ const app = new Vue({
   el: '#app',
   data () {
     return {
+      // menuの開閉をコントロール
+      menu: true,
+
+      // 以下はテスト用のデーターです。消しても大丈夫。
       testMessage: 'これはテストメッセージです',
       testObject: {
         fruit: 'Apple',
@@ -42,8 +46,12 @@ const app = new Vue({
     }
   },
   mounted () {
-    axios.get('http://opendata.city.kitamoto.saitama.jp/dataset/ba6e829f-1e64-4daf-948a-9de5b33ab0fe/resource/3dcc9337-c166-45e9-987f-a27c211f3985/download/homewwwhtdocsappappconsolecommandjsonconvertjsondata.json').then((res) => {
-      this.openData = res.data.dataset
-    })
-  },
+    axios
+      .get(
+        'http://opendata.city.kitamoto.saitama.jp/dataset/ba6e829f-1e64-4daf-948a-9de5b33ab0fe/resource/3dcc9337-c166-45e9-987f-a27c211f3985/download/homewwwhtdocsappappconsolecommandjsonconvertjsondata.json'
+      )
+      .then(res => {
+        this.openData = res.data.dataset
+      })
+  }
 })
