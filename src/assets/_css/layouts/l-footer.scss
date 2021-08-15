@@ -53,7 +53,7 @@
         width: 1px;
         height: 20px;
         margin: 0 $gap;
-        content: " ";
+        content: ' ';
         background-color: $color-light-darken;
       }
 
@@ -89,12 +89,12 @@
       background-color: $color-brand;
     }
 
-    &[target="_blank"] {
+    &[target='_blank'] {
       &::after {
         @include material-icons;
-        margin-left: $gap/2;
+        margin-left: math.div($gap, 2);
         font-size: 1.6rem;
-        content: "open_in_new";
+        content: 'open_in_new';
       }
     }
     @each $class in faq, policy {

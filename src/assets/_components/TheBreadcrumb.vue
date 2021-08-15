@@ -78,7 +78,7 @@ export default {
   &__item {
     display: flex;
     align-items: center;
-    margin-right: $gap/2;
+    margin-right: math.div($gap, 2);
 
     i {
       font-size: 1.4rem;

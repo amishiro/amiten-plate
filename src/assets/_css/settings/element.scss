@@ -20,9 +20,9 @@ h6 {
   margin-top: 1em;
   margin-bottom: 0.3em;
   font-weight: normal;
+  font-feature-settings: 'palt';
   line-height: 1.4;
   color: $black;
-  font-feature-settings: "palt";
 
   @include tablet {
     margin-top: 1.5em;
@@ -165,13 +165,13 @@ cite,
 time,
 abbr {
   display: inline-block;
-  padding: $gap/4 $gap;
-  margin: 0 $gap/2;
+  padding: math.div($gap, 4) $gap;
+  margin: 0 math.div($gap, 2);
   font-size: 1.4rem;
+  font-feature-settings: normal;
   line-height: 1.4;
   background-color: $color-light;
   border-radius: 2px;
-  font-feature-settings: normal;
   @include tablet {
     font-size: 1.6rem;
   }
@@ -228,8 +228,8 @@ address {
 
 table {
   width: 100%;
+  font-feature-settings: 'palt';
   border-collapse: collapse;
-  font-feature-settings: "palt";
 
   @include mobile {
     thead,
@@ -347,8 +347,8 @@ form {
       padding: 0 $gap;
       margin-left: -$gap;
       font-weight: bold;
+      font-feature-settings: 'palt';
       background-color: #fff;
-      font-feature-settings: "palt";
     }
   }
 
@@ -373,12 +373,12 @@ form {
       outline: 0;
     }
 
-    &[type="radio"],
-    &[type="checkbox"] {
+    &[type='radio'],
+    &[type='checkbox'] {
       display: inline-block;
       width: auto;
       padding: 0;
-      margin-right: $gap/2;
+      margin-right: math.div($gap, 2);
     }
 
     // &[type='text'] {}
@@ -454,7 +454,7 @@ form {
   position: relative;
   top: -1px;
   display: inline-block;
-  padding: $gap/2;
+  padding: math.div($gap, 2);
   margin-right: $gap;
   font-size: 1.2rem;
   font-weight: bold;
@@ -468,7 +468,7 @@ form {
   position: relative;
   top: -1px;
   display: inline-block;
-  padding: $gap/2;
+  padding: math.div($gap, 2);
   margin-right: $gap;
   font-size: 1.2rem;
   font-weight: bold;

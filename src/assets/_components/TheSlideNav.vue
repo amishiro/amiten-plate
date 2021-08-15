@@ -203,8 +203,8 @@
 
     &.acceptance {
       &::before {
-        margin-right: $gap/2;
-        margin-left: $gap/2;
+        margin-right: math.div($gap, 2);
+        margin-left: math.div($gap, 2);
         content: 'headset_mic';
       }
 
@@ -223,8 +223,8 @@
       color: $color-primary;
 
       &::before {
-        margin-right: $gap/2;
-        margin-left: $gap/2;
+        margin-right: math.div($gap, 2);
+        margin-left: math.div($gap, 2);
         content: 'mail';
       }
 
@@ -283,7 +283,7 @@
       &[target='_blank'] {
         &::after {
           @include material-icons;
-          margin-left: $gap/2;
+          margin-left: math.div($gap, 2);
           font-size: 1.6rem;
           content: 'open_in_new';
         }

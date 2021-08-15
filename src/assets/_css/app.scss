@@ -2,38 +2,41 @@
  * settings
  */
 
+// Dart Scss用の記述
+@use 'sass:math';
+
 // グローバル変数
-@import "./settings/variables.scss";
+@import './settings/variables.scss';
 
 // mixin
-@import "./settings/mixins.scss";
+@import './settings/mixins.scss';
 
 // リセットCSS
-@import "./settings/reset.scss";
+@import './settings/reset.scss';
 
 // 要素型CSS
-@import "./settings/element.scss";
+@import './settings/element.scss';
 
 // フォームCSS
-@import "./settings/vue-formulate.scss";
+@import './settings/vue-formulate.scss';
 
 // トランジションCSS
-@import "./settings/transition.scss";
+@import './settings/transition.scss';
 
 /**
  * layouts: ベースレイアウトCSS
  */
 
-@import "./layouts/**/*.scss";
+@import './layouts/**/*.scss';
 
 /**
  * pages: 各ページCSS
  */
 
-@import "./pages/**/*.scss";
+@import './pages/**/*.scss';
 
 /**
  * units: 各パーツCSS
  */
 
-@import "./units/**/*.scss";
+@import './units/**/*.scss';

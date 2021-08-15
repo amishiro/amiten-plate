@@ -16,9 +16,9 @@ export default {
   &__wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: -$gap/2;
+    margin-top: math.div(-$gap, 2);
     margin-right: -$gap;
-    margin-bottom: -$gap/2;
+    margin-bottom: math.div(-$gap, 2);
     margin-left: -$gap;
     @include desktop {
       flex-direction: row;
@@ -26,7 +26,7 @@ export default {
 
     & > .base-button {
       width: 100%;
-      padding: $gap/2 $gap;
+      padding: math.div($gap, 2) $gap;
 
       .base-button__link {
         height: 100%;

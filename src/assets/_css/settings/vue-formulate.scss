@@ -64,7 +64,7 @@ $formulate-white: #fff;
 @mixin down-arrow {
   width: 0;
   height: 0;
-  content: "";
+  content: '';
   border: 0.3em solid transparent;
   border-top-color: $formulate-gray-d;
   border-bottom-width: 0;
@@ -89,7 +89,7 @@ $formulate-white: #fff;
     // font-weight: 600;
     // margin-bottom: 0.1em;
     &--before {
-      margin-bottom: $gap/2;
+      margin-bottom: math.div($gap, 2);
       color: black;
     }
 
@@ -149,7 +149,7 @@ $formulate-white: #fff;
   // Text inputs
   // -----------------------------------------------------------------------------
 
-  &[data-classification="text"] {
+  &[data-classification='text'] {
     input {
       @include baseinput;
     }
@@ -173,7 +173,7 @@ $formulate-white: #fff;
         width: 2em;
         height: 100%;
         pointer-events: none;
-        content: "";
+        content: '';
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.99 72.9"><path fill="%23#{str-slice("#{$formulate-gray-ddd}", 2)}" d="M71.77,66,53.87,48.1A29.94,29.94,0,1,0,30,60a29.52,29.52,0,0,0,18.1-6.1l18,17.8A4,4,0,0,0,69,72.9a4.18,4.18,0,0,0,2.9-1.2A4.09,4.09,0,0,0,71.77,66ZM30.07,51.9a21.9,21.9,0,1,1,15.5-37.4A21.37,21.37,0,0,1,52,30a22,22,0,0,1-6.4,15.5A21.54,21.54,0,0,1,30.07,51.9Z"/></svg>');
         background-repeat: no-repeat;
         background-position: center;
@@ -185,7 +185,7 @@ $formulate-white: #fff;
       }
     }
 
-    input[type="color"] {
+    input[type='color'] {
       box-sizing: content-box;
       width: auto;
       min-width: 5em;
@@ -222,7 +222,7 @@ $formulate-white: #fff;
   // Slider inputs
   // -----------------------------------------------------------------------------
 
-  &[data-classification="slider"] {
+  &[data-classification='slider'] {
     .formulate-input-element--range {
       display: flex;
       align-items: center;
@@ -232,11 +232,11 @@ $formulate-white: #fff;
       padding: 0.25em 0.3em;
       margin-left: 0.5em;
       font-size: 0.9em;
+      font-variant-numeric: tabular-nums;
       line-height: 1;
       color: $formulate-gray-ddd;
       background-color: $formulate-gray;
       border-radius: 0.25em;
-      font-variant-numeric: tabular-nums;
     }
 
     input {
@@ -295,7 +295,7 @@ $formulate-white: #fff;
   // Textarea inputs
   // -----------------------------------------------------------------------------
 
-  &[data-classification="textarea"] {
+  &[data-classification='textarea'] {
     textarea {
       @include baseinput;
     }
@@ -304,7 +304,7 @@ $formulate-white: #fff;
   // Button inputs
   // -----------------------------------------------------------------------------
 
-  &[data-classification="button"] {
+  &[data-classification='button'] {
     button {
       @include baseinput;
       display: inline-flex;
@@ -354,7 +354,7 @@ $formulate-white: #fff;
   // Select lists
   // -----------------------------------------------------------------------------
 
-  &[data-classification="select"] {
+  &[data-classification='select'] {
     .formulate-input-element {
       position: relative;
 
@@ -382,7 +382,7 @@ $formulate-white: #fff;
   // Box inputs
   // -----------------------------------------------------------------------------
 
-  &[data-classification="box"] {
+  &[data-classification='box'] {
     .formulate-input-wrapper {
       display: flex;
       align-items: center;
@@ -417,13 +417,13 @@ $formulate-white: #fff;
           display: block;
           width: calc(100% - 0.125em);
           height: calc(100% - 0.125em);
-          content: "";
+          content: '';
           background-position: right;
           background-size: contain;
         }
       }
 
-      &[data-type="radio"] {
+      &[data-type='radio'] {
         .formulate-input-element-decorator {
           border-radius: 1em;
 
@@ -437,7 +437,7 @@ $formulate-white: #fff;
         }
       }
 
-      input[type="checkbox"]:checked {
+      input[type='checkbox']:checked {
         & ~ .formulate-input-element-decorator {
           border-color: $formulate-green;
 
@@ -448,7 +448,7 @@ $formulate-white: #fff;
         }
       }
 
-      input[type="radio"]:checked {
+      input[type='radio']:checked {
         & ~ .formulate-input-element-decorator {
           border-color: $formulate-green;
 
@@ -477,7 +477,7 @@ $formulate-white: #fff;
   // Input groups
   // -----------------------------------------------------------------------------
 
-  &[data-classification="group"] {
+  &[data-classification='group'] {
     .formulate-input-group-item {
       margin-bottom: 0.5em;
 
@@ -527,7 +527,7 @@ $formulate-white: #fff;
             display: block;
             width: 0.65em;
             height: 0.2em;
-            content: "";
+            content: '';
             background-color: white;
             transition: transform 0.25s;
             transform-origin: center center;
@@ -566,7 +566,7 @@ $formulate-white: #fff;
   // File inputs
   // -----------------------------------------------------------------------------
 
-  &[data-classification="file"] {
+  &[data-classification='file'] {
     .formulate-input-upload-area {
       position: relative;
       width: 100%;
@@ -613,7 +613,7 @@ $formulate-white: #fff;
           width: 2em;
           height: 2em;
           pointer-events: none;
-          content: "";
+          content: '';
           background-color: $formulate-gray-dd;
           mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58"><path d="M29,58A29,29,0,1,0,0,29,29,29,0,0,0,29,58ZM29,4A25,25,0,1,1,4,29,25,25,0,0,1,29,4Z"/><polygon points="27 22 27 44.4 31 44.4 31 22 41.7 31.1 44.3 28.1 29 15 13.7 28.1 16.3 31.1 27 22"/></svg>');
           mask-repeat: no-repeat;
@@ -659,7 +659,7 @@ $formulate-white: #fff;
           left: 0;
           z-index: 3;
           display: block;
-          content: "";
+          content: '';
           background-color: $formulate-white;
           opacity: 0;
           transform: scale(0.08);
@@ -723,7 +723,7 @@ $formulate-white: #fff;
           height: 1.25em;
           margin-top: -0.7em;
           margin-right: 0.5em;
-          content: "";
+          content: '';
           background-color: $formulate-gray-dd;
           mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.06 83.59"><path d="M55.94,83.59a8.16,8.16,0,0,0,8.12-8.16V19.12a1.77,1.77,0,0,0-.52-1.25L46.21.59A1.69,1.69,0,0,0,45.14.08L44.69,0l-.18,0H8.13A8.18,8.18,0,0,0,0,8.16V75.41a8.16,8.16,0,0,0,8.13,8.16H55.94ZM46.68,6,58.11,17.38H46.68ZM3.52,75.43V8.16A4.64,4.64,0,0,1,8.13,3.52h35V19.16a1.75,1.75,0,0,0,1.76,1.74H60.55V75.43a4.65,4.65,0,0,1-4.61,4.65H8.13A4.65,4.65,0,0,1,3.52,75.43Z"/></svg>');
           mask-repeat: no-repeat;
@@ -834,7 +834,7 @@ $formulate-white: #fff;
     // Image uploads
     // -----------------------------------------------------------------------------
 
-    [data-type="image"] {
+    [data-type='image'] {
       .formulate-input-upload-area {
         .formulate-input-upload-area-mask {
           &::before {

@@ -27,7 +27,6 @@ import gulpConnect from 'gulp-connect-php'
 import gulpEslint from 'gulp-eslint'
 // Compile scss to css
 import gulpStylelint from 'gulp-stylelint'
-import gulpSass from 'gulp-sass'
 import gulpPostcss from 'gulp-postcss'
 import gulpSassGlob from 'gulp-sass-glob'
 import gulpSourcemaps from 'gulp-sourcemaps'
@@ -46,6 +45,9 @@ import open from 'open'
 import dotenv from 'dotenv'
 dotenv.config()
 
+// gulpSassのみしてによりrequireで読み込み
+const gulpSass = require('gulp-sass')(require('sass'))
+
 /**
  * env settings
  * sync用ポート番号を初め、各種パラメーターを設定します。
@@ -53,7 +55,7 @@ dotenv.config()
  * dotenvを利用して、process.envにデーターを渡します。
  */
 class EnvSettings {
-  constructor () {
+  constructor() {
     // proxyのport設定
     this.port = process.env.PORT || 8080
     // proxyのhost設定
@@ -69,7 +71,8 @@ class EnvSettings {
     // deploy先のディレクトリへissue番号をつけてたい場合にissue番号を記載
     this.issue = process.env.ISSUE || null
     // deploy先のURLを指定
-    this.deployUrl = process.env.DEPLOY_URL || 'https://xxxxx.aws-testserver.com/'
+    this.deployUrl =
+      process.env.DEPLOY_URL || 'https://xxxxx.aws-testserver.com/'
     // deploy先のドキュメントルートを指定
     this.deployRoot = process.env.DEPLOY_ROOT || '/var/www/html/xxxxx/'
     // 以下deploy先のFTP情報
@@ -84,7 +87,7 @@ const settings = new EnvSettings()
 // setting update
 const argv = minimist(process.argv.slice(2))
 for (const key in argv) {
-  key === 'i' ? settings.issue = argv[key] : settings[key] = argv[key]
+  key === 'i' ? (settings.issue = argv[key]) : (settings[key] = argv[key])
 }
 console.log('settings: ', settings)
 
@@ -95,7 +98,7 @@ console.log('settings: ', settings)
 const mode = {
   development: true,
   production: false,
-  dist: false,
+  dist: false
 }
 // mode update
 if (settings._.indexOf('dist') >= 0 || settings.dist) {
@@ -126,13 +129,13 @@ const paths = {
     ],
     jsFiles: {
       app: settings.srcDir + 'assets/_js/app.js',
-      form: settings.srcDir + 'assets/_js/form.js',
+      form: settings.srcDir + 'assets/_js/form.js'
     },
     dist: [
       settings.srcDir + '**/*',
       '!' + settings.srcDir + '**/_**',
       '!' + settings.srcDir + '**/_**/**/*',
-      '!' + settings.srcDir + '**/_*',
+      '!' + settings.srcDir + '**/_*'
     ]
   },
   dist: {
@@ -150,7 +153,8 @@ const paths = {
  * etc: npm run lint:js -- --fix でeslintErrorを修正
  */
 export const eslint = () => {
-  return gulp.src(paths.target.js)
+  return gulp
+    .src(paths.target.js)
     .pipe(gulpEslint())
     .pipe(gulpEslint.format())
 }
@@ -163,10 +167,11 @@ export const eslint = () => {
  * etc: npm run lint:css -- --fix でstylelintErrorを修正
  */
 export const stylelint = () => {
-  return gulp.src(paths.target.css)
-    .pipe(gulpStylelint({
+  return gulp.src(paths.target.css).pipe(
+    gulpStylelint({
       reporters: [{ formatter: 'string', console: true }]
-    }))
+    })
+  )
 }
 
 export const lint = gulp.series(eslint, stylelint)
@@ -182,21 +187,27 @@ export const lint = gulp.series(eslint, stylelint)
  * 5. distモードの場合は、圧縮してdistフォルダへ出力
  */
 export const css = () => {
-  return gulp.src(paths.target.cssFile)
+  return gulp
+    .src(paths.target.cssFile)
     .pipe(gulpSourcemaps.init())
-    .pipe(gulpSassGlob({
-      ignorePathss: ['**/_*.*']
-    }))
+    .pipe(
+      gulpSassGlob({
+        ignorePathss: ['**/_*.*']
+      })
+    )
     .pipe(gulpSass({ outputStyle: 'expanded' }).on('error', gulpSass.logError))
-    .pipe(gulpPostcss([
-      autoprefixer({ grid: 'autoplace' }),
-    ]))
+    .pipe(gulpPostcss([autoprefixer({ grid: 'autoplace' })]))
     .pipe(gulpSourcemaps.write())
     .pipe(gulpRename({ suffix: '.bundle' }))
     .pipe(gulpIf(mode.development, gulp.dest(paths.css)))
-    .pipe(gulpIf(mode.dist, gulpCleanCSS({
-      format: 'keep-breaks'
-    })))
+    .pipe(
+      gulpIf(
+        mode.dist,
+        gulpCleanCSS({
+          format: 'keep-breaks'
+        })
+      )
+    )
     .pipe(gulpIf(mode.dist, gulp.dest(paths.dist.css)))
 }
 
@@ -209,89 +220,95 @@ export const css = () => {
  */
 export const js = () => {
   const modeName = mode.development ? 'development' : 'production'
-  return webpackStream({
-    mode: modeName,
-    entry: paths.target.jsFiles,
-    output: {
-      filename: '[name].bundle.js'
-    },
-    optimization: {
-      // 2回以上利用している共通箇所を切り出して出力
-      // Docs: https://webpack.js.org/plugins/split-chunks-plugin/
-      splitChunks: {
-        cacheGroups: {
-          // 2回以上利用しているnode_moduleをまとめる
-          vendor: {
-            test: /node_modules/,
-            name: 'vendor',
-            chunks: 'initial',
-            minChunks: 2,
-            enforce: true
-          },
-          components: {
-            // 2回以上利用しているコンポーネントをまとめる
-            test: /src\/assets\/_js\/components/,
-            name: 'components',
-            chunks: 'initial',
-            minChunks: 2,
-            enforce: true
+  return webpackStream(
+    {
+      mode: modeName,
+      entry: paths.target.jsFiles,
+      output: {
+        filename: '[name].bundle.js'
+      },
+      optimization: {
+        // 2回以上利用している共通箇所を切り出して出力
+        // Docs: https://webpack.js.org/plugins/split-chunks-plugin/
+        splitChunks: {
+          cacheGroups: {
+            // 2回以上利用しているnode_moduleをまとめる
+            vendor: {
+              test: /node_modules/,
+              name: 'vendor',
+              chunks: 'initial',
+              minChunks: 2,
+              enforce: true
+            },
+            components: {
+              // 2回以上利用しているコンポーネントをまとめる
+              test: /src\/assets\/_js\/components/,
+              name: 'components',
+              chunks: 'initial',
+              minChunks: 2,
+              enforce: true
+            }
           }
         }
-      }
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(css|scss)$/,
-          use: [
-            'vue-style-loader',
-            'css-loader',
-            {
-              // for .vue:autoprefixer
-              loader: 'postcss-loader',
-              options: {
-                plugins: [
-                  require('autoprefixer')({
-                    grid: 'autoplace'
-                  })
-                ]
-              }
-            },
-            'sass-loader',
-            {
-              // for .vue:グローバルscssファイル読み込み
-              loader: 'sass-resources-loader',
-              options: {
-                resources: [
-                  path.resolve(__dirname, 'src/assets/_css/settings/variables.scss'),
-                  path.resolve(__dirname, 'src/assets/_css/settings/mixins.scss'),
-                ]
-              }
-            }
-          ]
-        },
-        {
-          test: /\.vue$/,
-          loader: 'vue-loader'
-        },
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: ['babel-loader'],
-        }
-      ]
-    },
-    resolve: {
-      extensions: ['.js', '.vue'],
-      alias: {
-        // vue-template-compilerに読ませてコンパイルするために必要
-        vue$: 'vue/dist/vue.esm.js',
       },
+      module: {
+        rules: [
+          // vue-loaderセッティング
+          // doc: https://github.com/shakacode/sass-resources-loader#example-of-webpack-4-config-for-vue
+          {
+            test: /\.vue$/,
+            use: 'vue-loader'
+          },
+          {
+            test: /\.css$/,
+            use: [
+              { loader: 'vue-style-loader' },
+              { loader: 'css-loader', options: { sourceMap: true } }
+            ]
+          },
+          {
+            test: /\.scss$/,
+            use: [
+              { loader: 'vue-style-loader' },
+              { loader: 'css-loader', options: { sourceMap: true } },
+              { loader: 'sass-loader', options: { sourceMap: true } },
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  sourceMap: true,
+                  resources: [
+                    path.resolve(
+                      __dirname,
+                      'src/assets/_css/settings/variables.scss'
+                    ),
+                    path.resolve(
+                      __dirname,
+                      'src/assets/_css/settings/mixins.scss'
+                    )
+                  ]
+                }
+              }
+            ]
+          },
+
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: ['babel-loader']
+          }
+        ]
+      },
+      resolve: {
+        extensions: ['.js', '.vue'],
+        alias: {
+          // vue-template-compilerに読ませてコンパイルするために必要
+          vue$: 'vue/dist/vue.esm.js'
+        }
+      },
+      plugins: [new VueLoaderPlugin()]
     },
-    plugins: [
-      new VueLoaderPlugin()]
-    ,
-  }, webpack)
+    webpack
+  )
     .pipe(gulpIf(mode.development, gulp.dest(paths.js)))
     .pipe(gulpIf(mode.dist, gulp.dest(paths.dist.js)))
 }
@@ -307,8 +324,7 @@ const removeDistDir = () => {
   return del(paths.dist.dir)
 }
 export const copy = () => {
-  return gulp.src(paths.target.dist)
-    .pipe(gulp.dest(paths.dist.dir))
+  return gulp.src(paths.target.dist).pipe(gulp.dest(paths.dist.dir))
 }
 export const dist = gulp.series(removeDistDir, copy, css, js)
 
@@ -321,20 +337,23 @@ export const dist = gulp.series(removeDistDir, copy, css, js)
  * 対象：settings.port
  * sync終了後もportが閉じない場合に利用
  */
-export const sync = (done) => {
-  gulpConnect.server({
-    port: settings.port,
-    base: settings.srcDir,
-    stdio: 'ignore',
-    bin: settings.phpPath
-  }, () => {
-    browserSync.init({
-      proxy: `${settings.host}:${settings.port}`
-    })
-  })
+export const sync = done => {
+  gulpConnect.server(
+    {
+      port: settings.port,
+      base: settings.srcDir,
+      stdio: 'ignore',
+      bin: settings.phpPath
+    },
+    () => {
+      browserSync.init({
+        proxy: `${settings.host}:${settings.port}`
+      })
+    }
+  )
   done()
 }
-export const disconnect = (done) => {
+export const disconnect = done => {
   console.log('port disConnected')
   gulpConnect.closeServer()
   done()
@@ -346,7 +365,7 @@ export const disconnect = (done) => {
  * ファイル更新を検知して、ブラウザを更新
  */
 // watch
-const reload = (done) => {
+const reload = done => {
   browserSync.reload()
   done()
 }
@@ -370,7 +389,7 @@ const deployUrl = settings.deployUrl + settings.deployDir
 const issueNum = settings.issue
 const remoteRoot = issueNum ? deployRoot + '_' + issueNum : deployRoot
 const openUrl = issueNum ? deployUrl + '_' + issueNum : deployUrl
-const upload = (done) => {
+const upload = done => {
   const config = {
     user: settings.ftpUser,
     password: settings.ftpPassword,
@@ -382,16 +401,26 @@ const upload = (done) => {
     deleteRemote: false,
     forcePasv: false
   }
-  ftpDeploy.deploy(config).then(() => {
-    console.log('ftp deploy finished')
-    done()
-  }).catch((err) => {
-    console.log(err)
-    done()
-  })
+  ftpDeploy
+    .deploy(config)
+    .then(() => {
+      console.log('ftp deploy finished')
+      done()
+    })
+    .catch(err => {
+      console.log(err)
+      done()
+    })
 }
-export const openWindow = (done) => {
+export const openWindow = done => {
   open(openUrl)
   done()
 }
-export const deploy = gulp.series(removeDistDir, copy, css, js, upload, openWindow)
+export const deploy = gulp.series(
+  removeDistDir,
+  copy,
+  css,
+  js,
+  upload,
+  openWindow
+)
