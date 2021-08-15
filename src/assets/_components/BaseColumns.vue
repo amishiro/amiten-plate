@@ -11,7 +11,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    margin: -($gap-s/2) (-$gap-s);
+    margin: -(math.div($gap-s, 2)) (-$gap-s);
     @include tablet {
       flex-direction: row;
       margin: - $gap-s;

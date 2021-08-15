@@ -55,6 +55,7 @@ export default {
       default: null
     },
   },
+emits: ['onClick', 'click'],
   computed: {
     tag () {
       if (this.href != null) return 'a'

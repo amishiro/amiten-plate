@@ -11,7 +11,7 @@
   flex: 1 1 auto;
   width: 100%;
   max-width: 100%;
-  padding: $gap-s/2 $gap-s;
+  padding: math.div($gap-s, 2) $gap-s;
   @include tablet {
     padding: $gap-s;
   }

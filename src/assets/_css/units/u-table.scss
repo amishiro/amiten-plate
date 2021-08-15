@@ -56,8 +56,9 @@ compile: false
 
 .u-table {
   width: 100%;
-  border-collapse: collapse;
   font-feature-settings: 'palt';
+  border-collapse: collapse;
+
   @include mobile {
     thead,
     tfoot {
