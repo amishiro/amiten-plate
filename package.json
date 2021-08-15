@@ -25,7 +25,8 @@
     "disconnect": "gulp disconnect",
     "lint:js": "eslint 'src/assets/_js/**/*.js'",
     "lint:vue": "eslint 'src/assets/_js/**/*.vue'",
-    "lint:css": "stylelint 'src/assets/_css/**/*.scss'"
+    "lint:style": "stylelint 'src/assets/_css/**/*.scss'",
+    "lint": "npm run lint:js & npm run lint:vue & npm run lint:style"
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.5.2",

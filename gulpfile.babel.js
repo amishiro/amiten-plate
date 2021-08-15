@@ -163,8 +163,8 @@ export const eslint = () => {
  * stylelint: stylelint with stylelint-config-standard-scss & order
  * 対象: paths.target.css
  * 作業中ターミナルへstylelintErrorを出力
- * etc: npm run lint:css でstylelintErrorを出力
- * etc: npm run lint:css -- --fix でstylelintErrorを修正
+ * etc: npm run lint:style でstylelintErrorを出力
+ * etc: npm run lint:style -- --fix でstylelintErrorを修正
  */
 export const stylelint = () => {
   return gulp.src(paths.target.css).pipe(

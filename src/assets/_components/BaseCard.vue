@@ -6,16 +6,10 @@
       class="base-card__wrapper"
       :class="addClass"
     >
-      <div
-        v-if="this.$slots.image"
-        class="base-card__image"
-      >
+      <div v-if="$slots.image" class="base-card__image">
         <slot name="image" />
       </div>
-      <div
-        v-if="this.$slots.body"
-        class="base-card__body"
-      >
+      <div v-if="$slots.body" class="base-card__body">
         <slot name="body" />
       </div>
     </component>
@@ -43,12 +37,12 @@ export default {
     }
   },
   computed: {
-    tag () {
+    tag() {
       if (this.href != null) return 'a'
       if (this.to != null) return 'nuxt-link'
       return 'div'
     },
-    attrs () {
+    attrs() {
       const attrs = []
       if (this.href != null) attrs.push({ href: this.href })
       if (this.to != null) attrs.push({ to: this.to })
@@ -56,12 +50,12 @@ export default {
       if (this.type != null) attrs.push({ type: this.type })
       return attrs
     },
-    addClass () {
+    addClass() {
       return {
-        'is-reverse': this.type === 'reverse',
+        'is-reverse': this.type === 'reverse'
       }
     }
-  },
+  }
 }
 </script>
 
@@ -124,5 +118,4 @@ export default {
     }
   }
 }
-
 </style>

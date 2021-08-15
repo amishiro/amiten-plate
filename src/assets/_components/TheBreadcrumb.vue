@@ -11,18 +11,11 @@
         itemscope="itemscope"
         itemtype="http://schema.org/ListItem"
       >
-        <a
-          class="the-breadcrumb__link is-home"
-          itemprop="item"
-          href="/"
-        >
+        <a class="the-breadcrumb__link is-home" itemprop="item" href="/">
           <i class="material-icons">home</i>
           <span itemprop="name">HOME</span>
         </a>
-        <meta
-          itemprop="position"
-          content="1"
-        >
+        <meta itemprop="position" content="1" />
       </li>
       <template v-for="(v, i) in breadcrumb">
         <li
@@ -33,17 +26,10 @@
           itemtype="http://schema.org/ListItem"
         >
           <i class="material-icons">chevron_right</i>
-          <a
-            class="the-breadcrumb__link"
-            itemprop="item"
-            :href="v.url"
-          >
+          <a class="the-breadcrumb__link" itemprop="item" :href="v.url">
             <span itemprop="name">{{ v.title }}</span>
           </a>
-          <meta
-            itemprop="position"
-            :content="i + 2"
-          >
+          <meta itemprop="position" :content="i + 2" />
         </li>
       </template>
     </ul>
@@ -56,11 +42,11 @@ export default {
     breadcrumb: {
       type: Array,
       required: false,
-      default () {
+      default() {
         return [{ title: 'breadcrumbを設定してください。', url: '/' }]
       }
-    },
-  },
+    }
+  }
 }
 </script>
 

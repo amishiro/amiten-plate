@@ -1,25 +1,13 @@
 <template>
-  <div
-    class="base-heading"
-    :class="addClass"
-  >
+  <div class="base-heading" :class="addClass">
     <div class="base-heading__wrapper">
-      <div
-        v-if="this.$slots.sub"
-        class="base-heading__sub"
-      >
+      <div v-if="$slots.sub" class="base-heading__sub">
         <slot name="sub" />
       </div>
-      <component
-        :is="tag"
-        class="base-heading__title"
-      >
+      <component :is="tag" class="base-heading__title">
         <slot />
       </component>
-      <div
-        v-if="this.$slots.ex"
-        class="base-heading__ex"
-      >
+      <div v-if="$slots.ex" class="base-heading__ex">
         <slot name="ex" />
       </div>
     </div>
@@ -40,20 +28,20 @@ export default {
     position: {
       type: String,
       default: null
-    },
+    }
   },
   computed: {
-    addClass () {
+    addClass() {
       return {
         'is-small': this.size === 'small',
         'is-medium': this.size === 'medium',
         'is-large': this.size === 'large',
         'is-center': this.position === 'center',
         'is-left': this.position === 'left',
-        'is-right': this.position === 'right',
+        'is-right': this.position === 'right'
       }
     }
-  },
+  }
 }
 </script>
 
