@@ -64,7 +64,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylelint": "^13.0.0",
     "minimist": "^1.2.5",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "open": "^8.2.1",
     "path": "^0.12.7",
     "postcss-loader": "^6.1.1",
